@@ -164,6 +164,10 @@ Two separate tickets are riskier than one round trip:
   tracker tries a few evenly spaced ones (the "dates to try" setting).
 - **Trip lengths are assumptions** you can change in Settings: 4 nights for US cities, 7 for
   London, 10 for Delhi. A destination is skipped for any window too short for its fewest nights.
+- **Long layovers are skipped.** Any itinerary with a layover over 3 hours (domestic) or 7 hours
+  (international) is ignored, both for the flight out and the flight back. Change the limits in
+  Settings (**Longest layover**). If every option for a trip is longer than your limit, that trip
+  shows no fare.
 - **Airline miles are not tracked.** Fare data doesn't show whether a fare earns miles.
 - **The repository is public,** so your destinations, dates, and price history are visible to
   anyone with the link. Nothing else is stored.

@@ -65,8 +65,26 @@ PHASE_LABEL = {"far": "Too early to expect the best fares", "approaching": "Best
                "prime": "In the best booking window", "late": "Past the best booking window"}
 
 
+INTERNATIONAL_BOOKING_DAYS = (50, 133)
+DEFAULT_MAX_LAYOVER_HOURS = {"domestic": 3, "international": 7}
+
+
+def is_international(dest):
+    bd = dest.get("booking_days")
+    return bool(dest.get("international")) or bool(bd and bd[1] > 70)
+
+
+def layover_cap_min(cfg, dest):
+    """Longest layover (minutes) allowed for this destination, or None for no limit."""
+    table = dict(DEFAULT_MAX_LAYOVER_HOURS)
+    table.update(cfg.get("max_layover_hours") or {})
+    hours = table["international" if is_international(dest) else "domestic"]
+    return int(round(float(hours) * 60)) if hours else None
+
+
 def booking_range(dest, window):
-    lo, hi = dest.get("booking_days") or DEFAULT_BOOKING_DAYS
+    lo, hi = dest.get("booking_days") or (INTERNATIONAL_BOOKING_DAYS if is_international(dest)
+                                          else DEFAULT_BOOKING_DAYS)
     extra = int(window.get("book_earlier_days") or 0)
     return int(lo) + extra, int(hi) + extra
 
@@ -134,6 +152,7 @@ def plan_trips(cfg, today):
                     "max_price": d["max_price"],
                     "book_lo": lo,
                     "book_hi": hi,
+                    "max_layover_min": layover_cap_min(cfg, d),
                 })
     return trips, skipped
 
@@ -246,9 +265,14 @@ def serp_get(params):
     raise RuntimeError(last_err or "unknown error")
 
 
-def itineraries(resp):
+def itineraries(resp, max_layover_min=None):
+    """Priced itineraries, skipping any with a layover longer than the limit (minutes)."""
     offers = (resp.get("best_flights") or []) + (resp.get("other_flights") or [])
-    return [o for o in offers if isinstance(o.get("price"), (int, float))]
+    offers = [o for o in offers if isinstance(o.get("price"), (int, float))]
+    if max_layover_min:
+        offers = [o for o in offers
+                  if all((l.get("duration") or 0) <= max_layover_min for l in (o.get("layovers") or []))]
+    return offers
 
 
 def leg_detail(itin):
@@ -272,9 +296,9 @@ def leg_detail(itin):
     return {"segments": segs, "layovers": lays, "minutes": itin.get("total_duration")}
 
 
-def best_offer(resp):
+def best_offer(resp, max_layover_min=None):
     """Cheapest itinerary in a Google Flights response (price = round-trip total)."""
-    offers = itineraries(resp)
+    offers = itineraries(resp, max_layover_min)
     if not offers:
         return None
     o = min(offers, key=lambda x: x["price"])
@@ -298,9 +322,9 @@ def best_offer(resp):
     }
 
 
-def cheapest_return(resp):
+def cheapest_return(resp, max_layover_min=None):
     """Cheapest return flight from a departure_token lookup (price = round-trip total)."""
-    offers = itineraries(resp)
+    offers = itineraries(resp, max_layover_min)
     if not offers:
         return None
     o = min(offers, key=lambda x: x["price"])
@@ -318,9 +342,9 @@ def ow_settings(cfg):
     return o
 
 
-def one_way_leg(resp):
+def one_way_leg(resp, max_layover_min=None):
     """Cheapest one-way itinerary in a response: price plus the exact flights."""
-    offers = itineraries(resp)
+    offers = itineraries(resp, max_layover_min)
     if not offers:
         return None
     o = min(offers, key=lambda x: x["price"])
@@ -790,9 +814,10 @@ def main():
             print(f"  {t['destination']} {t['depart']}: search failed ({e})")
             continue
         searched.add(t["id"])
-        offer = best_offer(resp)
+        offer = best_offer(resp, t.get("max_layover_min"))
         if not offer:
-            print(f"  {t['destination']} {t['depart']}: no fares returned")
+            print(f"  {t['destination']} {t['depart']}: no fares returned "
+                  f"(or none with layovers under your limit)")
             continue
         done += 1
 
@@ -810,7 +835,8 @@ def main():
             elif lookups_left > 0 and used < budget:
                 try:
                     back = cheapest_return(serp_search(api_key, cfg["home_airports"], t, currency,
-                                                       departure_token=offer["departure_token"]))
+                                                       departure_token=offer["departure_token"]),
+                                           t.get("max_layover_min"))
                     used += 1
                     lookups_left -= 1
                     if back:
@@ -860,7 +886,7 @@ def main():
                 used += 1
                 print(f"  {t['destination']} {t['depart']}: one-way comparison failed ({e})")
                 continue
-            a, b = one_way_leg(r1), one_way_leg(r2)
+            a, b = one_way_leg(r1, t.get("max_layover_min")), one_way_leg(r2, t.get("max_layover_min"))
             if a and b:
                 details[t["id"]]["oneway"] = {"checked_at": now_iso(), "out": a, "back": b}
                 rt = details[t["id"]]["price"]

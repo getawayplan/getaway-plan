@@ -6,14 +6,15 @@
   "pacing_slack": 40,
 
   "one_way_compare": { "enabled": true, "max_trips_per_run": 2, "within_pct_of_limit": 25, "min_days_between": 7 },
+  "max_layover_hours": { "domestic": 3, "international": 7 },
   "check_every_days": { "far": 21, "approaching": 7, "prime": 3, "late": 5 },
 
   "destinations": [
     { "name": "Boston", "airports": ["BOS"], "max_price": 350, "nights": 4, "min_nights": 3 },
     { "name": "New York City", "airports": ["JFK", "LGA", "EWR"], "max_price": 500, "nights": 4, "min_nights": 3 },
     { "name": "Washington, DC", "airports": ["DCA", "IAD", "BWI"], "max_price": 350, "nights": 4, "min_nights": 3 },
-    { "name": "London", "airports": ["LHR", "LGW"], "max_price": 1200, "nights": 7, "min_nights": 5, "booking_days": [50, 133] },
-    { "name": "Delhi", "airports": ["DEL"], "max_price": 2400, "nights": 10, "min_nights": 8, "booking_days": [50, 133] }
+    { "name": "London", "airports": ["LHR", "LGW"], "max_price": 1200, "nights": 7, "min_nights": 5, "international": true },
+    { "name": "Delhi", "airports": ["DEL"], "max_price": 2400, "nights": 10, "min_nights": 8, "international": true }
   ],
 
   "windows": [
