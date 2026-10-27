@@ -1,0 +1,1118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{color-scheme:light;padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Getaway Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a travel-poster board. Big headline, one flat-color poster tile per destination (fare, status against
+   your limit, trend), a price chart for the selected destination, cards with the exact flights, then settings.
+   Tiles carry their own fixed colors; the chart and cards use the page tokens below. */
+:root {
+  color-scheme: light;
+  --page: #eceff4;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink2: #52514e;
+  --muted: #898781;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --border: rgba(11, 11, 11, 0.12);
+  --select: #f1f4f9;
+  --accent: #256abf;
+  --good: #006300;
+  --good-wash: #e3f1e3;
+  --zone: rgba(12, 163, 12, 0.07);
+  --over-wash: #efeeea;
+  --note-bg: #fff3d1;
+  --note-ink: #5a4100;
+  --bad: #b42318;
+  --s1: #2a78d6;
+  --s2: #eb6834;
+  --s3: #1baf7a;
+  --font-display: "Big Shoulders Display", "Arial Narrow", Impact, system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --ink: #f0efec;
+    --ink2: #c3c2b7;
+    --muted: #898781;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --border: rgba(255, 255, 255, 0.12);
+    --select: #20242b;
+    --accent: #5598e7;
+    --good: #0ca30c;
+    --good-wash: #0f2610;
+    --zone: rgba(12, 163, 12, 0.10);
+    --over-wash: #262624;
+    --note-bg: #2e2410;
+    --note-ink: #f3d58b;
+    --bad: #f97066;
+    --s1: #3987e5;
+    --s2: #d95926;
+    --s3: #199e70;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --ink: #f0efec;
+  --ink2: #c3c2b7;
+  --muted: #898781;
+  --grid: #2c2c2a;
+  --axis: #383835;
+  --border: rgba(255, 255, 255, 0.12);
+  --select: #20242b;
+  --accent: #5598e7;
+  --good: #0ca30c;
+  --good-wash: #0f2610;
+  --zone: rgba(12, 163, 12, 0.10);
+  --over-wash: #262624;
+  --note-bg: #2e2410;
+  --note-ink: #f3d58b;
+  --bad: #f97066;
+  --s1: #3987e5;
+  --s2: #d95926;
+  --s3: #199e70;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font: 400 15px/1.5 var(--font-body);
+  padding-block: 28px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; }
+h1, h2, legend { font-family: var(--font-display); text-transform: uppercase; margin: 0; text-wrap: balance; }
+h2 { font-size: 30px; font-weight: 800; line-height: 1; letter-spacing: 0.01em; }
+p { margin: 0; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ic { width: 14px; height: 14px; flex: none; }
+.vh { position: absolute; left: -9999px; }
+
+/* banner */
+.banner { display: flex; gap: 10px; align-items: flex-start; background: var(--note-bg); color: var(--note-ink);
+  border-radius: 12px; padding: 12px 14px; font-size: 14px; }
+.banner .ic { margin-top: 3px; width: 16px; height: 16px; }
+.banner strong { font-weight: 700; }
+
+/* hero */
+.hero { display: flex; flex-wrap: wrap; gap: 18px 32px; align-items: flex-end; justify-content: space-between; }
+.hero-main { display: flex; flex-direction: column; gap: 10px; min-width: 0; flex: 1 1 520px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink2); }
+h1 { font-weight: 900; font-size: clamp(40px, 7vw, 78px); line-height: 0.92; letter-spacing: 0.004em; }
+.sub { color: var(--ink2); font-size: 15px; max-width: 62ch; }
+.hero-side { display: flex; flex-direction: column; gap: 12px; min-width: 210px; align-items: flex-start; }
+.budget { width: 100%; display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--ink2); }
+.budget .bar { height: 6px; border-radius: 3px; background: var(--grid); overflow: hidden; }
+.budget .bar span { display: block; height: 100%; background: var(--ink); border-radius: 3px; }
+.budget b { color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+.stripe { display: flex; height: 8px; border-radius: 4px; overflow: hidden; }
+.stripe i { flex: 1; }
+
+.btn2 { border: 1.5px solid var(--ink); background: transparent; border-radius: 999px; padding: 7px 16px; font-weight: 600;
+  font-size: 14px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--ink); }
+.btn2:hover { background: var(--ink); color: var(--surface); }
+.btn2[aria-disabled="true"] { opacity: 0.45; cursor: not-allowed; }
+.btn2[aria-disabled="true"]:hover { background: transparent; color: var(--ink); }
+
+/* poster tiles */
+.tiles { display: flex; flex-wrap: wrap; gap: 16px; }
+.tile { container-type: inline-size; position: relative; overflow: hidden; isolation: isolate; flex: 1 1 300px; min-height: 270px; border: 0; border-radius: 22px;
+  padding: 20px 22px; text-align: left; cursor: pointer; background: var(--tb); color: var(--ti);
+  display: flex; flex-direction: column; gap: 10px; }
+.tile[aria-pressed="true"] { outline: 3px solid var(--ink); outline-offset: 3px; }
+.motif { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+.t-codes { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; }
+.t-name { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; font-size: clamp(36px, 4.6vw, 56px);
+  line-height: 0.9; max-width: 76%; text-wrap: balance; overflow-wrap: break-word; }
+@supports (font-size: 1cqw) { .t-name { font-size: clamp(30px, 12.5cqw, 52px); } }
+.t-fare { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.t-price { font-family: var(--font-display); font-weight: 800; font-size: 58px; line-height: 1; font-variant-numeric: tabular-nums; }
+.t-basis { font-size: 12.5px; font-weight: 500; }
+.t-status { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 13px; font-weight: 500; }
+.t-foot { margin-top: auto; display: flex; align-items: flex-end; gap: 14px; }
+.t-spark { flex: 1; min-width: 90px; height: 44px; }
+.t-spark svg { display: block; max-width: 100%; }
+.t-dates { text-align: right; font-size: 13px; line-height: 1.3; font-weight: 500; }
+.t-dates b { font-weight: 700; display: block; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 11px 3px 8px; border-radius: 999px;
+  font-size: 13px; font-weight: 600; white-space: nowrap; }
+.tile .pill.under { background: var(--ti); color: var(--tb); }
+.tile .pill.over { background: transparent; color: var(--ti); box-shadow: inset 0 0 0 1.5px var(--ti); }
+.tile .pill.none { box-shadow: inset 0 0 0 1.5px var(--ti); }
+.pill.under { background: var(--good-wash); color: var(--good); }
+.pill.over { background: var(--over-wash); color: var(--ink2); }
+.pill.none { border: 1px solid var(--border); color: var(--ink2); }
+.pill.rate { border: 1px solid var(--border); color: var(--ink2); background: transparent; }
+.pill.rate.low { background: var(--good-wash); color: var(--good); border-color: transparent; }
+.pill.rate.high { background: var(--over-wash); color: var(--ink); border-color: transparent; }
+.ow-warn { margin: 6px 0 0; font-size: 12.5px; color: var(--ink2); line-height: 1.4; }
+.pill.newlow { background: var(--ink); color: var(--surface); }
+
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; }
+
+/* chart */
+.chart-panel { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.chart-sub { color: var(--ink2); font-size: 14px; max-width: 72ch; margin-top: 6px; }
+.legend { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 13.5px; }
+.legend li { display: inline-flex; align-items: center; gap: 8px; }
+.legend .sw { width: 12px; height: 12px; border-radius: 3px; flex: none; }
+.legend .dash { width: 18px; height: 0; border-top: 2px dashed var(--ink2); flex: none; }
+.legend span.v { color: var(--ink2); }
+.chart-wrap { position: relative; }
+.chart-wrap svg { display: block; max-width: 100%; }
+.chart-wrap text { font-family: var(--font-body); font-variant-numeric: tabular-nums; }
+.tip { position: absolute; pointer-events: none; display: none; min-width: 150px; background: var(--surface);
+  border: 1px solid var(--axis); border-radius: 10px; padding: 8px 10px; font-size: 12.5px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14); z-index: 2; }
+.tip strong { display: block; font-weight: 700; margin-bottom: 4px; }
+.tip div { display: flex; align-items: center; gap: 8px; justify-content: space-between; white-space: nowrap; }
+.tip .sw { width: 9px; height: 9px; border-radius: 2px; flex: none; }
+.tip .lab { display: inline-flex; align-items: center; gap: 6px; color: var(--ink2); }
+.tip .val { font-weight: 700; font-variant-numeric: tabular-nums; }
+.note { font-size: 13.5px; color: var(--ink2); }
+
+/* flights */
+.trips-head { display: flex; flex-direction: column; gap: 12px; margin-bottom: 4px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { border: 1.5px solid var(--border); background: var(--surface); border-radius: 999px; padding: 5px 14px; font-size: 13.5px;
+  font-weight: 500; cursor: pointer; color: var(--ink2); }
+.chip:hover { border-color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.chip.gap-left { margin-left: auto; }
+.trips { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.trip { display: grid; grid-template-columns: 185px minmax(0, 1.5fr) 190px 180px; gap: 10px 22px; align-items: start;
+  padding: 18px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; }
+.t-when { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.t-when b { font-family: var(--font-display); font-size: 33px; font-weight: 800; line-height: 1.05; text-transform: uppercase; }
+.t-when small, .t-fare2 small, .t-go small { color: var(--ink2); font-size: 12.5px; line-height: 1.35; }
+.t-when .dest-tag { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink2); }
+.leg { display: flex; flex-direction: column; gap: 4px; }
+.leg + .leg { margin-top: 12px; }
+.leg-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; font-size: 15px; color: var(--ink2); }
+.dir { font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: 0.09em; font-size: 13px; }
+.segs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px; }
+.segs li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
+.segs li.lay { color: var(--ink2); font-size: 14.5px; border-left: 2px dotted var(--axis); padding-left: 10px; margin-left: 4px; }
+.fl { font-weight: 700; font-variant-numeric: tabular-nums; }
+.air { color: var(--ink2); }
+.rt { flex-basis: 100%; font-variant-numeric: tabular-nums; font-size: 23px; line-height: 1.2; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; }
+.rt .tm { font-weight: 800; letter-spacing: -0.01em; }
+.rt .ap { font-size: 16px; font-weight: 700; color: var(--ink2); letter-spacing: 0.04em; }
+.rt .arr { color: var(--ink2); font-weight: 400; }
+.rt sup { font-size: 12px; font-weight: 700; color: var(--ink2); margin-left: 2px; }
+.leg-missing { font-size: 14.5px; color: var(--ink2); }
+.t-fare2 { display: flex; flex-direction: column; gap: 5px; align-items: flex-start; }
+.price { font-family: var(--font-display); font-weight: 800; font-size: 44px; line-height: 1; font-variant-numeric: tabular-nums; }
+.delta { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-variant-numeric: tabular-nums; }
+.delta.down { color: var(--good); }
+.delta.up { color: var(--ink2); }
+.t-go { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: var(--ink);
+  color: var(--surface); font-weight: 600; font-size: 14px; text-decoration: none; }
+.btn:hover { opacity: 0.86; }
+.empty { padding: 22px 4px; color: var(--ink2); }
+
+/* settings */
+.settings > summary { cursor: pointer; padding: 18px 20px; font-family: var(--font-display); font-weight: 800; font-size: 30px;
+  text-transform: uppercase; line-height: 1; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.settings > summary::-webkit-details-marker { display: none; }
+.settings > summary small { font-family: var(--font-body); text-transform: none; font-weight: 500; font-size: 13.5px; color: var(--ink2); }
+.set-body { padding: 4px 20px 24px; display: flex; flex-direction: column; gap: 24px; }
+fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+legend { font-size: 22px; font-weight: 800; padding: 0; margin-bottom: 6px; }
+.hint { color: var(--ink2); font-size: 13.5px; }
+.f-row { display: grid; gap: 8px 10px; align-items: end; }
+.f-one { grid-template-columns: minmax(160px, 320px); }
+.f-dest { grid-template-columns: minmax(120px, 1.4fr) minmax(130px, 1.2fr) 100px 90px 100px auto; }
+.f-win { grid-template-columns: minmax(130px, 1fr) minmax(130px, 1fr) 100px 120px auto; }
+.chk-inline { grid-column: 1 / -1; }
+.f-dest-ow { grid-template-columns: repeat(auto-fit, minmax(180px, 220px)); }
+.phase { font-size: 12.5px; font-weight: 600; }
+.phase.prime { color: var(--good); }
+.field { display: flex; flex-direction: column; gap: 3px; font-size: 12px; font-weight: 600; color: var(--ink2); min-width: 0; }
+.field input { font: inherit; font-size: 14.5px; font-weight: 400; padding: 8px 10px; border: 1.5px solid var(--axis);
+  border-radius: 10px; background: var(--surface); color: var(--ink); width: 100%; min-width: 0; }
+.field input[aria-invalid="true"] { border-color: var(--bad); }
+.rm { border: 1.5px solid var(--axis); background: transparent; border-radius: 10px; padding: 8px 12px; cursor: pointer; color: var(--ink2); font-size: 13.5px; }
+.rm:hover { border-color: var(--bad); color: var(--bad); }
+.add { align-self: flex-start; }
+.est { font-size: 14px; padding: 12px 14px; border-radius: 12px; background: var(--over-wash); color: var(--ink); }
+.est.warn { background: var(--note-bg); color: var(--note-ink); }
+.issues { margin: 0; padding-left: 18px; color: var(--bad); font-size: 13.5px; }
+.cfg-out { width: 100%; min-height: 230px; font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; padding: 12px;
+  border: 1.5px solid var(--axis); border-radius: 12px; background: var(--page); color: var(--ink); resize: vertical; }
+.steps { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+.save-box { border: 1.5px solid var(--border); border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+.save-box h4 { margin: 0; font-size: 15px; }
+.save-box .f-row { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.chk { display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--ink2); }
+.how summary { cursor: pointer; font-weight: 600; font-size: 14px; }
+.how ol { margin: 8px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+.msg-ok { color: var(--good); font-weight: 600; font-size: 14px; }
+.msg-bad { color: var(--bad); font-weight: 600; font-size: 14px; }
+.row-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+#copy-msg { font-size: 13.5px; color: var(--good); font-weight: 600; }
+
+.foot { color: var(--ink2); font-size: 13px; display: flex; flex-direction: column; gap: 4px; max-width: 84ch; }
+
+@media (max-width: 920px) {
+  .trip { grid-template-columns: minmax(0, 1fr) minmax(0, 46%); grid-template-areas: "when fare" "legs legs" "go go"; }
+  .trip .t-when { grid-area: when; }
+  .trip .t-legs { grid-area: legs; }
+  .trip .t-fare2 { grid-area: fare; align-items: flex-end; text-align: right; }
+  .trip .t-go { grid-area: go; flex-direction: row; flex-wrap: wrap; align-items: center; }
+  .f-dest { grid-template-columns: 1fr 1fr 1fr; }
+  .f-dest .rm { grid-column: 1 / -1; justify-self: start; }
+  .f-win { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .t-name { max-width: 78%; }
+  .chip.gap-left { margin-left: 0; }
+  .settings > summary small { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tile { transition: transform 0.15s ease; }
+  .tile:hover { transform: translateY(-3px); }
+}
+@media (max-width: 560px) {
+  .trip { grid-template-columns: minmax(0, 1fr); grid-template-areas: "when" "fare" "legs" "go"; }
+  .trip .t-fare2 { align-items: flex-start; text-align: left; }
+  .rt { font-size: 20px; gap: 0 6px; }
+  .rt .ap { font-size: 14px; }
+}
+</style>
+
+<div class="wrap" id="app">
+  <div id="banner"></div>
+  <header class="hero" id="head"></header>
+  <div class="stripe" id="stripe" aria-hidden="true"></div>
+
+  <section aria-labelledby="board-title">
+    <h2 id="board-title" class="vh">Destinations</h2>
+    <div class="tiles" id="board" role="group" aria-label="Destinations. Select one to see its price history and flights."></div>
+  </section>
+
+  <section class="panel chart-panel" aria-labelledby="chart-title">
+    <div>
+      <h2 id="chart-title">Price history</h2>
+      <p class="chart-sub" id="chart-sub"></p>
+    </div>
+    <ul class="legend" id="legend"></ul>
+    <div class="chart-wrap" id="chart"></div>
+    <p class="note" id="chart-note" hidden></p>
+  </section>
+
+  <section aria-labelledby="trips-title">
+    <div class="trips-head">
+      <h2 id="trips-title">Flights</h2>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="trips" id="trips"></div>
+  </section>
+
+  <details class="panel settings" id="settings">
+    <summary>Settings <small>Destinations, limits and free windows</small></summary>
+    <div class="set-body" id="set-body"></div>
+  </details>
+
+  <footer class="foot">
+    <p>Fares are round trip for one traveler, from Google Flights through SerpApi. Prices include airport taxes. Bag fees and card fees are extra.</p>
+    <p>Prices change often. Google refreshes them about once a day and the tracker checks each trip every few days (more often when it is in its best booking window), so confirm the price on the booking page before you pay.</p>
+    <p>The tracker looks up the exact return flight only for fares under your limit, to save searches. It tries a few departure dates inside each free window, not every date. Trips that are in or near their best booking window are checked more often than ones months away.</p>
+    <p>"Low, typical or high for this route" is Google's own rating of the fare, shown when Google provides one. "Lowest yet" means this fare beat every earlier check for the same trip by at least 3%.</p>
+    <p>"Two one-way tickets" means buying the flight out and the flight back as separate tickets. It can cost less, but the tickets are not linked: a delay on one does not protect the other, and bags are paid per ticket.</p>
+    <p>Airline miles are not tracked. Fare data shows the airline but not whether a fare earns miles.</p>
+  </footer>
+</div>
+
+<script type="application/json" id="sample-data">{"latest":{"generated_at":"2026-10-27T18:42:28+00:00","mode":"demo","home_airports":["MCI"],"currency":"USD","searches_used_this_month":0,"monthly_search_budget":240,"estimated_searches_next_30_days":156,"config":{"home_airports":["MCI"],"currency":"USD","monthly_search_budget":240,"max_detail_lookups_per_run":8,"pacing_slack":40,"one_way_compare":{"enabled":true,"max_trips_per_run":2,"within_pct_of_limit":25,"min_days_between":7},"check_every_days":{"far":21,"approaching":7,"prime":3,"late":5},"destinations":[{"name":"Boston","airports":["BOS"],"max_price":350,"nights":4,"min_nights":3},{"name":"New York City","airports":["JFK","LGA","EWR"],"max_price":500,"nights":4,"min_nights":3},{"name":"Washington, DC","airports":["DCA","IAD","BWI"],"max_price":350,"nights":4,"min_nights":3},{"name":"London","airports":["LHR","LGW"],"max_price":1200,"nights":7,"min_nights":5,"booking_days":[50,133]},{"name":"Delhi","airports":["DEL"],"max_price":2400,"nights":10,"min_nights":8,"booking_days":[50,133]}],"windows":[{"start":"2026-12-18","end":"2027-01-18","samples":3,"book_earlier_days":10},{"start":"2027-03-29","end":"2027-04-04","samples":2,"book_earlier_days":5},{"start":"2027-05-14","end":"2027-05-20","samples":2,"book_earlier_days":0}]},"destinations":[{"name":"Boston","airports":["BOS"],"max_price":350,"best_trip_id":"Boston|2027-05-14|2027-05-18","best_price":288,"best_kind":"round_trip","under_ceiling":true},{"name":"New York City","airports":["JFK","LGA","EWR"],"max_price":500,"best_trip_id":"New York City|2027-03-31|2027-04-04","best_price":598,"best_kind":"round_trip","under_ceiling":false},{"name":"Washington, DC","airports":["DCA","IAD","BWI"],"max_price":350,"best_trip_id":"Washington, DC|2027-03-31|2027-04-04","best_price":280,"best_kind":"round_trip","under_ceiling":true},{"name":"London","airports":["LHR","LGW"],"max_price":1200,"best_trip_id":"London|2027-01-11|2027-01-18","best_price":860,"best_kind":"round_trip","under_ceiling":true},{"name":"Delhi","airports":["DEL"],"max_price":2400,"best_trip_id":"Delhi|2027-01-08|2027-01-18","best_price":2066,"best_kind":"two_one_ways","under_ceiling":true}],"trips":[{"id":"Boston|2026-12-18|2026-12-22","destination":"Boston","airports":["BOS"],"window":"Dec 18 \u2013 Jan 18","depart":"2026-12-18","return":"2026-12-22","nights":4,"max_price":350,"book_lo":32,"book_hi":67,"days_out":52,"phase":"prime","best_from":"2026-10-12","best_until":"2026-11-16","check_every_days":3,"status":"ok","price":469,"airlines":["Delta"],"stops":1,"duration_min":null,"link":null,"price_level":"typical","typical_range":[447,529],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":454,"delta":15,"low_price":451,"observations":14,"effective_price":469,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Delta","flight":"DL 297","from":"MCI","depart":"2026-12-18 17:55","to":"DFW","arrive":"2026-12-18 19:20","minutes":85,"overnight":false},{"airline":"Delta","flight":"DL 396","from":"DFW","depart":"2026-12-18 20:49","to":"BOS","arrive":"2026-12-19 00:09","minutes":140,"overnight":true}],"layovers":[{"name":"Dallas/Fort Worth","code":"DFW","minutes":89,"overnight":false}],"minutes":314},"return_flight":null},{"id":"Boston|2027-01-01|2027-01-05","destination":"Boston","airports":["BOS"],"window":"Dec 18 \u2013 Jan 18","depart":"2027-01-01","return":"2027-01-05","nights":4,"max_price":350,"book_lo":32,"book_hi":67,"days_out":66,"phase":"prime","best_from":"2026-10-26","best_until":"2026-11-30","check_every_days":3,"status":"ok","price":380,"airlines":["Southwest"],"stops":0,"duration_min":null,"link":null,"price_level":"low","typical_range":[447,529],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":389,"delta":-9,"low_price":380,"observations":14,"effective_price":353,"oneway":{"total":353,"out_price":184,"back_price":169,"out_airlines":["Southwest"],"back_airlines":["Southwest"],"out_flight":{"segments":[{"airline":"Southwest","flight":"WN 1045","from":"MCI","depart":"2027-01-01 12:15","to":"BOS","arrive":"2027-01-01 16:10","minutes":175,"overnight":false}],"layovers":[],"minutes":175},"back_flight":{"segments":[{"airline":"Southwest","flight":"WN 439","from":"BOS","depart":"2027-01-05 07:05","to":"MCI","arrive":"2027-01-05 09:10","minutes":185,"overnight":false}],"layovers":[],"minutes":185},"checked_at":"2026-10-27T14:00:00+00:00","better":true,"saves":27},"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Southwest","flight":"WN 485","from":"MCI","depart":"2027-01-01 14:30","to":"BOS","arrive":"2027-01-01 18:25","minutes":175,"overnight":false}],"layovers":[],"minutes":175},"return_flight":null},{"id":"Boston|2027-01-14|2027-01-18","destination":"Boston","airports":["BOS"],"window":"Dec 18 \u2013 Jan 18","depart":"2027-01-14","return":"2027-01-18","nights":4,"max_price":350,"book_lo":32,"book_hi":67,"days_out":79,"phase":"approaching","best_from":"2026-11-08","best_until":"2026-12-13","check_every_days":7,"status":"ok","price":363,"airlines":["Southwest"],"stops":1,"duration_min":null,"link":null,"price_level":"typical","typical_range":[310,366],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":365,"delta":-2,"low_price":356,"observations":14,"effective_price":363,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Southwest","flight":"WN 979","from":"MCI","depart":"2027-01-14 14:30","to":"DFW","arrive":"2027-01-14 15:55","minutes":85,"overnight":false},{"airline":"Southwest","flight":"WN 253","from":"DFW","depart":"2027-01-14 18:19","to":"BOS","arrive":"2027-01-14 21:39","minutes":140,"overnight":false}],"layovers":[{"name":"Dallas/Fort Worth","code":"DFW","minutes":144,"overnight":false}],"minutes":369},"return_flight":null},{"id":"New York City|2026-12-18|2026-12-22","destination":"New York City","airports":["JFK","LGA","EWR"],"window":"Dec 18 \u2013 Jan 18","depart":"2026-12-18","return":"2026-12-22","nights":4,"max_price":500,"book_lo":32,"book_hi":67,"days_out":52,"phase":"prime","best_from":"2026-10-12","best_until":"2026-11-16","check_every_days":3,"status":"ok","price":868,"airlines":["Delta"],"stops":0,"duration_min":null,"link":null,"price_level":"typical","typical_range":[870,1030],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":862,"delta":6,"low_price":862,"observations":14,"effective_price":868,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Delta","flight":"DL 1876","from":"MCI","depart":"2026-12-18 06:10","to":"JFK","arrive":"2026-12-18 10:00","minutes":170,"overnight":false}],"layovers":[],"minutes":170},"return_flight":null},{"id":"New York City|2027-01-01|2027-01-05","destination":"New York City","airports":["JFK","LGA","EWR"],"window":"Dec 18 \u2013 Jan 18","depart":"2027-01-01","return":"2027-01-05","nights":4,"max_price":500,"book_lo":32,"book_hi":67,"days_out":66,"phase":"prime","best_from":"2026-10-26","best_until":"2026-11-30","check_every_days":3,"status":"ok","price":1045,"airlines":["American"],"stops":0,"duration_min":null,"link":null,"price_level":"high","typical_range":[870,1030],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":1083,"delta":-38,"low_price":981,"observations":14,"effective_price":1045,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"American","flight":"AA 386","from":"MCI","depart":"2027-01-01 12:15","to":"JFK","arrive":"2027-01-01 16:05","minutes":170,"overnight":false}],"layovers":[],"minutes":170},"return_flight":null},{"id":"New York City|2027-01-14|2027-01-18","destination":"New York City","airports":["JFK","LGA","EWR"],"window":"Dec 18 \u2013 Jan 18","depart":"2027-01-14","return":"2027-01-18","nights":4,"max_price":500,"book_lo":32,"book_hi":67,"days_out":79,"phase":"approaching","best_from":"2026-11-08","best_until":"2026-12-13","check_every_days":7,"status":"ok","price":645,"airlines":["United"],"stops":0,"duration_min":null,"link":null,"price_level":"typical","typical_range":[603,713],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":622,"delta":23,"low_price":622,"observations":14,"effective_price":645,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"United","flight":"UA 471","from":"MCI","depart":"2027-01-14 07:05","to":"JFK","arrive":"2027-01-14 10:55","minutes":170,"overnight":false}],"layovers":[],"minutes":170},"return_flight":null},{"id":"Washington, DC|2026-12-18|2026-12-22","destination":"Washington, DC","airports":["DCA","IAD","BWI"],"window":"Dec 18 \u2013 Jan 18","depart":"2026-12-18","return":"2026-12-22","nights":4,"max_price":350,"book_lo":32,"book_hi":67,"days_out":52,"phase":"prime","best_from":"2026-10-12","best_until":"2026-11-16","check_every_days":3,"status":"ok","price":440,"airlines":["American"],"stops":1,"duration_min":null,"link":null,"price_level":"typical","typical_range":[447,529],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":452,"delta":-12,"low_price":440,"observations":14,"effective_price":440,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"American","flight":"AA 1014","from":"MCI","depart":"2026-12-18 06:10","to":"DFW","arrive":"2026-12-18 07:35","minutes":85,"overnight":false},{"airline":"American","flight":"AA 2683","from":"DFW","depart":"2026-12-18 08:52","to":"DCA","arrive":"2026-12-18 11:42","minutes":110,"overnight":false}],"layovers":[{"name":"Dallas/Fort Worth","code":"DFW","minutes":77,"overnight":false}],"minutes":272},"return_flight":null},{"id":"Washington, DC|2027-01-01|2027-01-05","destination":"Washington, DC","airports":["DCA","IAD","BWI"],"window":"Dec 18 \u2013 Jan 18","depart":"2027-01-01","return":"2027-01-05","nights":4,"max_price":350,"book_lo":32,"book_hi":67,"days_out":66,"phase":"prime","best_from":"2026-10-26","best_until":"2026-11-30","check_every_days":3,"status":"ok","price":341,"airlines":["Southwest"],"stops":1,"duration_min":null,"link":null,"price_level":"low","typical_range":[447,529],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":378,"delta":-37,"low_price":341,"observations":14,"effective_price":293,"oneway":{"total":293,"out_price":152,"back_price":141,"out_airlines":["Southwest"],"back_airlines":["Southwest"],"out_flight":{"segments":[{"airline":"Southwest","flight":"WN 1801","from":"MCI","depart":"2027-01-01 17:55","to":"DCA","arrive":"2027-01-01 21:30","minutes":155,"overnight":false}],"layovers":[],"minutes":155},"back_flight":{"segments":[{"airline":"Southwest","flight":"WN 2896","from":"DCA","depart":"2027-01-05 09:40","to":"MCI","arrive":"2027-01-05 11:25","minutes":165,"overnight":false}],"layovers":[],"minutes":165},"checked_at":"2026-10-27T14:00:00+00:00","better":true,"saves":48},"under_ceiling":true,"lowest_yet":true,"outbound_flight":{"segments":[{"airline":"Southwest","flight":"WN 303","from":"MCI","depart":"2027-01-01 12:15","to":"ORD","arrive":"2027-01-01 13:40","minutes":85,"overnight":false},{"airline":"Southwest","flight":"WN 1005","from":"ORD","depart":"2027-01-01 16:03","to":"DCA","arrive":"2027-01-01 18:53","minutes":110,"overnight":false}],"layovers":[{"name":"Chicago O'Hare","code":"ORD","minutes":143,"overnight":false}],"minutes":338},"return_flight":{"segments":[{"airline":"Southwest","flight":"WN 2380","from":"DCA","depart":"2027-01-05 06:10","to":"ORD","arrive":"2027-01-05 07:40","minutes":150,"overnight":false},{"airline":"Southwest","flight":"WN 645","from":"ORD","depart":"2027-01-05 10:04","to":"MCI","arrive":"2027-01-05 11:29","minutes":85,"overnight":false}],"layovers":[{"name":"Chicago O'Hare","code":"ORD","minutes":144,"overnight":false}],"minutes":379}},{"id":"Washington, DC|2027-01-14|2027-01-18","destination":"Washington, DC","airports":["DCA","IAD","BWI"],"window":"Dec 18 \u2013 Jan 18","depart":"2027-01-14","return":"2027-01-18","nights":4,"max_price":350,"book_lo":32,"book_hi":67,"days_out":79,"phase":"approaching","best_from":"2026-11-08","best_until":"2026-12-13","check_every_days":7,"status":"ok","price":328,"airlines":["Southwest"],"stops":0,"duration_min":null,"link":null,"price_level":"typical","typical_range":[310,366],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":355,"delta":-27,"low_price":328,"observations":14,"effective_price":328,"oneway":null,"under_ceiling":true,"lowest_yet":true,"outbound_flight":{"segments":[{"airline":"Southwest","flight":"WN 1816","from":"MCI","depart":"2027-01-14 09:40","to":"DCA","arrive":"2027-01-14 13:15","minutes":155,"overnight":false}],"layovers":[],"minutes":155},"return_flight":{"segments":[{"airline":"Southwest","flight":"WN 2314","from":"DCA","depart":"2027-01-18 07:05","to":"MCI","arrive":"2027-01-18 08:50","minutes":165,"overnight":false}],"layovers":[],"minutes":165}},{"id":"London|2026-12-18|2026-12-25","destination":"London","airports":["LHR","LGW"],"window":"Dec 18 \u2013 Jan 18","depart":"2026-12-18","return":"2026-12-25","nights":7,"max_price":1200,"book_lo":60,"book_hi":143,"days_out":52,"phase":"late","best_from":"2026-07-28","best_until":"2026-10-19","check_every_days":5,"status":"ok","price":1696,"airlines":["Aer Lingus"],"stops":1,"duration_min":null,"link":null,"price_level":"typical","typical_range":[1487,1759],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":1672,"delta":24,"low_price":1671,"observations":14,"effective_price":1696,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Aer Lingus","flight":"EI 2893","from":"MCI","depart":"2026-12-18 14:30","to":"ORD","arrive":"2026-12-18 15:55","minutes":85,"overnight":false},{"airline":"Aer Lingus","flight":"EI 840","from":"ORD","depart":"2026-12-18 18:18","to":"LHR","arrive":"2026-12-19 08:08","minutes":470,"overnight":true}],"layovers":[{"name":"Chicago O'Hare","code":"ORD","minutes":143,"overnight":false}],"minutes":698},"return_flight":null},{"id":"London|2026-12-30|2027-01-06","destination":"London","airports":["LHR","LGW"],"window":"Dec 18 \u2013 Jan 18","depart":"2026-12-30","return":"2027-01-06","nights":7,"max_price":1200,"book_lo":60,"book_hi":143,"days_out":64,"phase":"prime","best_from":"2026-08-09","best_until":"2026-10-31","check_every_days":3,"status":"ok","price":1185,"airlines":["American"],"stops":1,"duration_min":null,"link":null,"price_level":"low","typical_range":[1487,1759],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":1207,"delta":-22,"low_price":1185,"observations":14,"effective_price":1185,"oneway":{"total":1327,"out_price":690,"back_price":637,"out_airlines":["American"],"back_airlines":["American"],"out_flight":{"segments":[{"airline":"American","flight":"AA 1176","from":"MCI","depart":"2026-12-30 07:05","to":"LHR","arrive":"2026-12-30 15:55","minutes":170,"overnight":false}],"layovers":[],"minutes":170},"back_flight":{"segments":[{"airline":"American","flight":"AA 116","from":"LHR","depart":"2027-01-06 09:40","to":"MCI","arrive":"2027-01-06 06:40","minutes":180,"overnight":false}],"layovers":[],"minutes":180},"checked_at":"2026-10-27T14:00:00+00:00","better":false,"saves":-142},"under_ceiling":true,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"American","flight":"AA 869","from":"MCI","depart":"2026-12-30 17:55","to":"ORD","arrive":"2026-12-30 19:20","minutes":85,"overnight":false},{"airline":"American","flight":"AA 1625","from":"ORD","depart":"2026-12-30 21:44","to":"LHR","arrive":"2026-12-31 11:34","minutes":470,"overnight":true}],"layovers":[{"name":"Chicago O'Hare","code":"ORD","minutes":144,"overnight":false}],"minutes":699},"return_flight":{"segments":[{"airline":"American","flight":"AA 2343","from":"LHR","depart":"2027-01-06 06:10","to":"ORD","arrive":"2027-01-06 08:40","minutes":510,"overnight":false},{"airline":"American","flight":"AA 357","from":"ORD","depart":"2027-01-06 11:03","to":"MCI","arrive":"2027-01-06 12:28","minutes":85,"overnight":false}],"layovers":[{"name":"Chicago O'Hare","code":"ORD","minutes":143,"overnight":false}],"minutes":738}},{"id":"London|2027-01-11|2027-01-18","destination":"London","airports":["LHR","LGW"],"window":"Dec 18 \u2013 Jan 18","depart":"2027-01-11","return":"2027-01-18","nights":7,"max_price":1200,"book_lo":60,"book_hi":143,"days_out":76,"phase":"prime","best_from":"2026-08-21","best_until":"2026-11-12","check_every_days":3,"status":"ok","price":860,"airlines":["British Airways"],"stops":1,"duration_min":null,"link":null,"price_level":"low","typical_range":[1030,1218],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":866,"delta":-6,"low_price":860,"observations":14,"effective_price":860,"oneway":{"total":920,"out_price":479,"back_price":441,"out_airlines":["British Airways"],"back_airlines":["British Airways"],"out_flight":{"segments":[{"airline":"British Airways","flight":"BA 719","from":"MCI","depart":"2027-01-11 07:05","to":"LHR","arrive":"2027-01-11 15:55","minutes":170,"overnight":false}],"layovers":[],"minutes":170},"back_flight":{"segments":[{"airline":"British Airways","flight":"BA 2797","from":"LHR","depart":"2027-01-18 07:05","to":"MCI","arrive":"2027-01-18 04:05","minutes":180,"overnight":false}],"layovers":[],"minutes":180},"checked_at":"2026-10-27T14:00:00+00:00","better":false,"saves":-60},"under_ceiling":true,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"British Airways","flight":"BA 2886","from":"MCI","depart":"2027-01-11 12:15","to":"ORD","arrive":"2027-01-11 13:40","minutes":85,"overnight":false},{"airline":"British Airways","flight":"BA 2277","from":"ORD","depart":"2027-01-11 16:09","to":"LHR","arrive":"2027-01-12 05:59","minutes":470,"overnight":true}],"layovers":[{"name":"Chicago O'Hare","code":"ORD","minutes":149,"overnight":false}],"minutes":704},"return_flight":{"segments":[{"airline":"British Airways","flight":"BA 1386","from":"LHR","depart":"2027-01-18 12:15","to":"ORD","arrive":"2027-01-18 14:45","minutes":510,"overnight":false},{"airline":"British Airways","flight":"BA 2007","from":"ORD","depart":"2027-01-18 16:21","to":"MCI","arrive":"2027-01-18 17:46","minutes":85,"overnight":false}],"layovers":[{"name":"Chicago O'Hare","code":"ORD","minutes":96,"overnight":false}],"minutes":691}},{"id":"Delhi|2026-12-18|2026-12-28","destination":"Delhi","airports":["DEL"],"window":"Dec 18 \u2013 Jan 18","depart":"2026-12-18","return":"2026-12-28","nights":10,"max_price":2400,"book_lo":60,"book_hi":143,"days_out":52,"phase":"late","best_from":"2026-07-28","best_until":"2026-10-19","check_every_days":5,"status":"ok","price":3367,"airlines":["Emirates"],"stops":1,"duration_min":null,"link":null,"price_level":"low","typical_range":[4111,4862],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":3384,"delta":-17,"low_price":3269,"observations":14,"effective_price":3367,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Emirates","flight":"EK 836","from":"MCI","depart":"2026-12-18 07:05","to":"DFW","arrive":"2026-12-18 08:30","minutes":85,"overnight":false},{"airline":"Emirates","flight":"EK 2963","from":"DFW","depart":"2026-12-18 10:26","to":"DEL","arrive":"2026-12-19 12:36","minutes":880,"overnight":true}],"layovers":[{"name":"Dallas/Fort Worth","code":"DFW","minutes":116,"overnight":false}],"minutes":1081},"return_flight":null},{"id":"Delhi|2026-12-29|2027-01-08","destination":"Delhi","airports":["DEL"],"window":"Dec 18 \u2013 Jan 18","depart":"2026-12-29","return":"2027-01-08","nights":10,"max_price":2400,"book_lo":60,"book_hi":143,"days_out":63,"phase":"prime","best_from":"2026-08-08","best_until":"2026-10-30","check_every_days":3,"status":"ok","price":3996,"airlines":["Air India"],"stops":1,"duration_min":null,"link":null,"price_level":"typical","typical_range":[4111,4862],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":3933,"delta":63,"low_price":3933,"observations":14,"effective_price":3996,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Air India","flight":"AI 2251","from":"MCI","depart":"2026-12-29 09:40","to":"ORD","arrive":"2026-12-29 11:05","minutes":85,"overnight":false},{"airline":"Air India","flight":"AI 2127","from":"ORD","depart":"2026-12-29 12:25","to":"DEL","arrive":"2026-12-30 14:35","minutes":880,"overnight":true}],"layovers":[{"name":"Chicago O'Hare","code":"ORD","minutes":80,"overnight":false}],"minutes":1045},"return_flight":null},{"id":"Delhi|2027-01-08|2027-01-18","destination":"Delhi","airports":["DEL"],"window":"Dec 18 \u2013 Jan 18","depart":"2027-01-08","return":"2027-01-18","nights":10,"max_price":2400,"book_lo":60,"book_hi":143,"days_out":73,"phase":"prime","best_from":"2026-08-18","best_until":"2026-11-09","check_every_days":3,"status":"ok","price":2295,"airlines":["Emirates"],"stops":1,"duration_min":null,"link":null,"price_level":"low","typical_range":[2846,3366],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":2353,"delta":-58,"low_price":2295,"observations":14,"effective_price":2066,"oneway":{"total":2066,"out_price":1074,"back_price":992,"out_airlines":["Emirates"],"back_airlines":["Emirates"],"out_flight":{"segments":[{"airline":"Emirates","flight":"EK 149","from":"MCI","depart":"2027-01-08 07:05","to":"DEL","arrive":"2027-01-08 21:25","minutes":170,"overnight":false}],"layovers":[],"minutes":170},"back_flight":{"segments":[{"airline":"Emirates","flight":"EK 2513","from":"DEL","depart":"2027-01-18 12:15","to":"MCI","arrive":"2027-01-18 03:45","minutes":180,"overnight":false}],"layovers":[],"minutes":180},"checked_at":"2026-10-27T14:00:00+00:00","better":true,"saves":229},"under_ceiling":true,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Emirates","flight":"EK 399","from":"MCI","depart":"2027-01-08 14:30","to":"DFW","arrive":"2027-01-08 15:55","minutes":85,"overnight":false},{"airline":"Emirates","flight":"EK 583","from":"DFW","depart":"2027-01-08 18:02","to":"DEL","arrive":"2027-01-09 20:12","minutes":880,"overnight":true}],"layovers":[{"name":"Dallas/Fort Worth","code":"DFW","minutes":127,"overnight":false}],"minutes":1092},"return_flight":{"segments":[{"airline":"Emirates","flight":"EK 1812","from":"DEL","depart":"2027-01-18 14:30","to":"DFW","arrive":"2027-01-18 18:20","minutes":920,"overnight":false},{"airline":"Emirates","flight":"EK 775","from":"DFW","depart":"2027-01-18 20:06","to":"MCI","arrive":"2027-01-18 21:31","minutes":85,"overnight":false}],"layovers":[{"name":"Dallas/Fort Worth","code":"DFW","minutes":106,"overnight":false}],"minutes":1111}},{"id":"Boston|2027-03-29|2027-04-02","destination":"Boston","airports":["BOS"],"window":"Mar 29 \u2013 Apr 4","depart":"2027-03-29","return":"2027-04-02","nights":4,"max_price":350,"book_lo":27,"book_hi":62,"days_out":153,"phase":"far","best_from":"2027-01-26","best_until":"2027-03-02","check_every_days":21,"status":"ok","price":457,"airlines":["American"],"stops":0,"duration_min":null,"link":null,"price_level":"high","typical_range":[361,427],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":452,"delta":5,"low_price":402,"observations":14,"effective_price":457,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"American","flight":"AA 722","from":"MCI","depart":"2027-03-29 09:40","to":"BOS","arrive":"2027-03-29 13:35","minutes":175,"overnight":false}],"layovers":[],"minutes":175},"return_flight":null},{"id":"Boston|2027-03-31|2027-04-04","destination":"Boston","airports":["BOS"],"window":"Mar 29 \u2013 Apr 4","depart":"2027-03-31","return":"2027-04-04","nights":4,"max_price":350,"book_lo":27,"book_hi":62,"days_out":155,"phase":"far","best_from":"2027-01-28","best_until":"2027-03-04","check_every_days":21,"status":"ok","price":336,"airlines":["Delta"],"stops":0,"duration_min":null,"link":null,"price_level":"low","typical_range":[361,427],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":334,"delta":2,"low_price":334,"observations":14,"effective_price":336,"oneway":null,"under_ceiling":true,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Delta","flight":"DL 1827","from":"MCI","depart":"2027-03-31 12:15","to":"BOS","arrive":"2027-03-31 16:10","minutes":175,"overnight":false}],"layovers":[],"minutes":175},"return_flight":{"segments":[{"airline":"Delta","flight":"DL 2837","from":"BOS","depart":"2027-04-04 06:10","to":"MCI","arrive":"2027-04-04 08:15","minutes":185,"overnight":false}],"layovers":[],"minutes":185}},{"id":"New York City|2027-03-29|2027-04-02","destination":"New York City","airports":["JFK","LGA","EWR"],"window":"Mar 29 \u2013 Apr 4","depart":"2027-03-29","return":"2027-04-02","nights":4,"max_price":500,"book_lo":27,"book_hi":62,"days_out":153,"phase":"far","best_from":"2027-01-26","best_until":"2027-03-02","check_every_days":21,"status":"ok","price":867,"airlines":["United"],"stops":1,"duration_min":null,"link":null,"price_level":"high","typical_range":[703,832],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":841,"delta":26,"low_price":792,"observations":14,"effective_price":867,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"United","flight":"UA 1493","from":"MCI","depart":"2027-03-29 09:40","to":"ORD","arrive":"2027-03-29 11:05","minutes":85,"overnight":false},{"airline":"United","flight":"UA 2947","from":"ORD","depart":"2027-03-29 13:26","to":"JFK","arrive":"2027-03-29 16:41","minutes":135,"overnight":false}],"layovers":[{"name":"Chicago O'Hare","code":"ORD","minutes":141,"overnight":false}],"minutes":361},"return_flight":null},{"id":"New York City|2027-03-31|2027-04-04","destination":"New York City","airports":["JFK","LGA","EWR"],"window":"Mar 29 \u2013 Apr 4","depart":"2027-03-31","return":"2027-04-04","nights":4,"max_price":500,"book_lo":27,"book_hi":62,"days_out":155,"phase":"far","best_from":"2027-01-28","best_until":"2027-03-04","check_every_days":21,"status":"ok","price":598,"airlines":["American"],"stops":0,"duration_min":null,"link":null,"price_level":"low","typical_range":[703,832],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":590,"delta":8,"low_price":590,"observations":14,"effective_price":598,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"American","flight":"AA 2534","from":"MCI","depart":"2027-03-31 09:40","to":"JFK","arrive":"2027-03-31 13:30","minutes":170,"overnight":false}],"layovers":[],"minutes":170},"return_flight":null},{"id":"Washington, DC|2027-03-29|2027-04-02","destination":"Washington, DC","airports":["DCA","IAD","BWI"],"window":"Mar 29 \u2013 Apr 4","depart":"2027-03-29","return":"2027-04-02","nights":4,"max_price":350,"book_lo":27,"book_hi":62,"days_out":153,"phase":"far","best_from":"2027-01-26","best_until":"2027-03-02","check_every_days":21,"status":"ok","price":386,"airlines":["Southwest"],"stops":1,"duration_min":null,"link":null,"price_level":"typical","typical_range":[361,427],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":398,"delta":-12,"low_price":374,"observations":14,"effective_price":386,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Southwest","flight":"WN 483","from":"MCI","depart":"2027-03-29 06:10","to":"DFW","arrive":"2027-03-29 07:35","minutes":85,"overnight":false},{"airline":"Southwest","flight":"WN 1205","from":"DFW","depart":"2027-03-29 09:59","to":"DCA","arrive":"2027-03-29 12:49","minutes":110,"overnight":false}],"layovers":[{"name":"Dallas/Fort Worth","code":"DFW","minutes":144,"overnight":false}],"minutes":339},"return_flight":null},{"id":"Washington, DC|2027-03-31|2027-04-04","destination":"Washington, DC","airports":["DCA","IAD","BWI"],"window":"Mar 29 \u2013 Apr 4","depart":"2027-03-31","return":"2027-04-04","nights":4,"max_price":350,"book_lo":27,"book_hi":62,"days_out":155,"phase":"far","best_from":"2027-01-28","best_until":"2027-03-04","check_every_days":21,"status":"ok","price":280,"airlines":["United"],"stops":0,"duration_min":null,"link":null,"price_level":"low","typical_range":[361,427],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":311,"delta":-31,"low_price":280,"observations":14,"effective_price":280,"oneway":null,"under_ceiling":true,"lowest_yet":true,"outbound_flight":{"segments":[{"airline":"United","flight":"UA 2955","from":"MCI","depart":"2027-03-31 12:15","to":"DCA","arrive":"2027-03-31 15:50","minutes":155,"overnight":false}],"layovers":[],"minutes":155},"return_flight":{"segments":[{"airline":"United","flight":"UA 366","from":"DCA","depart":"2027-04-04 17:55","to":"MCI","arrive":"2027-04-04 19:40","minutes":165,"overnight":false}],"layovers":[],"minutes":165}},{"id":"London|2027-03-29|2027-04-04","destination":"London","airports":["LHR","LGW"],"window":"Mar 29 \u2013 Apr 4","depart":"2027-03-29","return":"2027-04-04","nights":6,"max_price":1200,"book_lo":55,"book_hi":138,"days_out":153,"phase":"approaching","best_from":"2026-11-11","best_until":"2027-02-02","check_every_days":7,"status":"ok","price":1345,"airlines":["Aer Lingus"],"stops":1,"duration_min":null,"link":null,"price_level":"typical","typical_range":[1201,1421],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":1392,"delta":-47,"low_price":1313,"observations":14,"effective_price":1345,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Aer Lingus","flight":"EI 1925","from":"MCI","depart":"2027-03-29 17:55","to":"ORD","arrive":"2027-03-29 19:20","minutes":85,"overnight":false},{"airline":"Aer Lingus","flight":"EI 1265","from":"ORD","depart":"2027-03-29 21:09","to":"LHR","arrive":"2027-03-30 10:59","minutes":470,"overnight":true}],"layovers":[{"name":"Chicago O'Hare","code":"ORD","minutes":109,"overnight":false}],"minutes":664},"return_flight":null},{"id":"Boston|2027-05-14|2027-05-18","destination":"Boston","airports":["BOS"],"window":"May 14 \u2013 May 20","depart":"2027-05-14","return":"2027-05-18","nights":4,"max_price":350,"book_lo":22,"book_hi":57,"days_out":199,"phase":"far","best_from":"2027-03-18","best_until":"2027-04-22","check_every_days":21,"status":"ok","price":288,"airlines":["American"],"stops":0,"duration_min":null,"link":null,"price_level":"low","typical_range":[327,387],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":289,"delta":-1,"low_price":288,"observations":14,"effective_price":288,"oneway":null,"under_ceiling":true,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"American","flight":"AA 1680","from":"MCI","depart":"2027-05-14 17:55","to":"BOS","arrive":"2027-05-14 21:50","minutes":175,"overnight":false}],"layovers":[],"minutes":175},"return_flight":{"segments":[{"airline":"American","flight":"AA 1521","from":"BOS","depart":"2027-05-18 17:55","to":"MCI","arrive":"2027-05-18 20:00","minutes":185,"overnight":false}],"layovers":[],"minutes":185}},{"id":"Boston|2027-05-16|2027-05-20","destination":"Boston","airports":["BOS"],"window":"May 14 \u2013 May 20","depart":"2027-05-16","return":"2027-05-20","nights":4,"max_price":350,"book_lo":22,"book_hi":57,"days_out":201,"phase":"far","best_from":"2027-03-20","best_until":"2027-04-24","check_every_days":21,"status":"ok","price":338,"airlines":["Delta"],"stops":0,"duration_min":null,"link":null,"price_level":"typical","typical_range":[327,387],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":338,"delta":0,"low_price":338,"observations":14,"effective_price":338,"oneway":null,"under_ceiling":true,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Delta","flight":"DL 1991","from":"MCI","depart":"2027-05-16 06:10","to":"BOS","arrive":"2027-05-16 10:05","minutes":175,"overnight":false}],"layovers":[],"minutes":175},"return_flight":{"segments":[{"airline":"Delta","flight":"DL 788","from":"BOS","depart":"2027-05-20 09:40","to":"MCI","arrive":"2027-05-20 11:45","minutes":185,"overnight":false}],"layovers":[],"minutes":185}},{"id":"New York City|2027-05-14|2027-05-18","destination":"New York City","airports":["JFK","LGA","EWR"],"window":"May 14 \u2013 May 20","depart":"2027-05-14","return":"2027-05-18","nights":4,"max_price":500,"book_lo":22,"book_hi":57,"days_out":199,"phase":"far","best_from":"2027-03-18","best_until":"2027-04-22","check_every_days":21,"status":"ok","price":700,"airlines":["Delta"],"stops":0,"duration_min":null,"link":null,"price_level":"typical","typical_range":[636,752],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":731,"delta":-31,"low_price":664,"observations":14,"effective_price":700,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Delta","flight":"DL 579","from":"MCI","depart":"2027-05-14 14:30","to":"JFK","arrive":"2027-05-14 18:20","minutes":170,"overnight":false}],"layovers":[],"minutes":170},"return_flight":null},{"id":"New York City|2027-05-16|2027-05-20","destination":"New York City","airports":["JFK","LGA","EWR"],"window":"May 14 \u2013 May 20","depart":"2027-05-16","return":"2027-05-20","nights":4,"max_price":500,"book_lo":22,"book_hi":57,"days_out":201,"phase":"far","best_from":"2027-03-20","best_until":"2027-04-24","check_every_days":21,"status":"ok","price":633,"airlines":["Delta"],"stops":0,"duration_min":null,"link":null,"price_level":"typical","typical_range":[636,752],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":616,"delta":17,"low_price":616,"observations":14,"effective_price":633,"oneway":null,"under_ceiling":false,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Delta","flight":"DL 341","from":"MCI","depart":"2027-05-16 12:15","to":"JFK","arrive":"2027-05-16 16:05","minutes":170,"overnight":false}],"layovers":[],"minutes":170},"return_flight":null},{"id":"Washington, DC|2027-05-14|2027-05-18","destination":"Washington, DC","airports":["DCA","IAD","BWI"],"window":"May 14 \u2013 May 20","depart":"2027-05-14","return":"2027-05-18","nights":4,"max_price":350,"book_lo":22,"book_hi":57,"days_out":199,"phase":"far","best_from":"2027-03-18","best_until":"2027-04-22","check_every_days":21,"status":"ok","price":309,"airlines":["Southwest"],"stops":0,"duration_min":null,"link":null,"price_level":"low","typical_range":[327,387],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":309,"delta":0,"low_price":309,"observations":14,"effective_price":309,"oneway":null,"under_ceiling":true,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"Southwest","flight":"WN 1277","from":"MCI","depart":"2027-05-14 07:05","to":"DCA","arrive":"2027-05-14 10:40","minutes":155,"overnight":false}],"layovers":[],"minutes":155},"return_flight":{"segments":[{"airline":"Southwest","flight":"WN 1114","from":"DCA","depart":"2027-05-18 07:05","to":"MCI","arrive":"2027-05-18 08:50","minutes":165,"overnight":false}],"layovers":[],"minutes":165}},{"id":"Washington, DC|2027-05-16|2027-05-20","destination":"Washington, DC","airports":["DCA","IAD","BWI"],"window":"May 14 \u2013 May 20","depart":"2027-05-16","return":"2027-05-20","nights":4,"max_price":350,"book_lo":22,"book_hi":57,"days_out":201,"phase":"far","best_from":"2027-03-20","best_until":"2027-04-24","check_every_days":21,"status":"ok","price":290,"airlines":["United"],"stops":0,"duration_min":null,"link":null,"price_level":"low","typical_range":[327,387],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":317,"delta":-27,"low_price":290,"observations":14,"effective_price":290,"oneway":null,"under_ceiling":true,"lowest_yet":true,"outbound_flight":{"segments":[{"airline":"United","flight":"UA 1701","from":"MCI","depart":"2027-05-16 12:15","to":"DCA","arrive":"2027-05-16 15:50","minutes":155,"overnight":false}],"layovers":[],"minutes":155},"return_flight":{"segments":[{"airline":"United","flight":"UA 430","from":"DCA","depart":"2027-05-20 12:15","to":"MCI","arrive":"2027-05-20 14:00","minutes":165,"overnight":false}],"layovers":[],"minutes":165}},{"id":"London|2027-05-14|2027-05-20","destination":"London","airports":["LHR","LGW"],"window":"May 14 \u2013 May 20","depart":"2027-05-14","return":"2027-05-20","nights":6,"max_price":1200,"book_lo":50,"book_hi":133,"days_out":199,"phase":"far","best_from":"2027-01-01","best_until":"2027-03-25","check_every_days":21,"status":"ok","price":989,"airlines":["American"],"stops":1,"duration_min":null,"link":null,"price_level":"low","typical_range":[1087,1285],"observed_at":"2026-10-27T14:00:00+00:00","prev_price":1013,"delta":-24,"low_price":989,"observations":14,"effective_price":989,"oneway":null,"under_ceiling":true,"lowest_yet":false,"outbound_flight":{"segments":[{"airline":"American","flight":"AA 1238","from":"MCI","depart":"2027-05-14 14:30","to":"ORD","arrive":"2027-05-14 15:55","minutes":85,"overnight":false},{"airline":"American","flight":"AA 660","from":"ORD","depart":"2027-05-14 18:02","to":"LHR","arrive":"2027-05-15 07:52","minutes":470,"overnight":true}],"layovers":[{"name":"Chicago O'Hare","code":"ORD","minutes":127,"overnight":false}],"minutes":682},"return_flight":{"segments":[{"airline":"American","flight":"AA 2353","from":"LHR","depart":"2027-05-20 12:15","to":"ORD","arrive":"2027-05-20 14:45","minutes":510,"overnight":false},{"airline":"American","flight":"AA 1240","from":"ORD","depart":"2027-05-20 16:46","to":"MCI","arrive":"2027-05-20 18:11","minutes":85,"overnight":false}],"layovers":[{"name":"Chicago O'Hare","code":"ORD","minutes":121,"overnight":false}],"minutes":716}}],"skipped":["Delhi / Mar 29 \u2013 Apr 4: window too short (6 nights, needs 8+)","Delhi / May 14 \u2013 May 20: window too short (6 nights, needs 8+)"]},"history":[{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Boston|2026-12-18|2026-12-22","price":491,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Boston|2026-12-18|2026-12-22","price":498,"airlines":["Delta"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Boston|2026-12-18|2026-12-22","price":486,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Boston|2026-12-18|2026-12-22","price":490,"airlines":["Delta"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Boston|2026-12-18|2026-12-22","price":490,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Boston|2026-12-18|2026-12-22","price":484,"airlines":["Delta"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Boston|2026-12-18|2026-12-22","price":470,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Boston|2026-12-18|2026-12-22","price":475,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Boston|2026-12-18|2026-12-22","price":460,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Boston|2026-12-18|2026-12-22","price":464,"airlines":["Delta"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Boston|2026-12-18|2026-12-22","price":464,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Boston|2026-12-18|2026-12-22","price":451,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Boston|2026-12-18|2026-12-22","price":454,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Boston|2026-12-18|2026-12-22","price":469,"airlines":["Delta"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Boston|2027-01-01|2027-01-05","price":515,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Boston|2027-01-01|2027-01-05","price":510,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Boston|2027-01-01|2027-01-05","price":491,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Boston|2027-01-01|2027-01-05","price":500,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Boston|2027-01-01|2027-01-05","price":472,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Boston|2027-01-01|2027-01-05","price":461,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Boston|2027-01-01|2027-01-05","price":450,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Boston|2027-01-01|2027-01-05","price":456,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Boston|2027-01-01|2027-01-05","price":428,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Boston|2027-01-01|2027-01-05","price":412,"airlines":["Delta"],"stops":0,"price_level":"low","typical_range":[447,529]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Boston|2027-01-01|2027-01-05","price":416,"airlines":["Southwest"],"stops":0,"price_level":"low","typical_range":[447,529]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Boston|2027-01-01|2027-01-05","price":405,"airlines":["Southwest"],"stops":0,"price_level":"low","typical_range":[447,529]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Boston|2027-01-01|2027-01-05","price":389,"airlines":["Delta"],"stops":0,"price_level":"low","typical_range":[447,529]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Boston|2027-01-01|2027-01-05","price":380,"airlines":["Southwest"],"stops":0,"price_level":"low","typical_range":[447,529]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Boston|2027-01-14|2027-01-18","price":360,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[310,366]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Boston|2027-01-14|2027-01-18","price":375,"airlines":["Delta"],"stops":1,"price_level":"high","typical_range":[310,366]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Boston|2027-01-14|2027-01-18","price":367,"airlines":["Delta"],"stops":1,"price_level":"high","typical_range":[310,366]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Boston|2027-01-14|2027-01-18","price":356,"airlines":["Delta"],"stops":1,"price_level":"typical","typical_range":[310,366]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Boston|2027-01-14|2027-01-18","price":364,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[310,366]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Boston|2027-01-14|2027-01-18","price":365,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[310,366]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Boston|2027-01-14|2027-01-18","price":375,"airlines":["American"],"stops":1,"price_level":"high","typical_range":[310,366]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Boston|2027-01-14|2027-01-18","price":368,"airlines":["Southwest"],"stops":1,"price_level":"high","typical_range":[310,366]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Boston|2027-01-14|2027-01-18","price":369,"airlines":["Delta"],"stops":1,"price_level":"high","typical_range":[310,366]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Boston|2027-01-14|2027-01-18","price":376,"airlines":["Delta"],"stops":1,"price_level":"high","typical_range":[310,366]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Boston|2027-01-14|2027-01-18","price":357,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[310,366]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Boston|2027-01-14|2027-01-18","price":368,"airlines":["Southwest"],"stops":1,"price_level":"high","typical_range":[310,366]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Boston|2027-01-14|2027-01-18","price":365,"airlines":["Delta"],"stops":1,"price_level":"typical","typical_range":[310,366]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Boston|2027-01-14|2027-01-18","price":363,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[310,366]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"New York City|2026-12-18|2026-12-22","price":1083,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[870,1030]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"New York City|2026-12-18|2026-12-22","price":1042,"airlines":["United"],"stops":0,"price_level":"high","typical_range":[870,1030]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"New York City|2026-12-18|2026-12-22","price":1071,"airlines":["Delta"],"stops":0,"price_level":"high","typical_range":[870,1030]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"New York City|2026-12-18|2026-12-22","price":1075,"airlines":["Delta"],"stops":0,"price_level":"high","typical_range":[870,1030]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"New York City|2026-12-18|2026-12-22","price":1053,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[870,1030]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"New York City|2026-12-18|2026-12-22","price":1033,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[870,1030]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"New York City|2026-12-18|2026-12-22","price":997,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"New York City|2026-12-18|2026-12-22","price":964,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"New York City|2026-12-18|2026-12-22","price":967,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"New York City|2026-12-18|2026-12-22","price":937,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"New York City|2026-12-18|2026-12-22","price":930,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"New York City|2026-12-18|2026-12-22","price":882,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"New York City|2026-12-18|2026-12-22","price":862,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"New York City|2026-12-18|2026-12-22","price":868,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"New York City|2027-01-01|2027-01-05","price":1010,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"New York City|2027-01-01|2027-01-05","price":981,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"New York City|2027-01-01|2027-01-05","price":1001,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"New York City|2027-01-01|2027-01-05","price":988,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"New York City|2027-01-01|2027-01-05","price":1023,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"New York City|2027-01-01|2027-01-05","price":986,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"New York City|2027-01-01|2027-01-05","price":989,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"New York City|2027-01-01|2027-01-05","price":1033,"airlines":["United"],"stops":0,"price_level":"high","typical_range":[870,1030]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"New York City|2027-01-01|2027-01-05","price":1042,"airlines":["United"],"stops":0,"price_level":"high","typical_range":[870,1030]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"New York City|2027-01-01|2027-01-05","price":1023,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"New York City|2027-01-01|2027-01-05","price":1015,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[870,1030]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"New York City|2027-01-01|2027-01-05","price":1090,"airlines":["Delta"],"stops":0,"price_level":"high","typical_range":[870,1030]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"New York City|2027-01-01|2027-01-05","price":1083,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[870,1030]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"New York City|2027-01-01|2027-01-05","price":1045,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[870,1030]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"New York City|2027-01-14|2027-01-18","price":748,"airlines":["United"],"stops":0,"price_level":"high","typical_range":[603,713]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"New York City|2027-01-14|2027-01-18","price":733,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[603,713]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"New York City|2027-01-14|2027-01-18","price":727,"airlines":["Delta"],"stops":0,"price_level":"high","typical_range":[603,713]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"New York City|2027-01-14|2027-01-18","price":735,"airlines":["Delta"],"stops":0,"price_level":"high","typical_range":[603,713]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"New York City|2027-01-14|2027-01-18","price":697,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[603,713]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"New York City|2027-01-14|2027-01-18","price":708,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[603,713]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"New York City|2027-01-14|2027-01-18","price":707,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[603,713]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"New York City|2027-01-14|2027-01-18","price":674,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[603,713]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"New York City|2027-01-14|2027-01-18","price":671,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[603,713]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"New York City|2027-01-14|2027-01-18","price":670,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[603,713]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"New York City|2027-01-14|2027-01-18","price":655,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[603,713]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"New York City|2027-01-14|2027-01-18","price":647,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[603,713]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"New York City|2027-01-14|2027-01-18","price":622,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[603,713]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"New York City|2027-01-14|2027-01-18","price":645,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[603,713]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Washington, DC|2026-12-18|2026-12-22","price":467,"airlines":["United"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Washington, DC|2026-12-18|2026-12-22","price":489,"airlines":["United"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Washington, DC|2026-12-18|2026-12-22","price":488,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Washington, DC|2026-12-18|2026-12-22","price":474,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Washington, DC|2026-12-18|2026-12-22","price":454,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Washington, DC|2026-12-18|2026-12-22","price":454,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Washington, DC|2026-12-18|2026-12-22","price":458,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Washington, DC|2026-12-18|2026-12-22","price":452,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Washington, DC|2026-12-18|2026-12-22","price":444,"airlines":["United"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Washington, DC|2026-12-18|2026-12-22","price":441,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Washington, DC|2026-12-18|2026-12-22","price":473,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Washington, DC|2026-12-18|2026-12-22","price":461,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Washington, DC|2026-12-18|2026-12-22","price":452,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Washington, DC|2026-12-18|2026-12-22","price":440,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Washington, DC|2027-01-01|2027-01-05","price":551,"airlines":["American"],"stops":1,"price_level":"high","typical_range":[447,529]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Washington, DC|2027-01-01|2027-01-05","price":550,"airlines":["Southwest"],"stops":1,"price_level":"high","typical_range":[447,529]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Washington, DC|2027-01-01|2027-01-05","price":506,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Washington, DC|2027-01-01|2027-01-05","price":500,"airlines":["United"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Washington, DC|2027-01-01|2027-01-05","price":490,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Washington, DC|2027-01-01|2027-01-05","price":469,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Washington, DC|2027-01-01|2027-01-05","price":452,"airlines":["United"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Washington, DC|2027-01-01|2027-01-05","price":441,"airlines":["United"],"stops":1,"price_level":"typical","typical_range":[447,529]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Washington, DC|2027-01-01|2027-01-05","price":419,"airlines":["Southwest"],"stops":1,"price_level":"low","typical_range":[447,529]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Washington, DC|2027-01-01|2027-01-05","price":405,"airlines":["United"],"stops":1,"price_level":"low","typical_range":[447,529]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Washington, DC|2027-01-01|2027-01-05","price":395,"airlines":["American"],"stops":1,"price_level":"low","typical_range":[447,529]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Washington, DC|2027-01-01|2027-01-05","price":393,"airlines":["United"],"stops":1,"price_level":"low","typical_range":[447,529]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Washington, DC|2027-01-01|2027-01-05","price":378,"airlines":["Southwest"],"stops":1,"price_level":"low","typical_range":[447,529]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Washington, DC|2027-01-01|2027-01-05","price":341,"airlines":["Southwest"],"stops":1,"price_level":"low","typical_range":[447,529]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Washington, DC|2027-01-14|2027-01-18","price":398,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[310,366]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Washington, DC|2027-01-14|2027-01-18","price":384,"airlines":["Southwest"],"stops":0,"price_level":"high","typical_range":[310,366]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Washington, DC|2027-01-14|2027-01-18","price":384,"airlines":["Southwest"],"stops":0,"price_level":"high","typical_range":[310,366]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Washington, DC|2027-01-14|2027-01-18","price":379,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[310,366]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Washington, DC|2027-01-14|2027-01-18","price":381,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[310,366]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Washington, DC|2027-01-14|2027-01-18","price":367,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[310,366]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Washington, DC|2027-01-14|2027-01-18","price":376,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[310,366]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Washington, DC|2027-01-14|2027-01-18","price":372,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[310,366]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Washington, DC|2027-01-14|2027-01-18","price":353,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[310,366]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Washington, DC|2027-01-14|2027-01-18","price":358,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[310,366]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Washington, DC|2027-01-14|2027-01-18","price":354,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[310,366]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Washington, DC|2027-01-14|2027-01-18","price":355,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[310,366]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Washington, DC|2027-01-14|2027-01-18","price":355,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[310,366]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Washington, DC|2027-01-14|2027-01-18","price":328,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[310,366]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"London|2026-12-18|2026-12-25","price":1818,"airlines":["Aer Lingus"],"stops":1,"price_level":"high","typical_range":[1487,1759]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"London|2026-12-18|2026-12-25","price":1794,"airlines":["American"],"stops":1,"price_level":"high","typical_range":[1487,1759]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"London|2026-12-18|2026-12-25","price":1803,"airlines":["British Airways"],"stops":1,"price_level":"high","typical_range":[1487,1759]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"London|2026-12-18|2026-12-25","price":1791,"airlines":["American"],"stops":1,"price_level":"high","typical_range":[1487,1759]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"London|2026-12-18|2026-12-25","price":1761,"airlines":["American"],"stops":1,"price_level":"high","typical_range":[1487,1759]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"London|2026-12-18|2026-12-25","price":1735,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"London|2026-12-18|2026-12-25","price":1824,"airlines":["American"],"stops":1,"price_level":"high","typical_range":[1487,1759]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"London|2026-12-18|2026-12-25","price":1753,"airlines":["British Airways"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"London|2026-12-18|2026-12-25","price":1694,"airlines":["British Airways"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"London|2026-12-18|2026-12-25","price":1676,"airlines":["British Airways"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"London|2026-12-18|2026-12-25","price":1671,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"London|2026-12-18|2026-12-25","price":1719,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"London|2026-12-18|2026-12-25","price":1672,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"London|2026-12-18|2026-12-25","price":1696,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"London|2026-12-30|2027-01-06","price":1829,"airlines":["Aer Lingus"],"stops":1,"price_level":"high","typical_range":[1487,1759]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"London|2026-12-30|2027-01-06","price":1754,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"London|2026-12-30|2027-01-06","price":1730,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"London|2026-12-30|2027-01-06","price":1737,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"London|2026-12-30|2027-01-06","price":1621,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"London|2026-12-30|2027-01-06","price":1610,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"London|2026-12-30|2027-01-06","price":1521,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"London|2026-12-30|2027-01-06","price":1428,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"London|2026-12-30|2027-01-06","price":1426,"airlines":["British Airways"],"stops":1,"price_level":"typical","typical_range":[1487,1759]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"London|2026-12-30|2027-01-06","price":1355,"airlines":["American"],"stops":1,"price_level":"low","typical_range":[1487,1759]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"London|2026-12-30|2027-01-06","price":1305,"airlines":["British Airways"],"stops":1,"price_level":"low","typical_range":[1487,1759]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"London|2026-12-30|2027-01-06","price":1255,"airlines":["American"],"stops":1,"price_level":"low","typical_range":[1487,1759]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"London|2026-12-30|2027-01-06","price":1207,"airlines":["British Airways"],"stops":1,"price_level":"low","typical_range":[1487,1759]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"London|2026-12-30|2027-01-06","price":1185,"airlines":["American"],"stops":1,"price_level":"low","typical_range":[1487,1759]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"London|2027-01-11|2027-01-18","price":1181,"airlines":["British Airways"],"stops":1,"price_level":"typical","typical_range":[1030,1218]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"London|2027-01-11|2027-01-18","price":1124,"airlines":["British Airways"],"stops":1,"price_level":"typical","typical_range":[1030,1218]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"London|2027-01-11|2027-01-18","price":1048,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1030,1218]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"London|2027-01-11|2027-01-18","price":1052,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1030,1218]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"London|2027-01-11|2027-01-18","price":1083,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[1030,1218]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"London|2027-01-11|2027-01-18","price":976,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1030,1218]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"London|2027-01-11|2027-01-18","price":960,"airlines":["American"],"stops":1,"price_level":"low","typical_range":[1030,1218]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"London|2027-01-11|2027-01-18","price":959,"airlines":["British Airways"],"stops":1,"price_level":"low","typical_range":[1030,1218]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"London|2027-01-11|2027-01-18","price":970,"airlines":["Aer Lingus"],"stops":1,"price_level":"low","typical_range":[1030,1218]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"London|2027-01-11|2027-01-18","price":897,"airlines":["British Airways"],"stops":1,"price_level":"low","typical_range":[1030,1218]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"London|2027-01-11|2027-01-18","price":870,"airlines":["British Airways"],"stops":1,"price_level":"low","typical_range":[1030,1218]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"London|2027-01-11|2027-01-18","price":888,"airlines":["Aer Lingus"],"stops":1,"price_level":"low","typical_range":[1030,1218]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"London|2027-01-11|2027-01-18","price":866,"airlines":["American"],"stops":1,"price_level":"low","typical_range":[1030,1218]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"London|2027-01-11|2027-01-18","price":860,"airlines":["British Airways"],"stops":1,"price_level":"low","typical_range":[1030,1218]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Delhi|2026-12-18|2026-12-28","price":4588,"airlines":["Emirates"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Delhi|2026-12-18|2026-12-28","price":4386,"airlines":["Emirates"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Delhi|2026-12-18|2026-12-28","price":4237,"airlines":["Lufthansa"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Delhi|2026-12-18|2026-12-28","price":4294,"airlines":["Air India"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Delhi|2026-12-18|2026-12-28","price":4175,"airlines":["Lufthansa"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Delhi|2026-12-18|2026-12-28","price":4181,"airlines":["Lufthansa"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Delhi|2026-12-18|2026-12-28","price":4060,"airlines":["Emirates"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Delhi|2026-12-18|2026-12-28","price":3890,"airlines":["Lufthansa"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Delhi|2026-12-18|2026-12-28","price":3674,"airlines":["Lufthansa"],"stops":1,"price_level":"low","typical_range":[4111,4862]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Delhi|2026-12-18|2026-12-28","price":3754,"airlines":["Lufthansa"],"stops":1,"price_level":"low","typical_range":[4111,4862]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Delhi|2026-12-18|2026-12-28","price":3698,"airlines":["Emirates"],"stops":1,"price_level":"low","typical_range":[4111,4862]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Delhi|2026-12-18|2026-12-28","price":3269,"airlines":["Air India"],"stops":1,"price_level":"low","typical_range":[4111,4862]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Delhi|2026-12-18|2026-12-28","price":3384,"airlines":["Air India"],"stops":1,"price_level":"low","typical_range":[4111,4862]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Delhi|2026-12-18|2026-12-28","price":3367,"airlines":["Emirates"],"stops":1,"price_level":"low","typical_range":[4111,4862]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Delhi|2026-12-29|2027-01-08","price":5184,"airlines":["Lufthansa"],"stops":1,"price_level":"high","typical_range":[4111,4862]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Delhi|2026-12-29|2027-01-08","price":5108,"airlines":["Emirates"],"stops":1,"price_level":"high","typical_range":[4111,4862]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Delhi|2026-12-29|2027-01-08","price":5030,"airlines":["Emirates"],"stops":1,"price_level":"high","typical_range":[4111,4862]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Delhi|2026-12-29|2027-01-08","price":4763,"airlines":["Lufthansa"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Delhi|2026-12-29|2027-01-08","price":4708,"airlines":["Emirates"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Delhi|2026-12-29|2027-01-08","price":4773,"airlines":["Lufthansa"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Delhi|2026-12-29|2027-01-08","price":4571,"airlines":["Air India"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Delhi|2026-12-29|2027-01-08","price":4332,"airlines":["Emirates"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Delhi|2026-12-29|2027-01-08","price":4241,"airlines":["Air India"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Delhi|2026-12-29|2027-01-08","price":4433,"airlines":["Lufthansa"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Delhi|2026-12-29|2027-01-08","price":4255,"airlines":["Air India"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Delhi|2026-12-29|2027-01-08","price":4143,"airlines":["Air India"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Delhi|2026-12-29|2027-01-08","price":3933,"airlines":["Lufthansa"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Delhi|2026-12-29|2027-01-08","price":3996,"airlines":["Air India"],"stops":1,"price_level":"typical","typical_range":[4111,4862]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Delhi|2027-01-08|2027-01-18","price":3622,"airlines":["Lufthansa"],"stops":1,"price_level":"high","typical_range":[2846,3366]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Delhi|2027-01-08|2027-01-18","price":3364,"airlines":["Lufthansa"],"stops":1,"price_level":"typical","typical_range":[2846,3366]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Delhi|2027-01-08|2027-01-18","price":3363,"airlines":["Lufthansa"],"stops":1,"price_level":"typical","typical_range":[2846,3366]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Delhi|2027-01-08|2027-01-18","price":3140,"airlines":["Emirates"],"stops":1,"price_level":"typical","typical_range":[2846,3366]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Delhi|2027-01-08|2027-01-18","price":3132,"airlines":["Lufthansa"],"stops":1,"price_level":"typical","typical_range":[2846,3366]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Delhi|2027-01-08|2027-01-18","price":3147,"airlines":["Lufthansa"],"stops":1,"price_level":"typical","typical_range":[2846,3366]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Delhi|2027-01-08|2027-01-18","price":2896,"airlines":["Lufthansa"],"stops":1,"price_level":"typical","typical_range":[2846,3366]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Delhi|2027-01-08|2027-01-18","price":2792,"airlines":["Air India"],"stops":1,"price_level":"typical","typical_range":[2846,3366]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Delhi|2027-01-08|2027-01-18","price":2855,"airlines":["Emirates"],"stops":1,"price_level":"typical","typical_range":[2846,3366]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Delhi|2027-01-08|2027-01-18","price":2719,"airlines":["Emirates"],"stops":1,"price_level":"typical","typical_range":[2846,3366]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Delhi|2027-01-08|2027-01-18","price":2505,"airlines":["Lufthansa"],"stops":1,"price_level":"low","typical_range":[2846,3366]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Delhi|2027-01-08|2027-01-18","price":2566,"airlines":["Air India"],"stops":1,"price_level":"low","typical_range":[2846,3366]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Delhi|2027-01-08|2027-01-18","price":2353,"airlines":["Emirates"],"stops":1,"price_level":"low","typical_range":[2846,3366]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Delhi|2027-01-08|2027-01-18","price":2295,"airlines":["Emirates"],"stops":1,"price_level":"low","typical_range":[2846,3366]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Boston|2027-03-29|2027-04-02","price":429,"airlines":["Delta"],"stops":0,"price_level":"high","typical_range":[361,427]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Boston|2027-03-29|2027-04-02","price":402,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Boston|2027-03-29|2027-04-02","price":425,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Boston|2027-03-29|2027-04-02","price":419,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Boston|2027-03-29|2027-04-02","price":416,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Boston|2027-03-29|2027-04-02","price":415,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Boston|2027-03-29|2027-04-02","price":433,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[361,427]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Boston|2027-03-29|2027-04-02","price":421,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Boston|2027-03-29|2027-04-02","price":439,"airlines":["Delta"],"stops":0,"price_level":"high","typical_range":[361,427]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Boston|2027-03-29|2027-04-02","price":446,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[361,427]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Boston|2027-03-29|2027-04-02","price":455,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[361,427]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Boston|2027-03-29|2027-04-02","price":443,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[361,427]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Boston|2027-03-29|2027-04-02","price":452,"airlines":["Delta"],"stops":0,"price_level":"high","typical_range":[361,427]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Boston|2027-03-29|2027-04-02","price":457,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[361,427]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Boston|2027-03-31|2027-04-04","price":402,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Boston|2027-03-31|2027-04-04","price":373,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Boston|2027-03-31|2027-04-04","price":386,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Boston|2027-03-31|2027-04-04","price":367,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Boston|2027-03-31|2027-04-04","price":387,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Boston|2027-03-31|2027-04-04","price":372,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Boston|2027-03-31|2027-04-04","price":377,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Boston|2027-03-31|2027-04-04","price":372,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Boston|2027-03-31|2027-04-04","price":353,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Boston|2027-03-31|2027-04-04","price":363,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Boston|2027-03-31|2027-04-04","price":360,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Boston|2027-03-31|2027-04-04","price":339,"airlines":["Delta"],"stops":0,"price_level":"low","typical_range":[361,427]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Boston|2027-03-31|2027-04-04","price":334,"airlines":["Southwest"],"stops":0,"price_level":"low","typical_range":[361,427]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Boston|2027-03-31|2027-04-04","price":336,"airlines":["Delta"],"stops":0,"price_level":"low","typical_range":[361,427]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"New York City|2027-03-29|2027-04-02","price":811,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"New York City|2027-03-29|2027-04-02","price":800,"airlines":["United"],"stops":1,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"New York City|2027-03-29|2027-04-02","price":792,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"New York City|2027-03-29|2027-04-02","price":798,"airlines":["Delta"],"stops":1,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"New York City|2027-03-29|2027-04-02","price":845,"airlines":["American"],"stops":1,"price_level":"high","typical_range":[703,832]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"New York City|2027-03-29|2027-04-02","price":818,"airlines":["Delta"],"stops":1,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"New York City|2027-03-29|2027-04-02","price":821,"airlines":["United"],"stops":1,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"New York City|2027-03-29|2027-04-02","price":829,"airlines":["Delta"],"stops":1,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"New York City|2027-03-29|2027-04-02","price":847,"airlines":["United"],"stops":1,"price_level":"high","typical_range":[703,832]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"New York City|2027-03-29|2027-04-02","price":838,"airlines":["American"],"stops":1,"price_level":"high","typical_range":[703,832]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"New York City|2027-03-29|2027-04-02","price":867,"airlines":["American"],"stops":1,"price_level":"high","typical_range":[703,832]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"New York City|2027-03-29|2027-04-02","price":837,"airlines":["American"],"stops":1,"price_level":"high","typical_range":[703,832]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"New York City|2027-03-29|2027-04-02","price":841,"airlines":["Delta"],"stops":1,"price_level":"high","typical_range":[703,832]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"New York City|2027-03-29|2027-04-02","price":867,"airlines":["United"],"stops":1,"price_level":"high","typical_range":[703,832]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"New York City|2027-03-31|2027-04-04","price":787,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"New York City|2027-03-31|2027-04-04","price":783,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"New York City|2027-03-31|2027-04-04","price":763,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"New York City|2027-03-31|2027-04-04","price":766,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"New York City|2027-03-31|2027-04-04","price":732,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"New York City|2027-03-31|2027-04-04","price":732,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"New York City|2027-03-31|2027-04-04","price":730,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"New York City|2027-03-31|2027-04-04","price":717,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"New York City|2027-03-31|2027-04-04","price":690,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[703,832]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"New York City|2027-03-31|2027-04-04","price":640,"airlines":["American"],"stops":0,"price_level":"low","typical_range":[703,832]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"New York City|2027-03-31|2027-04-04","price":651,"airlines":["United"],"stops":0,"price_level":"low","typical_range":[703,832]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"New York City|2027-03-31|2027-04-04","price":652,"airlines":["Delta"],"stops":0,"price_level":"low","typical_range":[703,832]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"New York City|2027-03-31|2027-04-04","price":590,"airlines":["American"],"stops":0,"price_level":"low","typical_range":[703,832]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"New York City|2027-03-31|2027-04-04","price":598,"airlines":["American"],"stops":0,"price_level":"low","typical_range":[703,832]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Washington, DC|2027-03-29|2027-04-02","price":390,"airlines":["United"],"stops":1,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Washington, DC|2027-03-29|2027-04-02","price":403,"airlines":["United"],"stops":1,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Washington, DC|2027-03-29|2027-04-02","price":386,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Washington, DC|2027-03-29|2027-04-02","price":399,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Washington, DC|2027-03-29|2027-04-02","price":378,"airlines":["United"],"stops":1,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Washington, DC|2027-03-29|2027-04-02","price":384,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Washington, DC|2027-03-29|2027-04-02","price":397,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Washington, DC|2027-03-29|2027-04-02","price":381,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Washington, DC|2027-03-29|2027-04-02","price":383,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Washington, DC|2027-03-29|2027-04-02","price":392,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Washington, DC|2027-03-29|2027-04-02","price":394,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Washington, DC|2027-03-29|2027-04-02","price":374,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Washington, DC|2027-03-29|2027-04-02","price":398,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Washington, DC|2027-03-29|2027-04-02","price":386,"airlines":["Southwest"],"stops":1,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Washington, DC|2027-03-31|2027-04-04","price":453,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[361,427]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Washington, DC|2027-03-31|2027-04-04","price":438,"airlines":["Southwest"],"stops":0,"price_level":"high","typical_range":[361,427]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Washington, DC|2027-03-31|2027-04-04","price":411,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Washington, DC|2027-03-31|2027-04-04","price":425,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Washington, DC|2027-03-31|2027-04-04","price":390,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Washington, DC|2027-03-31|2027-04-04","price":389,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Washington, DC|2027-03-31|2027-04-04","price":392,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Washington, DC|2027-03-31|2027-04-04","price":370,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Washington, DC|2027-03-31|2027-04-04","price":348,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Washington, DC|2027-03-31|2027-04-04","price":345,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[361,427]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Washington, DC|2027-03-31|2027-04-04","price":329,"airlines":["United"],"stops":0,"price_level":"low","typical_range":[361,427]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Washington, DC|2027-03-31|2027-04-04","price":329,"airlines":["Southwest"],"stops":0,"price_level":"low","typical_range":[361,427]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Washington, DC|2027-03-31|2027-04-04","price":311,"airlines":["Southwest"],"stops":0,"price_level":"low","typical_range":[361,427]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Washington, DC|2027-03-31|2027-04-04","price":280,"airlines":["United"],"stops":0,"price_level":"low","typical_range":[361,427]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"London|2027-03-29|2027-04-04","price":1313,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[1201,1421]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"London|2027-03-29|2027-04-04","price":1348,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1201,1421]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"London|2027-03-29|2027-04-04","price":1339,"airlines":["British Airways"],"stops":1,"price_level":"typical","typical_range":[1201,1421]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"London|2027-03-29|2027-04-04","price":1361,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[1201,1421]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"London|2027-03-29|2027-04-04","price":1392,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1201,1421]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"London|2027-03-29|2027-04-04","price":1380,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1201,1421]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"London|2027-03-29|2027-04-04","price":1361,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1201,1421]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"London|2027-03-29|2027-04-04","price":1390,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[1201,1421]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"London|2027-03-29|2027-04-04","price":1415,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1201,1421]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"London|2027-03-29|2027-04-04","price":1326,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1201,1421]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"London|2027-03-29|2027-04-04","price":1420,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1201,1421]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"London|2027-03-29|2027-04-04","price":1355,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[1201,1421]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"London|2027-03-29|2027-04-04","price":1392,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[1201,1421]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"London|2027-03-29|2027-04-04","price":1345,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1201,1421]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Boston|2027-05-14|2027-05-18","price":430,"airlines":["Delta"],"stops":0,"price_level":"high","typical_range":[327,387]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Boston|2027-05-14|2027-05-18","price":407,"airlines":["Southwest"],"stops":0,"price_level":"high","typical_range":[327,387]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Boston|2027-05-14|2027-05-18","price":400,"airlines":["Delta"],"stops":0,"price_level":"high","typical_range":[327,387]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Boston|2027-05-14|2027-05-18","price":399,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[327,387]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Boston|2027-05-14|2027-05-18","price":374,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Boston|2027-05-14|2027-05-18","price":363,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Boston|2027-05-14|2027-05-18","price":344,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Boston|2027-05-14|2027-05-18","price":352,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Boston|2027-05-14|2027-05-18","price":341,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Boston|2027-05-14|2027-05-18","price":323,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Boston|2027-05-14|2027-05-18","price":318,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Boston|2027-05-14|2027-05-18","price":298,"airlines":["Delta"],"stops":0,"price_level":"low","typical_range":[327,387]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Boston|2027-05-14|2027-05-18","price":289,"airlines":["Delta"],"stops":0,"price_level":"low","typical_range":[327,387]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Boston|2027-05-14|2027-05-18","price":288,"airlines":["American"],"stops":0,"price_level":"low","typical_range":[327,387]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Boston|2027-05-16|2027-05-20","price":364,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Boston|2027-05-16|2027-05-20","price":364,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Boston|2027-05-16|2027-05-20","price":357,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Boston|2027-05-16|2027-05-20","price":364,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Boston|2027-05-16|2027-05-20","price":361,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Boston|2027-05-16|2027-05-20","price":341,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Boston|2027-05-16|2027-05-20","price":356,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Boston|2027-05-16|2027-05-20","price":348,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Boston|2027-05-16|2027-05-20","price":353,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Boston|2027-05-16|2027-05-20","price":352,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Boston|2027-05-16|2027-05-20","price":350,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Boston|2027-05-16|2027-05-20","price":356,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Boston|2027-05-16|2027-05-20","price":338,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Boston|2027-05-16|2027-05-20","price":338,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"New York City|2027-05-14|2027-05-18","price":667,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"New York City|2027-05-14|2027-05-18","price":668,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"New York City|2027-05-14|2027-05-18","price":664,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"New York City|2027-05-14|2027-05-18","price":666,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"New York City|2027-05-14|2027-05-18","price":697,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"New York City|2027-05-14|2027-05-18","price":704,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"New York City|2027-05-14|2027-05-18","price":686,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"New York City|2027-05-14|2027-05-18","price":678,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"New York City|2027-05-14|2027-05-18","price":719,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"New York City|2027-05-14|2027-05-18","price":696,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"New York City|2027-05-14|2027-05-18","price":685,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"New York City|2027-05-14|2027-05-18","price":689,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"New York City|2027-05-14|2027-05-18","price":731,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"New York City|2027-05-14|2027-05-18","price":700,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"New York City|2027-05-16|2027-05-20","price":831,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[636,752]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"New York City|2027-05-16|2027-05-20","price":828,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[636,752]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"New York City|2027-05-16|2027-05-20","price":808,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[636,752]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"New York City|2027-05-16|2027-05-20","price":809,"airlines":["Delta"],"stops":0,"price_level":"high","typical_range":[636,752]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"New York City|2027-05-16|2027-05-20","price":775,"airlines":["United"],"stops":0,"price_level":"high","typical_range":[636,752]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"New York City|2027-05-16|2027-05-20","price":774,"airlines":["United"],"stops":0,"price_level":"high","typical_range":[636,752]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"New York City|2027-05-16|2027-05-20","price":750,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"New York City|2027-05-16|2027-05-20","price":735,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"New York City|2027-05-16|2027-05-20","price":717,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"New York City|2027-05-16|2027-05-20","price":699,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"New York City|2027-05-16|2027-05-20","price":655,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"New York City|2027-05-16|2027-05-20","price":654,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"New York City|2027-05-16|2027-05-20","price":616,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"New York City|2027-05-16|2027-05-20","price":633,"airlines":["Delta"],"stops":0,"price_level":"typical","typical_range":[636,752]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Washington, DC|2027-05-14|2027-05-18","price":408,"airlines":["United"],"stops":0,"price_level":"high","typical_range":[327,387]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Washington, DC|2027-05-14|2027-05-18","price":403,"airlines":["United"],"stops":0,"price_level":"high","typical_range":[327,387]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Washington, DC|2027-05-14|2027-05-18","price":403,"airlines":["United"],"stops":0,"price_level":"high","typical_range":[327,387]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Washington, DC|2027-05-14|2027-05-18","price":399,"airlines":["Southwest"],"stops":0,"price_level":"high","typical_range":[327,387]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Washington, DC|2027-05-14|2027-05-18","price":385,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Washington, DC|2027-05-14|2027-05-18","price":360,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Washington, DC|2027-05-14|2027-05-18","price":358,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Washington, DC|2027-05-14|2027-05-18","price":355,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Washington, DC|2027-05-14|2027-05-18","price":355,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Washington, DC|2027-05-14|2027-05-18","price":336,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Washington, DC|2027-05-14|2027-05-18","price":338,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Washington, DC|2027-05-14|2027-05-18","price":316,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Washington, DC|2027-05-14|2027-05-18","price":309,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Washington, DC|2027-05-14|2027-05-18","price":309,"airlines":["Southwest"],"stops":0,"price_level":"low","typical_range":[327,387]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"Washington, DC|2027-05-16|2027-05-20","price":416,"airlines":["Southwest"],"stops":0,"price_level":"high","typical_range":[327,387]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"Washington, DC|2027-05-16|2027-05-20","price":405,"airlines":["United"],"stops":0,"price_level":"high","typical_range":[327,387]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"Washington, DC|2027-05-16|2027-05-20","price":398,"airlines":["United"],"stops":0,"price_level":"high","typical_range":[327,387]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"Washington, DC|2027-05-16|2027-05-20","price":396,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[327,387]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"Washington, DC|2027-05-16|2027-05-20","price":392,"airlines":["American"],"stops":0,"price_level":"high","typical_range":[327,387]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"Washington, DC|2027-05-16|2027-05-20","price":369,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"Washington, DC|2027-05-16|2027-05-20","price":352,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"Washington, DC|2027-05-16|2027-05-20","price":342,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"Washington, DC|2027-05-16|2027-05-20","price":341,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"Washington, DC|2027-05-16|2027-05-20","price":337,"airlines":["United"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"Washington, DC|2027-05-16|2027-05-20","price":313,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"Washington, DC|2027-05-16|2027-05-20","price":325,"airlines":["Southwest"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"Washington, DC|2027-05-16|2027-05-20","price":317,"airlines":["American"],"stops":0,"price_level":"typical","typical_range":[327,387]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"Washington, DC|2027-05-16|2027-05-20","price":290,"airlines":["United"],"stops":0,"price_level":"low","typical_range":[327,387]},{"ts":"2026-09-05T14:00:00+00:00","trip_id":"London|2027-05-14|2027-05-20","price":1344,"airlines":["American"],"stops":1,"price_level":"high","typical_range":[1087,1285]},{"ts":"2026-09-09T14:00:00+00:00","trip_id":"London|2027-05-14|2027-05-20","price":1340,"airlines":["American"],"stops":1,"price_level":"high","typical_range":[1087,1285]},{"ts":"2026-09-13T14:00:00+00:00","trip_id":"London|2027-05-14|2027-05-20","price":1312,"airlines":["American"],"stops":1,"price_level":"high","typical_range":[1087,1285]},{"ts":"2026-09-17T14:00:00+00:00","trip_id":"London|2027-05-14|2027-05-20","price":1243,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[1087,1285]},{"ts":"2026-09-21T14:00:00+00:00","trip_id":"London|2027-05-14|2027-05-20","price":1234,"airlines":["American"],"stops":1,"price_level":"typical","typical_range":[1087,1285]},{"ts":"2026-09-25T14:00:00+00:00","trip_id":"London|2027-05-14|2027-05-20","price":1192,"airlines":["British Airways"],"stops":1,"price_level":"typical","typical_range":[1087,1285]},{"ts":"2026-09-29T14:00:00+00:00","trip_id":"London|2027-05-14|2027-05-20","price":1184,"airlines":["British Airways"],"stops":1,"price_level":"typical","typical_range":[1087,1285]},{"ts":"2026-10-03T14:00:00+00:00","trip_id":"London|2027-05-14|2027-05-20","price":1171,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1087,1285]},{"ts":"2026-10-07T14:00:00+00:00","trip_id":"London|2027-05-14|2027-05-20","price":1126,"airlines":["Aer Lingus"],"stops":1,"price_level":"typical","typical_range":[1087,1285]},{"ts":"2026-10-11T14:00:00+00:00","trip_id":"London|2027-05-14|2027-05-20","price":1066,"airlines":["British Airways"],"stops":1,"price_level":"typical","typical_range":[1087,1285]},{"ts":"2026-10-15T14:00:00+00:00","trip_id":"London|2027-05-14|2027-05-20","price":1074,"airlines":["British Airways"],"stops":1,"price_level":"typical","typical_range":[1087,1285]},{"ts":"2026-10-19T14:00:00+00:00","trip_id":"London|2027-05-14|2027-05-20","price":1061,"airlines":["British Airways"],"stops":1,"price_level":"typical","typical_range":[1087,1285]},{"ts":"2026-10-23T14:00:00+00:00","trip_id":"London|2027-05-14|2027-05-20","price":1013,"airlines":["Aer Lingus"],"stops":1,"price_level":"low","typical_range":[1087,1285]},{"ts":"2026-10-27T14:00:00+00:00","trip_id":"London|2027-05-14|2027-05-20","price":989,"airlines":["American"],"stops":1,"price_level":"low","typical_range":[1087,1285]}]}</script>
+<script>
+(function () {
+  'use strict';
+  var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var esc = function (s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  };
+  var money = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
+  var pd = function (s) { var p = s.split('-').map(Number); return { y: p[0], m: p[1], d: p[2], t: Date.UTC(p[0], p[1] - 1, p[2]) }; };
+  var md = function (s) { var p = pd(s); return MONTHS[p.m - 1] + ' ' + p.d; };
+  var range = function (a, b) {
+    var x = pd(a), y = pd(b);
+    return x.m === y.m ? MONTHS[x.m - 1] + ' ' + x.d + '–' + y.d : md(a) + ' – ' + md(b);
+  };
+  var weekday = function (s) {
+    return new Date(pd(s).t).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' });
+  };
+  var fmtDur = function (m) {
+    if (m == null || isNaN(m)) return '';
+    return Math.floor(m / 60) + 'h ' + ('0' + (m % 60)).slice(-2) + 'm';
+  };
+  // "2026-12-18 07:05" -> { time: '7:05 AM', date: '2026-12-18' }
+  function parseDT(s) {
+    var m = /^(\d{4}-\d{2}-\d{2})[ T](\d{1,2}):(\d{2})/.exec(String(s || ''));
+    if (!m) return { time: String(s || ''), date: null };
+    var h = +m[2], ap = h >= 12 ? 'PM' : 'AM', h12 = h % 12 || 12;
+    return { time: h12 + ':' + m[3] + ' ' + ap, date: m[1] };
+  }
+
+  var ICON = {
+    check: '<svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    up: '<svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13V3.5M3.8 7.5L8 3.3l4.2 4.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    down: '<svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v9.5M3.8 8.5L8 12.7l4.2-4.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    info: '<svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 7.2v4M8 4.6v.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+    ext: '<svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3H3.5v9.5H13V10M9 3h4v4M13 3L7.5 8.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+  };
+
+  // Poster color schemes. Decorative identity for each destination (not chart data).
+  var POSTERS = [
+    { bg: '#12355b', ink: '#f7efe0', accent: '#ff6b4a', soft: '#245083' },
+    { bg: '#f4b400', ink: '#1b1405', accent: '#c2410c', soft: '#fcc93a' },
+    { bg: '#0f5c47', ink: '#f3f0dc', accent: '#f2b84b', soft: '#1b7058' },
+    { bg: '#a3222c', ink: '#fbeee6', accent: '#f4a261', soft: '#b3343e' },
+    { bg: '#d9480f', ink: '#1a0d05', accent: '#0b6b6b', soft: '#e45a22' },
+    { bg: '#2b2d6e', ink: '#f1ecff', accent: '#7ee0c3', soft: '#3a3d86' },
+    { bg: '#0b6b6b', ink: '#effaf6', accent: '#ffcf5c', soft: '#1b7d7d' }
+  ];
+  var poster = function (i) { return POSTERS[i % POSTERS.length]; };
+  function motif(i, p) {
+    var a = p.accent, s = p.soft, b = p.bg, k = i % 5, g = '';
+    if (k === 0) {
+      g = '<circle cx="348" cy="52" r="26" fill="' + a + '"/><rect x="190" y="215" width="230" height="22" rx="11" fill="' + s + '"/>' +
+        '<rect x="232" y="247" width="190" height="22" rx="11" fill="' + s + '"/><rect x="274" y="279" width="150" height="22" rx="11" fill="' + s + '"/>';
+    } else if (k === 1) {
+      g = '<circle cx="348" cy="52" r="26" fill="' + a + '"/><rect x="250" y="215" width="44" height="90" fill="' + s + '"/><rect x="300" y="170" width="36" height="140" fill="' + s + '"/>' +
+        '<rect x="342" y="130" width="30" height="180" fill="' + s + '"/><rect x="378" y="200" width="40" height="110" fill="' + s + '"/>';
+    } else if (k === 2) {
+      g = '<circle cx="348" cy="52" r="26" fill="' + a + '"/><path d="M200 300a130 130 0 0 1 260 0z" fill="' + s + '"/><path d="M250 300a80 80 0 0 1 160 0z" fill="' + b + '"/><path d="M290 300a40 40 0 0 1 80 0z" fill="' + s + '"/>';
+    } else if (k === 3) {
+      g = '<circle cx="348" cy="52" r="24" fill="none" stroke="' + a + '" stroke-width="9"/><circle cx="350" cy="300" r="150" fill="' + s + '"/><circle cx="350" cy="300" r="112" fill="' + b + '"/><circle cx="350" cy="300" r="74" fill="' + s + '"/><circle cx="350" cy="300" r="36" fill="' + b + '"/>';
+    } else {
+      g = '<circle cx="348" cy="52" r="26" fill="' + a + '"/><polygon points="400,140 400,190 290,300 230,300" fill="' + s + '"/><polygon points="400,215 400,265 365,300 315,300" fill="' + s + '"/>';
+    }
+    return '<svg class="motif" viewBox="0 0 400 300" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">' + g + '</svg>';
+  }
+
+  var state = { dest: null, tableAll: false, underOnly: false };
+  var DATA = null, D = null, SAMPLE = false, lastW = 0, CFG = null;
+
+  /* ---------- load ---------- */
+  function getJson(url) {
+    return fetch(url, { cache: 'no-store' }).then(function (r) {
+      if (!r.ok) throw new Error('missing');
+      return r.json();
+    });
+  }
+  function load() {
+    return Promise.all([getJson('data/latest.json'), getJson('data/history.json')]).then(function (res) {
+      var l = res[0];
+      if (!l || !Array.isArray(l.trips) || !Array.isArray(l.destinations)) throw new Error('bad');
+      return { latest: l, history: Array.isArray(res[1]) ? res[1] : [], sample: l.mode === 'demo' };
+    }).catch(function () {
+      var s = JSON.parse($('#sample-data').textContent);
+      return { latest: s.latest, history: s.history, sample: true };
+    });
+  }
+
+  /* ---------- derive ---------- */
+  function derive(latest, history) {
+    var trips = latest.trips;
+    var byId = {};
+    trips.forEach(function (t) { byId[t.id] = t; });
+    var hist = history.filter(function (h) { return byId[h.trip_id]; })
+      .sort(function (a, b) { return a.ts < b.ts ? -1 : a.ts > b.ts ? 1 : 0; });
+    var daySet = {}, perTrip = {};
+    hist.forEach(function (h) {
+      var day = h.ts.slice(0, 10);
+      daySet[day] = 1;
+      (perTrip[h.trip_id] = perTrip[h.trip_id] || {})[day] = h.price;
+    });
+    var days = Object.keys(daySet).sort();
+    var dests = latest.destinations.map(function (d, idx) {
+      var dt = trips.filter(function (t) { return t.destination === d.name; });
+      var wm = {};
+      dt.forEach(function (t) {
+        var w = wm[t.window] || (wm[t.window] = { label: t.window, first: t.depart, trips: [] });
+        w.trips.push(t);
+        if (t.depart < w.first) w.first = t.depart;
+      });
+      var windows = Object.keys(wm).map(function (k) { return wm[k]; })
+        .sort(function (a, b) { return a.first < b.first ? -1 : 1; });
+      windows.forEach(function (w) {
+        w.values = days.map(function (day) {
+          var m = null;
+          w.trips.forEach(function (t) {
+            var v = perTrip[t.id] && perTrip[t.id][day];
+            if (v != null && (m === null || v < m)) m = v;
+          });
+          return m;
+        });
+        var ok = w.trips.filter(function (t) { return t.status === 'ok'; });
+        w.now = ok.length ? Math.min.apply(null, ok.map(function (t) { return t.price; })) : null;
+      });
+      var best = days.map(function (_, i) {
+        var m = null;
+        windows.forEach(function (w) { var v = w.values[i]; if (v != null && (m === null || v < m)) m = v; });
+        return m;
+      });
+      return Object.assign({}, d, { idx: idx, trips: dt, windows: windows, best: best, bestTrip: d.best_trip_id ? byId[d.best_trip_id] : null });
+    });
+    return { days: days, dests: dests, byId: byId };
+  }
+
+  /* ---------- helpers ---------- */
+  function tripLink(t) {
+    if (t.link && /^https:\/\//.test(t.link)) return t.link;
+    var home = (DATA.latest.home_airports || []).join(',');
+    var q = 'Flights to ' + t.destination + ' from ' + home + ' on ' + t.depart + ' through ' + t.return;
+    return 'https://www.google.com/travel/flights?q=' + encodeURIComponent(q);
+  }
+  function oneWayLink(t, outbound) {
+    var home = (DATA.latest.home_airports || []).join(',');
+    var to = (t.airports || []).join(',') || t.destination;
+    var q = outbound ? 'One-way flights from ' + home + ' to ' + to + ' on ' + t.depart
+                     : 'One-way flights from ' + to + ' to ' + home + ' on ' + t.return;
+    return 'https://www.google.com/travel/flights?q=' + encodeURIComponent(q);
+  }
+  function niceTicks(lo, hi, n) {
+    var span = hi - lo || 1, raw = span / n, mag = Math.pow(10, Math.floor(Math.log10(raw))), norm = raw / mag;
+    var step = (norm <= 1 ? 1 : norm <= 2 ? 2 : norm <= 2.5 ? 2.5 : norm <= 5 ? 5 : 10) * mag;
+    var start = Math.floor(lo / step) * step, end = Math.ceil(hi / step) * step, t = [];
+    for (var v = start; v <= end + step / 2; v += step) t.push(Math.round(v * 100) / 100);
+    return t;
+  }
+  function selDest() { return D.dests.filter(function (d) { return d.name === state.dest; })[0] || D.dests[0]; }
+  function pill(d) {
+    if (d.best_price == null) return '<span class="pill none">No fares yet</span>';
+    var diff = d.max_price - d.best_price;
+    if (diff > 0) return '<span class="pill under">' + ICON.check + money(diff) + ' under limit</span>';
+    if (diff === 0) return '<span class="pill under">' + ICON.check + 'At your limit</span>';
+    return '<span class="pill over">' + ICON.up + money(-diff) + ' over limit</span>';
+  }
+
+  /* ---------- header / banner ---------- */
+  function renderHead() {
+    var l = DATA.latest;
+    $('#banner').innerHTML = SAMPLE
+      ? '<div class="banner" role="note">' + ICON.info + '<p><strong>Sample data.</strong> These fares and flights are made up to show how the dashboard works. Real ones appear here after the tracker\'s first live run.</p></div>'
+      : '';
+    var under = D.dests.filter(function (d) { return d.best_price != null && d.best_price <= d.max_price; }).length;
+    var withFares = D.dests.filter(function (d) { return d.best_price != null; }).length;
+    var headline = withFares === 0 ? 'Waiting for the first fares'
+      : under === 0 ? 'Nothing under your limit yet'
+      : under + ' of ' + D.dests.length + ' destinations under your limit';
+    var when = l.generated_at ? new Date(l.generated_at).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '';
+    var home = (l.home_airports || []).join(' · ');
+    var budget = '';
+    if (!SAMPLE && l.monthly_search_budget) {
+      var pct = Math.min(100, Math.round(100 * l.searches_used_this_month / l.monthly_search_budget));
+      budget = '<div class="budget"><span><b>' + l.searches_used_this_month + '</b> of ' + l.monthly_search_budget +
+        ' searches used this month</span><div class="bar" role="img" aria-label="' + pct + ' percent of monthly searches used"><span style="width:' + pct + '%"></span></div></div>';
+    }
+    $('#head').innerHTML =
+      '<div class="hero-main"><span class="eyebrow">Getaway Plan · From ' + esc(home) + '</span>' +
+      '<h1>' + esc(headline) + '</h1>' +
+      '</div>' +
+      '<div class="hero-side">' + budget + '<button type="button" class="btn2" id="open-settings">Settings</button></div>';
+    $('#stripe').innerHTML = POSTERS.slice(0, 5).map(function (p) { return '<i style="background:' + p.bg + '"></i>'; }).join('');
+  }
+
+  /* ---------- poster tiles ---------- */
+  function renderBoard() {
+    $('#board').innerHTML = D.dests.map(function (d) {
+      var p = poster(d.idx), bt = d.bestTrip;
+      var dates = bt ? '<b>' + esc(range(bt.depart, bt.return)) + '</b>' + bt.nights + ' nights' : '';
+      return '<button type="button" class="tile" data-dest="' + esc(d.name) + '" aria-pressed="' + (d.name === state.dest) +
+        '" style="--tb:' + p.bg + ';--ti:' + p.ink + '">' + motif(d.idx, p) +
+        '<span class="t-codes">' + esc(d.airports.join(' · ')) + '</span>' +
+        '<span class="t-name">' + esc(d.name) + '</span>' +
+        '<span class="t-fare"><span class="t-price">' + (d.best_price != null ? money(d.best_price) : '—') + '</span>' +
+        '<span class="t-basis">' + (d.best_kind === 'two_one_ways' ? 'two one-way tickets, taxes included' : 'round trip, taxes included') + '</span></span>' +
+        '<span class="t-status">' + pill(d) + '<span>Your limit ' + money(d.max_price) + '</span></span>' +
+        '<span class="t-foot"><span class="t-spark" data-dest="' + esc(d.name) + '"></span><span class="t-dates">' + dates + '</span></span></button>';
+    }).join('');
+    drawSparks();
+  }
+  function drawSparks() {
+    var nodes = document.querySelectorAll('.t-spark');
+    Array.prototype.forEach.call(nodes, function (el) {
+      var d = D.dests.filter(function (x) { return x.name === el.getAttribute('data-dest'); })[0];
+      if (!d) return;
+      var p = poster(d.idx);
+      var w = Math.max(60, el.clientWidth || 150), h = 44, pad = 5;
+      var vals = d.best.filter(function (v) { return v != null; });
+      if (!vals.length) { el.innerHTML = ''; return; }
+      var lo = Math.min(Math.min.apply(null, vals), d.max_price), hi = Math.max(Math.max.apply(null, vals), d.max_price);
+      if (hi === lo) { hi += 1; lo -= 1; }
+      var y = function (v) { return pad + (1 - (v - lo) / (hi - lo)) * (h - 2 * pad); };
+      var ts = D.days.map(function (s) { return pd(s).t; });
+      var x = function (i) { return ts.length === 1 ? w - pad - 3 : pad + (ts[i] - ts[0]) / (ts[ts.length - 1] - ts[0]) * (w - 2 * pad - 6); };
+      var path = '', pen = false, last = -1;
+      d.best.forEach(function (v, i) {
+        if (v == null) { pen = false; return; }
+        path += (pen ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1); pen = true; last = i;
+      });
+      var ly = y(d.max_price).toFixed(1);
+      el.innerHTML = '<svg width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + ' ' + h + '" role="img" aria-label="Lowest fare trend, now ' +
+        money(d.best[last]) + ', limit ' + money(d.max_price) + '">' +
+        '<line x1="' + pad + '" x2="' + (w - pad) + '" y1="' + ly + '" y2="' + ly + '" stroke="' + p.ink + '" stroke-width="1" stroke-dasharray="3 3" opacity="0.75"/>' +
+        (path.indexOf('L') > -1 ? '<path d="' + path + '" fill="none" stroke="' + p.ink + '" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>' : '') +
+        '<circle cx="' + x(last).toFixed(1) + '" cy="' + y(d.best[last]).toFixed(1) + '" r="4.5" fill="' + p.ink + '" stroke="' + p.bg + '" stroke-width="2"/></svg>';
+    });
+  }
+
+  /* ---------- chart ---------- */
+  function renderChart() {
+    var d = selDest(), host = $('#chart');
+    $('#chart-title').textContent = 'Price history: ' + d.name;
+    $('#chart-sub').textContent = 'Lowest round-trip fare (taxes included) found in each of your free windows at every check. The shaded zone is below your ' + money(d.max_price) + ' limit.';
+    var series = d.windows.slice(0, 3).map(function (w, i) { return { label: w.label, color: 'var(--s' + (i + 1) + ')', values: w.values, now: w.now }; });
+
+    $('#legend').innerHTML = series.map(function (s) {
+      return '<li><span class="sw" style="background:' + s.color + '"></span>' + esc(s.label) +
+        (s.now != null ? ' <span class="v">now ' + money(s.now) + '</span>' : '') + '</li>';
+    }).join('') + '<li><span class="dash"></span>Your limit ' + money(d.max_price) + '</li>';
+
+    var note = $('#chart-note');
+    if (!D.days.length) {
+      host.innerHTML = '<p class="note">No fares recorded for ' + esc(d.name) + ' yet.</p>';
+      note.hidden = true; return;
+    }
+    note.hidden = D.days.length > 1;
+    note.textContent = D.days.length > 1 ? '' : 'First check recorded. Price lines appear after the next check.';
+
+    var W = Math.max(280, host.clientWidth || 600), narrow = W < 560, H = narrow ? 250 : 300;
+    var m = { t: 14, r: narrow ? 18 : 128, b: 30, l: narrow ? 44 : 50 };
+    var pw = W - m.l - m.r, ph = H - m.t - m.b;
+    var ts = D.days.map(function (s) { return pd(s).t; });
+    var n = ts.length;
+    var px = function (i) { return n === 1 ? m.l + pw / 2 : m.l + (ts[i] - ts[0]) / (ts[n - 1] - ts[0]) * pw; };
+
+    var vals = [d.max_price];
+    series.forEach(function (s) { s.values.forEach(function (v) { if (v != null) vals.push(v); }); });
+    var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals), pad = (hi - lo) * 0.12 || hi * 0.1;
+    var ticks = niceTicks(lo - pad, hi + pad, 4), yMin = ticks[0], yMax = ticks[ticks.length - 1];
+    var py = function (v) { return m.t + (1 - (v - yMin) / (yMax - yMin)) * ph; };
+
+    var s = '';
+    s += '<rect x="' + m.l + '" y="' + py(d.max_price).toFixed(1) + '" width="' + pw + '" height="' + (m.t + ph - py(d.max_price)).toFixed(1) + '" fill="var(--zone)"/>';
+    ticks.forEach(function (v) {
+      var yy = py(v).toFixed(1);
+      s += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + yy + '" y2="' + yy + '" stroke="var(--grid)" stroke-width="1"/>' +
+        '<text x="' + (m.l - 8) + '" y="' + (+yy + 4) + '" text-anchor="end" font-size="11" fill="var(--muted)">' + money(v) + '</text>';
+    });
+    s += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + (m.t + ph) + '" y2="' + (m.t + ph) + '" stroke="var(--axis)" stroke-width="1"/>';
+    var cnt = Math.min(n, narrow ? 3 : 5), seen = {};
+    for (var k = 0; k < cnt; k++) {
+      var idx = cnt === 1 ? 0 : Math.round(k * (n - 1) / (cnt - 1));
+      if (seen[idx]) continue; seen[idx] = 1;
+      var anchor = n === 1 ? 'middle' : idx === 0 ? 'start' : idx === n - 1 ? 'end' : 'middle';
+      s += '<text x="' + px(idx).toFixed(1) + '" y="' + (H - 9) + '" text-anchor="' + anchor + '" font-size="11" fill="var(--muted)">' + md(D.days[idx]) + '</text>';
+    }
+    var ly = py(d.max_price).toFixed(1);
+    s += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + ly + '" y2="' + ly + '" stroke="var(--ink2)" stroke-width="1.5" stroke-dasharray="5 4"/>' +
+      '<text x="' + (m.l + 6) + '" y="' + (+ly - 6) + '" font-size="11.5" font-weight="600" fill="var(--ink2)" stroke="var(--surface)" stroke-width="3" paint-order="stroke">Your limit ' + money(d.max_price) + '</text>';
+    series.forEach(function (sr) {
+      var path = '', pen = false;
+      sr.values.forEach(function (v, i) {
+        if (v == null) { pen = false; return; }
+        path += (pen ? 'L' : 'M') + px(i).toFixed(1) + ' ' + py(v).toFixed(1); pen = true;
+      });
+      if (path.indexOf('L') > -1) s += '<path d="' + path + '" fill="none" stroke="' + sr.color + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+      var li = -1; sr.values.forEach(function (v, i) { if (v != null) li = i; });
+      sr.last = li;
+      if (li > -1) s += '<circle cx="' + px(li).toFixed(1) + '" cy="' + py(sr.values[li]).toFixed(1) + '" r="4.5" fill="' + sr.color + '" stroke="var(--surface)" stroke-width="2"/>';
+    });
+    if (!narrow) {
+      var labs = series.filter(function (sr) { return sr.last > -1; }).map(function (sr) {
+        return { y: py(sr.values[sr.last]), v: sr.values[sr.last], label: sr.label, x: px(sr.last) + 12 };
+      }).sort(function (a, b) { return a.y - b.y; });
+      for (var i = 1; i < labs.length; i++) if (labs[i].y - labs[i - 1].y < 32) labs[i].y = labs[i - 1].y + 32;
+      var over = labs.length ? labs[labs.length - 1].y - (H - m.b - 6) : 0;
+      if (over > 0) labs.forEach(function (lb) { lb.y -= over; });
+      labs.forEach(function (lb) {
+        s += '<text x="' + lb.x.toFixed(1) + '" y="' + (lb.y - 1).toFixed(1) + '" font-size="13" font-weight="700" fill="var(--ink)">' + money(lb.v) + '</text>' +
+          '<text x="' + lb.x.toFixed(1) + '" y="' + (lb.y + 13).toFixed(1) + '" font-size="11" fill="var(--ink2)">' + esc(lb.label) + '</text>';
+      });
+    }
+    s += '<g class="hov" style="display:none"><line y1="' + m.t + '" y2="' + (m.t + ph) + '" stroke="var(--ink2)" stroke-width="1" opacity="0.6"/>';
+    series.forEach(function (sr) { s += '<circle r="5" fill="' + sr.color + '" stroke="var(--surface)" stroke-width="2" style="display:none"/>'; });
+    s += '</g><rect class="hit" x="' + m.l + '" y="' + m.t + '" width="' + pw + '" height="' + ph + '" fill="transparent" style="touch-action:pan-y"/>';
+
+    var aria = d.name + ' price history. ' + series.map(function (sr) { return sr.label + (sr.now != null ? ', now ' + money(sr.now) : ''); }).join('; ') + '. Limit ' + money(d.max_price) + '.';
+    host.innerHTML = '<svg width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(aria) + '">' + s + '</svg><div class="tip" id="tip"></div>';
+
+    var svg = host.firstChild, hit = $('.hit', host), hov = $('.hov', host), tip = $('#tip'), dots = hov.querySelectorAll('circle'), vline = hov.querySelector('line');
+    function show(e) {
+      var r = svg.getBoundingClientRect(), x = e.clientX - r.left, best = 0, bd = 1e9;
+      for (var i = 0; i < n; i++) { var dd = Math.abs(px(i) - x); if (dd < bd) { bd = dd; best = i; } }
+      var cx = px(best);
+      hov.style.display = 'block';
+      vline.setAttribute('x1', cx); vline.setAttribute('x2', cx);
+      var html = '<strong>' + md(D.days[best]) + '</strong>';
+      series.forEach(function (sr, j) {
+        var v = sr.values[best];
+        if (v == null) { dots[j].style.display = 'none'; }
+        else { dots[j].style.display = 'block'; dots[j].setAttribute('cx', cx); dots[j].setAttribute('cy', py(v)); }
+        html += '<div><span class="lab"><span class="sw" style="background:' + sr.color + '"></span>' + esc(sr.label) + '</span><span class="val">' + (v == null ? '—' : money(v)) + '</span></div>';
+      });
+      tip.innerHTML = html; tip.style.display = 'block';
+      var tw = tip.offsetWidth, left = cx + 14;
+      if (left + tw > W - 2) left = cx - 14 - tw;
+      tip.style.left = Math.max(2, left) + 'px'; tip.style.top = (m.t + 8) + 'px';
+    }
+    function hide() { hov.style.display = 'none'; tip.style.display = 'none'; }
+    hit.addEventListener('pointermove', show);
+    hit.addEventListener('pointerdown', show);
+    hit.addEventListener('pointerleave', hide);
+  }
+
+  /* ---------- flights ---------- */
+  function legHtml(label, dateStr, leg, missingText) {
+    if (!leg || !leg.segments || !leg.segments.length) {
+      return '<div class="leg"><div class="leg-h"><span class="dir">' + label + '</span><span>' + esc(weekday(dateStr)) + '</span></div><p class="leg-missing">' + esc(missingText) + '</p></div>';
+    }
+    var stops = leg.layovers ? leg.layovers.length : Math.max(0, leg.segments.length - 1);
+    var meta = (stops === 0 ? 'Nonstop' : stops + (stops === 1 ? ' stop' : ' stops')) + (leg.minutes ? ' · ' + fmtDur(leg.minutes) : '');
+    var items = '';
+    leg.segments.forEach(function (sg, i) {
+      var a = parseDT(sg.depart), b = parseDT(sg.arrive);
+      var plus = a.date && b.date && b.date > a.date ? '<sup>+' + Math.round((pd(b.date).t - pd(a.date).t) / 864e5) + '</sup>' : '';
+      items += '<li><span class="rt"><b class="tm">' + esc(a.time) + '</b><span class="ap">' + esc(sg.from) + '</span><span class="arr">→</span>' +
+        '<b class="tm">' + esc(b.time) + plus + '</b><span class="ap">' + esc(sg.to) + '</span></span>' +
+        '<span class="fl">' + esc(sg.flight || sg.airline || 'Flight') + '</span>' +
+        (sg.flight && sg.airline ? '<span class="air">' + esc(sg.airline) + '</span>' : '') +
+        (sg.minutes ? '<span class="air">' + esc(fmtDur(sg.minutes)) + '</span>' : '') + '</li>';
+      var lay = leg.layovers && leg.layovers[i];
+      if (lay && i < leg.segments.length - 1) {
+        items += '<li class="lay">Layover in ' + esc(lay.name || lay.code) + (lay.code && lay.name ? ' (' + esc(lay.code) + ')' : '') + ', ' + esc(fmtDur(lay.minutes)) + (lay.overnight ? ', overnight' : '') + '</li>';
+      }
+    });
+    return '<div class="leg"><div class="leg-h"><span class="dir">' + label + '</span><span>' + esc(weekday(dateStr)) + '</span><span>' + esc(meta) + '</span></div><ul class="segs">' + items + '</ul></div>';
+  }
+  function renderTrips() {
+    var d = selDest();
+    $('#chips').innerHTML = D.dests.map(function (x) {
+      return '<button type="button" class="chip" data-chip="' + esc(x.name) + '" aria-pressed="' + (!state.tableAll && x.name === d.name) + '">' + esc(x.name) + '</button>';
+    }).join('') +
+      '<button type="button" class="chip" data-chip="__all" aria-pressed="' + state.tableAll + '">All destinations</button>' +
+      '<button type="button" class="chip gap-left" data-chip="__under" aria-pressed="' + state.underOnly + '">Under limit only</button>';
+
+    var rows = DATA.latest.trips.filter(function (t) { return state.tableAll || t.destination === d.name; });
+    if (state.underOnly) rows = rows.filter(function (t) { return t.status === 'ok' && t.under_ceiling; });
+    rows.sort(function (a, b) {
+      if (a.price == null) return 1; if (b.price == null) return -1;
+      return (a.effective_price == null ? a.price : a.effective_price) - (b.effective_price == null ? b.price : b.effective_price);
+    });
+    var host = $('#trips');
+    if (!rows.length) {
+      host.innerHTML = '<p class="empty">' + (state.underOnly ? 'No trips are under their limit right now.' : 'No trips to show yet.') + '</p>';
+      return;
+    }
+    host.innerHTML = rows.map(function (t) {
+      var checked = t.observed_at ? new Date(t.observed_at).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '';
+      var ow = t.oneway, useOW = !!(ow && ow.better), eff = t.effective_price == null ? t.price : t.effective_price;
+      var vs = t.price == null ? ''
+        : eff <= t.max_price ? '<span class="pill under">' + ICON.check + money(t.max_price - eff) + ' under limit</span>'
+        : '<span class="pill over">' + ICON.up + money(eff - t.max_price) + ' over limit</span>';
+      var delta = t.delta == null ? ''
+        : t.delta < 0 ? '<span class="delta down">' + ICON.down + money(-t.delta) + ' since last check</span>'
+        : t.delta > 0 ? '<span class="delta up">' + ICON.up + money(t.delta) + ' since last check</span>'
+        : '<span class="delta up">No change since last check</span>';
+      var RATE = { low: 'Low for this route', typical: 'Typical for this route', high: 'High for this route' };
+      var rate = RATE[t.price_level] ? '<span class="pill rate ' + t.price_level + '" title="Google\'s rating of this fare compared with usual prices on this route">' + RATE[t.price_level] + '</span>' : '';
+      var typ = t.typical_range && t.typical_range.length === 2 ? '<small>Usually ' + money(t.typical_range[0]) + '–' + money(t.typical_range[1]) + '</small>' : '';
+      var PH = { far: 'Too early for the best fares', approaching: 'Best booking window opens soon', prime: 'In the best booking window now', late: 'Past the best booking window' };
+      var phase = t.phase && PH[t.phase] ? '<small class="phase ' + t.phase + '">' + PH[t.phase] + ' (' + esc(range(t.best_from, t.best_until)) + ')</small>' : '';
+      var newlow = t.lowest_yet ? '<span class="pill newlow">Lowest yet</span>' : '';
+      var retMissing = t.under_ceiling ? 'Return flight not looked up yet.' : 'Looked up once this fare drops under your limit.';
+      var legs = useOW
+        ? legHtml('Ticket 1 · Outbound', t.depart, ow.out_flight, '') + legHtml('Ticket 2 · Return', t.return, ow.back_flight, '') +
+          '<p class="ow-warn">Two separate tickets, bought one at a time. If the first flight is late or cancelled, the airline owes you nothing on the second. Bags are paid per ticket.</p>'
+        : legHtml('Outbound', t.depart, t.outbound_flight, 'Flight details are not available for this check.') +
+          legHtml('Return', t.return, t.return_flight, retMissing);
+      var owNote = ow && !ow.better ? '<small>Two one-way tickets would cost ' + money(ow.total) + ' (' + money(-ow.saves) + ' more).</small>' : '';
+      var owLinks = useOW
+        ? '<a class="btn" href="' + esc(oneWayLink(t, true)) + '" target="_blank" rel="noopener noreferrer">' + ICON.ext + 'Ticket 1 on Google Flights</a>' +
+          '<a class="btn" href="' + esc(oneWayLink(t, false)) + '" target="_blank" rel="noopener noreferrer">' + ICON.ext + 'Ticket 2 on Google Flights</a>'
+        : '<a class="btn" href="' + esc(tripLink(t)) + '" target="_blank" rel="noopener noreferrer">' + ICON.ext + 'Open on Google Flights</a>';
+      return '<article class="trip">' +
+        '<div class="t-when">' + (state.tableAll ? '<span class="dest-tag">' + esc(t.destination) + '</span>' : '') +
+        '<b>' + esc(range(t.depart, t.return)) + '</b>' + phase +
+        (checked ? '<small>Checked ' + esc(checked) + '</small>' : '') + '</div>' +
+        '<div class="t-legs">' + legs + '</div>' +
+        '<div class="t-fare2">' + (t.price != null ? (useOW
+          ? '<span class="price">' + money(ow.total) + '</span><small>two one-way tickets (' + money(ow.out_price) + ' + ' + money(ow.back_price) + '), taxes included, bags extra</small><span class="pill newlow">Saves ' + money(ow.saves) + ' vs round trip</span><small>Round trip: ' + money(t.price) + '</small>' + vs
+          : '<span class="price">' + money(t.price) + '</span><small>round trip, taxes included, bags extra</small>' + vs + newlow + rate + typ + owNote + delta) : '<span class="muted">No fare yet</span>') +
+        (t.low_price != null && t.price != null && t.low_price < t.price ? '<small>Lowest seen ' + money(t.low_price) + '</small>' : '') + '</div>' +
+        '<div class="t-go">' + owLinks +
+        '<small>Choose the flight shown here. The price can change before you book.</small></div></article>';
+    }).join('');
+  }
+
+  /* ---------- settings ---------- */
+  function cloneCfg(latest) {
+    if (latest.config) return JSON.parse(JSON.stringify(latest.config));
+    return {
+      home_airports: latest.home_airports || ['MCI'], currency: latest.currency || 'USD',
+      monthly_search_budget: latest.monthly_search_budget || 240, max_detail_lookups_per_run: 8,
+      destinations: latest.destinations.map(function (d) { return { name: d.name, airports: d.airports, max_price: d.max_price, nights: 4, min_nights: 3 }; }),
+      windows: []
+    };
+  }
+  function ghEditUrl() {
+    var h = location.hostname, p = location.pathname.split('/').filter(Boolean);
+    if (/\.github\.io$/.test(h)) {
+      var user = h.replace(/\.github\.io$/, ''), repo = p[0] || h;
+      return 'https://github.com/' + user + '/' + repo + '/edit/main/config.json';
+    }
+    return null;
+  }
+  function isoT(s) { var p = String(s || '').split('-'); return p.length === 3 ? Date.UTC(+p[0], +p[1] - 1, +p[2]) : NaN; }
+  var DEF_EVERY = { far: 21, approaching: 7, prime: 3, late: 5 };
+  var PHASE_NAME = { far: 'far', approaching: 'approaching', prime: 'prime', late: 'late' };
+  function phaseFor(daysOut, lo, hi) {
+    if (daysOut > hi + 21) return 'far';
+    if (daysOut > hi) return 'approaching';
+    if (daysOut >= lo) return 'prime';
+    return 'late';
+  }
+  function everyFor(cfg, ph) {
+    var t = cfg.check_every_days || {}, v = t[ph] == null ? DEF_EVERY[ph] : t[ph];
+    return Math.max(1, Math.round(Number(v) || DEF_EVERY[ph]));
+  }
+  /* Same planning rules as tracker.py: one entry per trip, with its departure day number (UTC days). */
+  function planTrips(cfg) {
+    var now = new Date(), today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()), DAY = 864e5, out = [];
+    (cfg.windows || []).forEach(function (w) {
+      var ws = isoT(w.start), we = isoT(w.end);
+      if (isNaN(ws) || isNaN(we) || we <= today) return;
+      var L = Math.round((we - ws) / DAY);
+      (cfg.destinations || []).forEach(function (d) {
+        var nights = Math.min(d.nights, L);
+        if (!(nights >= (d.min_nights || 1))) return;
+        var earliest = Math.max(ws, today + DAY), latest = we - nights * DAY;
+        if (latest < earliest) return;
+        var s = Math.max(1, Math.floor(w.samples || 1)), span = Math.round((latest - earliest) / DAY), set = {};
+        if (s === 1 || span === 0) set[0] = 1;
+        else for (var i = 0; i < s; i++) set[Math.floor(i * span / (s - 1) + 0.5)] = 1;
+        var bd = d.booking_days || [22, 57], extra = Number(w.book_earlier_days) || 0;
+        Object.keys(set).forEach(function (k) {
+          out.push({ dest: d.name, depart: earliest + (+k) * DAY, daysOut: Math.round((earliest + (+k) * DAY - today) / DAY), lo: bd[0] + extra, hi: bd[1] + extra });
+        });
+      });
+    });
+    return out;
+  }
+  function simulate(cfg, days) {
+    days = days || 30;
+    var trips = planTrips(cfg), total = 0, by = { far: 0, approaching: 0, prime: 0, late: 0 };
+    trips.forEach(function (t) {
+      for (var day = 0; day < days;) {
+        var out = t.daysOut - day;
+        if (out <= 0) break;
+        var ph = phaseFor(out, t.lo, t.hi);
+        total++; by[ph]++; day += everyFor(cfg, ph);
+      }
+    });
+    return { trips: trips.length, total: total, by: by };
+  }
+  function airportsOk(str) { return /^\s*[A-Za-z]{3}(\s*,\s*[A-Za-z]{3})*\s*$/.test(str || ''); }
+  function splitCodes(str) { return String(str || '').split(',').map(function (x) { return x.trim().toUpperCase(); }).filter(Boolean); }
+  function fieldHtml(label, id, val, extra) {
+    return '<label class="field" for="' + id + '">' + label + '<input id="' + id + '" value="' + esc(val == null || isNaN(val) && typeof val === 'number' ? '' : val) + '" ' + (extra || '') + '></label>';
+  }
+  function renderSettings() {
+    var c = CFG, h = '';
+    h += '<p class="hint">Change anything here, then click <b>Save to GitHub</b> at the bottom. The tracker uses your changes on its next run. Nothing changes until you save.</p>';
+    h += '<fieldset><legend>Home airport</legend><div class="f-row f-one">' +
+      fieldHtml('Airport codes, separated by commas', 'set-home', (c.home_airports || []).join(', '), 'data-sec="home" autocomplete="off"') + '</div></fieldset>';
+    h += '<fieldset><legend>Destinations</legend>';
+    (c.destinations || []).forEach(function (d, i) {
+      h += '<div class="f-row f-dest">' +
+        fieldHtml('Name', 'dest-name-' + i, d.name, 'data-sec="dest" data-i="' + i + '" data-f="name"') +
+        fieldHtml('Airports', 'dest-ap-' + i, (d.airports || []).join(', '), 'data-sec="dest" data-i="' + i + '" data-f="airports" autocomplete="off"') +
+        fieldHtml('Limit ($)', 'dest-max-' + i, d.max_price, 'type="number" min="1" inputmode="numeric" data-sec="dest" data-i="' + i + '" data-f="max_price"') +
+        fieldHtml('Nights', 'dest-n-' + i, d.nights, 'type="number" min="1" inputmode="numeric" data-sec="dest" data-i="' + i + '" data-f="nights"') +
+        fieldHtml('Fewest nights', 'dest-mn-' + i, d.min_nights, 'type="number" min="1" inputmode="numeric" data-sec="dest" data-i="' + i + '" data-f="min_nights"') +
+        '<button type="button" class="rm" data-rm="dest" data-i="' + i + '" aria-label="Remove ' + esc(d.name || 'destination') + '">Remove</button>' +
+        '<label class="chk chk-inline"><input type="checkbox" data-sec="dest" data-i="' + i + '" data-f="intl"' + (d.booking_days && d.booking_days[1] > 70 ? ' checked' : '') + '> International trip (cheapest fares usually show up earlier, about 50 to 133 days out)</label></div>';
+    });
+    h += '<button type="button" class="btn2 add" data-add="dest">Add destination</button></fieldset>';
+    h += '<fieldset><legend>Free windows</legend><p class="hint">Dates you can travel. Trips must start and end inside a window. "Book earlier by" is for holidays and spring break, when fares tend to bottom out a bit sooner (about 10 days for Christmas, 5 for spring break).</p>';
+    (c.windows || []).forEach(function (w, i) {
+      h += '<div class="f-row f-win">' +
+        fieldHtml('First day', 'win-s-' + i, w.start, 'type="date" data-sec="win" data-i="' + i + '" data-f="start"') +
+        fieldHtml('Last day', 'win-e-' + i, w.end, 'type="date" data-sec="win" data-i="' + i + '" data-f="end"') +
+        fieldHtml('Dates to try', 'win-n-' + i, w.samples, 'type="number" min="1" inputmode="numeric" data-sec="win" data-i="' + i + '" data-f="samples"') +
+        fieldHtml('Book earlier by (days)', 'win-b-' + i, w.book_earlier_days || 0, 'type="number" min="0" inputmode="numeric" data-sec="win" data-i="' + i + '" data-f="book_earlier_days"') +
+        '<button type="button" class="rm" data-rm="win" data-i="' + i + '" aria-label="Remove window ' + (i + 1) + '">Remove</button></div>';
+    });
+    h += '<button type="button" class="btn2 add" data-add="win">Add window</button></fieldset>';
+    var oc = c.one_way_compare || {};
+    h += '<fieldset><legend>Two one-way tickets</legend><p class="hint">Sometimes two one-way tickets cost less than one round trip. The tracker compares them for a few trips that are in their best booking window and near your limit. It uses leftover searches only.</p>' +
+      '<label class="chk"><input type="checkbox" data-sec="ow" data-f="enabled"' + (oc.enabled === false ? '' : ' checked') + '> Compare round trips with two one-way tickets</label>' +
+      '<div class="f-row f-dest-ow">' +
+      fieldHtml('Trips compared per day', 'ow-max', oc.max_trips_per_run == null ? 2 : oc.max_trips_per_run, 'type="number" min="1" inputmode="numeric" data-sec="ow" data-f="max_trips_per_run"') +
+      fieldHtml('Only if within this % of your limit', 'ow-pct', oc.within_pct_of_limit == null ? 25 : oc.within_pct_of_limit, 'type="number" min="0" inputmode="numeric" data-sec="ow" data-f="within_pct_of_limit"') +
+      '</div></fieldset>';
+    h += '<fieldset><legend>Search budget</legend><div class="f-row f-one">' +
+      fieldHtml('Searches per month', 'set-budget', c.monthly_search_budget, 'type="number" min="1" inputmode="numeric" data-sec="budget"') + '</div>' +
+      '<p class="est" id="est" role="status"></p></fieldset>';
+    h += '<fieldset><legend>Save your changes</legend><div class="save-box"><h4>Save to GitHub</h4>' +
+      '<p class="hint">One click instead of copy and paste. You paste in a GitHub key once. It stays in this browser and is never put on the website.</p>' +
+      '<div class="f-row">' +
+      fieldHtml('Your GitHub repository (username/name)', 'gh-repo', GH.repo, 'autocomplete="off" placeholder="your-username/getaway-plan"') +
+      '<label class="field" for="gh-token">GitHub key<input id="gh-token" type="password" value="' + esc(GH.token) + '" autocomplete="off" placeholder="starts with github_pat_"></label></div>' +
+      '<label class="chk"><input type="checkbox" id="gh-remember"' + (GH.remember ? ' checked' : '') + '> Remember the key on this device</label>' +
+      '<div class="row-actions"><button type="button" class="btn2" id="save-gh" aria-disabled="false">Save to GitHub</button><span id="save-msg" role="status"></span></div>' +
+      '<details class="how"><summary>How do I get a GitHub key?</summary><ol>' +
+      '<li>On github.com, click your profile picture, then <b>Settings</b>, then <b>Developer settings</b> (bottom of the left menu).</li>' +
+      '<li>Click <b>Personal access tokens</b>, then <b>Fine-grained tokens</b>, then <b>Generate new token</b>.</li>' +
+      '<li>Name it <b>Getaway Plan</b> and set Expiration to the longest option offered.</li>' +
+      '<li>Under <b>Repository access</b>, choose <b>Only select repositories</b> and pick just your Getaway Plan repository.</li>' +
+      '<li>Under <b>Permissions</b>, then <b>Repository permissions</b>, set <b>Contents</b> to <b>Read and write</b>. Leave everything else alone.</li>' +
+      '<li>Click <b>Generate token</b>, copy it right away (GitHub shows it once), and paste it above.</li></ol>' +
+      '<p class="hint">This key can only edit files in that one repository. If you lose it or stop using it, delete it from the same GitHub page.</p></details></div>' +
+      '</fieldset>';
+    h += '<fieldset><legend>Or copy it yourself</legend><ol class="steps"><li>Copy the config below.</li>' +
+      '<li>Open <b>config.json</b> in your GitHub repo, click the pencil, and paste over everything.</li><li>Click <b>Commit changes</b>. The next run uses it.</li></ol>' +
+      '<ul class="issues" id="issues" hidden></ul>' +
+      '<textarea class="cfg-out" id="cfg-out" readonly aria-label="config.json contents" spellcheck="false"></textarea>' +
+      '<div class="row-actions"><button type="button" class="btn2" id="copy-cfg">Copy config</button>' +
+      '<span id="gh-slot"></span><span id="copy-msg" role="status"></span></div></fieldset>';
+    $('#set-body').innerHTML = h;
+    var url = ghEditUrl();
+    $('#gh-slot').innerHTML = url
+      ? '<a class="btn2" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + ICON.ext + 'Open config.json on GitHub</a>'
+      : '<span class="hint">Once the site is hosted on GitHub Pages, a button here opens your config file.</span>';
+    updateOut();
+  }
+  var GH = { repo: '', token: '', remember: false };
+  (function initGH() {
+    var h = location.hostname, p = location.pathname.split('/').filter(Boolean);
+    if (/\.github\.io$/.test(h) && p[0]) GH.repo = h.replace(/\.github\.io$/, '') + '/' + p[0];
+    try {
+      var r = localStorage.getItem('gp-repo'), t = localStorage.getItem('gp-token');
+      if (r && !GH.repo) GH.repo = r;
+      if (t) { GH.token = t; GH.remember = true; }
+    } catch (e) {}
+  })();
+  function b64(str) { return btoa(unescape(encodeURIComponent(str))); }
+  function saveMsg(text, cls) { var m = $('#save-msg'); if (m) { m.className = cls || ''; m.textContent = text; } }
+  function saveGH() {
+    var btn = $('#save-gh');
+    if (btn.getAttribute('aria-disabled') === 'true') return;
+    var issues = validate(CFG);
+    if (issues.length) { saveMsg('Fix the items listed below first.', 'msg-bad'); return; }
+    var repo = GH.repo.trim().replace(/^https?:\/\/github\.com\//, '').replace(/\/+$/, ''), token = GH.token.trim();
+    if (!/^[\w.-]+\/[\w.-]+$/.test(repo)) { saveMsg('Enter your repository as username/name, like sum123/getaway-plan.', 'msg-bad'); return; }
+    if (!token) { saveMsg('Paste your GitHub key first. The steps are just above.', 'msg-bad'); return; }
+    try {
+      if (GH.remember) { localStorage.setItem('gp-token', token); localStorage.setItem('gp-repo', repo); }
+      else { localStorage.removeItem('gp-token'); localStorage.removeItem('gp-repo'); }
+    } catch (e) {}
+    var api = 'https://api.github.com/repos/' + repo + '/contents/config.json';
+    var hdr = { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
+    btn.setAttribute('aria-disabled', 'true'); saveMsg('Saving...', '');
+    function fail(res) {
+      var why = res.status === 401 ? 'GitHub did not accept that key. It may be mistyped or expired.'
+        : res.status === 403 ? 'That key is not allowed to edit files. Set Contents to Read and write.'
+        : res.status === 404 ? 'Could not find config.json in ' + repo + '. Check the repository name, and that the key was given access to it.'
+        : res.status === 409 || res.status === 422 ? 'The file changed while saving. Click Save again.'
+        : 'GitHub said no (error ' + res.status + ').';
+      saveMsg(why, 'msg-bad');
+    }
+    fetch(api, { headers: hdr }).then(function (r) {
+      if (!r.ok) { fail(r); return null; }
+      return r.json();
+    }).then(function (cur) {
+      if (!cur) return;
+      var body = { message: 'Update settings from website', content: b64(JSON.stringify(cleanCfg(CFG), null, 2) + '\n'), sha: cur.sha };
+      return fetch(api, { method: 'PUT', headers: hdr, body: JSON.stringify(body) }).then(function (r) {
+        if (!r.ok) { fail(r); return; }
+        saveMsg('Saved. The next scheduled run uses these settings. To use them sooner, open the Actions tab on GitHub and run the workflow.', 'msg-ok');
+      });
+    }).catch(function () {
+      saveMsg('Could not reach GitHub. Check your connection. (This does not work from the preview page, only your own site.)', 'msg-bad');
+    }).then(function () { btn.setAttribute('aria-disabled', 'false'); });
+  }
+  function validate(c) {
+    var out = [];
+    if (!airportsOk((c.home_airports || []).join(','))) out.push('Home airport needs 3-letter codes, like MCI.');
+    if (!(c.destinations || []).length) out.push('Add at least one destination.');
+    (c.destinations || []).forEach(function (d, i) {
+      var nm = d.name ? d.name : 'Destination ' + (i + 1);
+      if (!d.name) out.push('Destination ' + (i + 1) + ' needs a name.');
+      if (!airportsOk((d.airports || []).join(','))) out.push(nm + ': airports need 3-letter codes separated by commas.');
+      if (!(d.max_price > 0)) out.push(nm + ': enter a limit above $0.');
+      if (!(d.nights >= 1)) out.push(nm + ': enter the number of nights.');
+      if (!(d.min_nights >= 1) || d.min_nights > d.nights) out.push(nm + ': fewest nights must be at least 1 and no more than nights.');
+    });
+    if (!(c.windows || []).length) out.push('Add at least one free window.');
+    (c.windows || []).forEach(function (w, i) {
+      if (isNaN(isoT(w.start)) || isNaN(isoT(w.end))) out.push('Window ' + (i + 1) + ' needs a first and last day.');
+      else if (isoT(w.end) <= isoT(w.start)) out.push('Window ' + (i + 1) + ': the last day must be after the first day.');
+      if (!(w.samples >= 1)) out.push('Window ' + (i + 1) + ': dates to try must be at least 1.');
+    });
+    if (!(c.monthly_search_budget >= 1)) out.push('Enter a monthly search budget.');
+    var oc = c.one_way_compare || {};
+    if (oc.max_trips_per_run != null && !(oc.max_trips_per_run >= 1)) out.push('Trips compared per day must be at least 1.');
+    if (oc.within_pct_of_limit != null && !(oc.within_pct_of_limit >= 0)) out.push('The percent within your limit cannot be negative.');
+    return out;
+  }
+  function oneWayCfg(o) {
+    o = o || {};
+    return {
+      enabled: o.enabled !== false,
+      max_trips_per_run: o.max_trips_per_run == null ? 2 : o.max_trips_per_run,
+      within_pct_of_limit: o.within_pct_of_limit == null ? 25 : o.within_pct_of_limit,
+      min_days_between: o.min_days_between == null ? 7 : o.min_days_between
+    };
+  }
+  function cleanCfg(c) {
+    return {
+      home_airports: c.home_airports, currency: c.currency || 'USD',
+      monthly_search_budget: c.monthly_search_budget, max_detail_lookups_per_run: c.max_detail_lookups_per_run == null ? 8 : c.max_detail_lookups_per_run,
+      pacing_slack: c.pacing_slack == null ? 40 : c.pacing_slack,
+      one_way_compare: oneWayCfg(c.one_way_compare),
+      check_every_days: c.check_every_days || DEF_EVERY,
+      destinations: (c.destinations || []).map(function (d) {
+        var o = { name: d.name, airports: d.airports, max_price: d.max_price, nights: d.nights, min_nights: d.min_nights };
+        if (d.booking_days) o.booking_days = d.booking_days;
+        return o;
+      }),
+      windows: (c.windows || []).map(function (w) { return { start: w.start, end: w.end, samples: w.samples, book_earlier_days: w.book_earlier_days || 0 }; })
+    };
+  }
+  function updateOut() {
+    var issues = validate(CFG), sim = simulate(CFG, 30), n = sim.total, budget = CFG.monthly_search_budget || 0;
+    var est = $('#est');
+    if (est) {
+      var over = n > budget * 0.85;
+      est.className = 'est' + (over ? ' warn' : '');
+      est.textContent = sim.trips
+        ? 'This setup tracks ' + sim.trips + ' trips and would make about ' + n + ' checks over the next 30 days (' + sim.by.prime + ' in best booking windows, ' + sim.by.late + ' after, ' +
+          (sim.by.approaching + sim.by.far) + ' on trips that are still far off). Looking up return flights for fares under a limit adds a few more, up to ' + (CFG.max_detail_lookups_per_run == null ? 8 : CFG.max_detail_lookups_per_run) + ' per day. ' +
+          (CFG.one_way_compare && CFG.one_way_compare.enabled === false ? '' : 'One-way comparisons use only leftover searches, at most ' + 2 * (((CFG.one_way_compare || {}).max_trips_per_run) || 2) + ' a day. ') + 'Your budget is ' + budget + ' a month.' + (over ? ' That is tight. If the month runs short, the tracker slows down the trips that matter least. You could also lower the dates to try or remove a destination.' : '')
+        : 'No searches yet. Add a destination and a free window that has not passed.';
+    }
+    var box = $('#issues');
+    if (box) { box.hidden = !issues.length; box.innerHTML = issues.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join(''); }
+    var out = $('#cfg-out');
+    if (out) out.value = JSON.stringify(cleanCfg(CFG), null, 2) + '\n';
+    var cp = $('#copy-cfg');
+    if (cp) cp.setAttribute('aria-disabled', issues.length ? 'true' : 'false');
+    var msg = $('#copy-msg'); if (msg) msg.textContent = '';
+  }
+  function copyCfg() {
+    var cp = $('#copy-cfg'), msg = $('#copy-msg'), out = $('#cfg-out');
+    if (cp.getAttribute('aria-disabled') === 'true') { msg.style.color = 'var(--bad)'; msg.textContent = 'Fix the items above first.'; return; }
+    msg.style.color = '';
+    function fallback() { out.focus(); out.select(); msg.textContent = 'Selected. Press Ctrl+C (Cmd+C on Mac) to copy.'; }
+    try {
+      navigator.clipboard.writeText(out.value).then(function () { msg.textContent = 'Copied.'; }, fallback);
+    } catch (e) { fallback(); }
+  }
+  function onSettingsInput(e) {
+    var el = e.target, sec = el.getAttribute('data-sec');
+    if (!sec) return;
+    var i = +el.getAttribute('data-i'), f = el.getAttribute('data-f'), v = el.value;
+    if (sec === 'home') CFG.home_airports = splitCodes(v);
+    else if (sec === 'budget') CFG.monthly_search_budget = v === '' ? NaN : Number(v);
+    else if (sec === 'ow') {
+      CFG.one_way_compare = CFG.one_way_compare || {};
+      CFG.one_way_compare[f] = f === 'enabled' ? el.checked : (v === '' ? NaN : Number(v));
+    }
+    else if (sec === 'dest') {
+      var d = CFG.destinations[i];
+      if (f === 'intl') d.booking_days = el.checked ? [50, 133] : undefined;
+      else if (f === 'name') d.name = v.trim();
+      else if (f === 'airports') d.airports = splitCodes(v);
+      else d[f] = v === '' ? NaN : Number(v);
+    } else if (sec === 'win') {
+      var w = CFG.windows[i];
+      if (f === 'samples') w.samples = v === '' ? NaN : Number(v);
+      else if (f === 'book_earlier_days') w.book_earlier_days = v === '' ? 0 : Math.max(0, Number(v));
+      else w[f] = v;
+    }
+    updateOut();
+  }
+
+  /* ---------- wire up ---------- */
+  function renderAll() { renderHead(); renderBoard(); renderChart(); renderTrips(); renderSettings(); }
+  document.addEventListener('click', function (e) {
+    if (!D) return;
+    var t = e.target;
+    var tile = t.closest && t.closest('.tile');
+    if (tile) { state.dest = tile.getAttribute('data-dest'); state.tableAll = false; renderBoard(); renderChart(); renderTrips(); return; }
+    var chip = t.closest && t.closest('.chip');
+    if (chip) {
+      var c = chip.getAttribute('data-chip');
+      if (c === '__all') state.tableAll = true;
+      else if (c === '__under') state.underOnly = !state.underOnly;
+      else { state.dest = c; state.tableAll = false; renderBoard(); renderChart(); }
+      renderTrips(); return;
+    }
+    if (t.closest && t.closest('#open-settings')) {
+      var s = $('#settings'); s.open = true; s.scrollIntoView({ block: 'start' }); return;
+    }
+    var rm = t.closest && t.closest('[data-rm]');
+    if (rm) {
+      var kind = rm.getAttribute('data-rm'), idx = +rm.getAttribute('data-i');
+      (kind === 'dest' ? CFG.destinations : CFG.windows).splice(idx, 1);
+      renderSettings(); return;
+    }
+    var add = t.closest && t.closest('[data-add]');
+    if (add) {
+      if (add.getAttribute('data-add') === 'dest') CFG.destinations.push({ name: '', airports: [], max_price: 500, nights: 4, min_nights: 3 });
+      else CFG.windows.push({ start: '', end: '', samples: 2 });
+      renderSettings(); return;
+    }
+    if (t.closest && t.closest('#copy-cfg')) copyCfg();
+    if (t.closest && t.closest('#save-gh')) saveGH();
+  });
+  document.addEventListener('input', function (e) {
+    var id = e.target && e.target.id;
+    if (id === 'gh-repo') GH.repo = e.target.value;
+    else if (id === 'gh-token') GH.token = e.target.value;
+    else if (id === 'gh-remember') GH.remember = e.target.checked;
+  });
+  document.addEventListener('input', function (e) { if (D && e.target.closest && e.target.closest('#settings')) onSettingsInput(e); });
+  if (window.ResizeObserver) {
+    new ResizeObserver(function () {
+      var w = document.body.clientWidth;
+      if (D && w !== lastW) { lastW = w; drawSparks(); renderChart(); }
+    }).observe(document.body);
+  }
+
+  load().then(function (res) {
+    DATA = res; SAMPLE = res.sample; D = derive(res.latest, res.history);
+    CFG = cloneCfg(res.latest);
+    state.dest = D.dests.length ? D.dests[0].name : null;
+    lastW = document.body.clientWidth;
+    renderAll();
+  });
+})();
+</script>
+

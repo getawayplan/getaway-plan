@@ -1,0 +1,5686 @@
+[
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-22",
+    "price": 491,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-22",
+    "price": 498,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-22",
+    "price": 486,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-22",
+    "price": 490,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-22",
+    "price": 490,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-22",
+    "price": 484,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-22",
+    "price": 470,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-22",
+    "price": 475,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-22",
+    "price": 460,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-22",
+    "price": 464,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-22",
+    "price": 464,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-22",
+    "price": 451,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-22",
+    "price": 454,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-22",
+    "price": 469,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-01|2027-01-05",
+    "price": 515,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-01|2027-01-05",
+    "price": 510,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-01|2027-01-05",
+    "price": 491,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-01|2027-01-05",
+    "price": 500,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-01|2027-01-05",
+    "price": 472,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-01|2027-01-05",
+    "price": 461,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-01|2027-01-05",
+    "price": 450,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-01|2027-01-05",
+    "price": 456,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-01|2027-01-05",
+    "price": 428,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-01|2027-01-05",
+    "price": 412,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-01|2027-01-05",
+    "price": 416,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-01|2027-01-05",
+    "price": 405,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-01|2027-01-05",
+    "price": 389,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-01|2027-01-05",
+    "price": 380,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-14|2027-01-18",
+    "price": 360,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-14|2027-01-18",
+    "price": 375,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-14|2027-01-18",
+    "price": 367,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-14|2027-01-18",
+    "price": 356,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-14|2027-01-18",
+    "price": 364,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-14|2027-01-18",
+    "price": 365,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-14|2027-01-18",
+    "price": 375,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-14|2027-01-18",
+    "price": 368,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-14|2027-01-18",
+    "price": 369,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-14|2027-01-18",
+    "price": 376,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-14|2027-01-18",
+    "price": 357,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-14|2027-01-18",
+    "price": 368,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-14|2027-01-18",
+    "price": 365,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Boston|2027-01-14|2027-01-18",
+    "price": 363,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 1083,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 1042,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 1071,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 1075,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 1053,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 1033,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 997,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 964,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 967,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 937,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 930,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 882,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 862,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 868,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 1010,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 981,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 1001,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 988,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 1023,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 986,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 989,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 1033,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 1042,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 1023,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 1015,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 1090,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 1083,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 1045,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      870,
+      1030
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 748,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      603,
+      713
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 733,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      603,
+      713
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 727,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      603,
+      713
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 735,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      603,
+      713
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 697,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      603,
+      713
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 708,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      603,
+      713
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 707,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      603,
+      713
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 674,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      603,
+      713
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 671,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      603,
+      713
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 670,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      603,
+      713
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 655,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      603,
+      713
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 647,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      603,
+      713
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 622,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      603,
+      713
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 645,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      603,
+      713
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 467,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 489,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 488,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 474,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 454,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 454,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 458,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 452,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 444,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 441,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 473,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 461,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 452,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 440,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 551,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 550,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 506,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 500,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 490,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 469,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 452,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 441,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 419,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 405,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 395,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 393,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 378,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 341,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      447,
+      529
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 398,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 384,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 384,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 379,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 381,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 367,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 376,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 372,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 353,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 358,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 354,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 355,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 355,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 328,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      310,
+      366
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1818,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1794,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1803,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1791,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1761,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1735,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1824,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1753,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1694,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1676,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1671,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1719,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1672,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1696,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1829,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1754,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1730,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1737,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1621,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1610,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1521,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1428,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1426,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1355,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1305,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1255,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1207,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1185,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1487,
+      1759
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 1181,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1030,
+      1218
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 1124,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1030,
+      1218
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 1048,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1030,
+      1218
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 1052,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1030,
+      1218
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 1083,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1030,
+      1218
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 976,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1030,
+      1218
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 960,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1030,
+      1218
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 959,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1030,
+      1218
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 970,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1030,
+      1218
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 897,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1030,
+      1218
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 870,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1030,
+      1218
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 888,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1030,
+      1218
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 866,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1030,
+      1218
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 860,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1030,
+      1218
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 4588,
+    "airlines": [
+      "Emirates"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 4386,
+    "airlines": [
+      "Emirates"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 4237,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 4294,
+    "airlines": [
+      "Air India"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 4175,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 4181,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 4060,
+    "airlines": [
+      "Emirates"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 3890,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 3674,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 3754,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 3698,
+    "airlines": [
+      "Emirates"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 3269,
+    "airlines": [
+      "Air India"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 3384,
+    "airlines": [
+      "Air India"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 3367,
+    "airlines": [
+      "Emirates"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 5184,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 5108,
+    "airlines": [
+      "Emirates"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 5030,
+    "airlines": [
+      "Emirates"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 4763,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 4708,
+    "airlines": [
+      "Emirates"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 4773,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 4571,
+    "airlines": [
+      "Air India"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 4332,
+    "airlines": [
+      "Emirates"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 4241,
+    "airlines": [
+      "Air India"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 4433,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 4255,
+    "airlines": [
+      "Air India"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 4143,
+    "airlines": [
+      "Air India"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 3933,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 3996,
+    "airlines": [
+      "Air India"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      4111,
+      4862
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 3622,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      2846,
+      3366
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 3364,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      2846,
+      3366
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 3363,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      2846,
+      3366
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 3140,
+    "airlines": [
+      "Emirates"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      2846,
+      3366
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 3132,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      2846,
+      3366
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 3147,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      2846,
+      3366
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 2896,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      2846,
+      3366
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 2792,
+    "airlines": [
+      "Air India"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      2846,
+      3366
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 2855,
+    "airlines": [
+      "Emirates"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      2846,
+      3366
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 2719,
+    "airlines": [
+      "Emirates"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      2846,
+      3366
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 2505,
+    "airlines": [
+      "Lufthansa"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      2846,
+      3366
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 2566,
+    "airlines": [
+      "Air India"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      2846,
+      3366
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 2353,
+    "airlines": [
+      "Emirates"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      2846,
+      3366
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 2295,
+    "airlines": [
+      "Emirates"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      2846,
+      3366
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-29|2027-04-02",
+    "price": 429,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-29|2027-04-02",
+    "price": 402,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-29|2027-04-02",
+    "price": 425,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-29|2027-04-02",
+    "price": 419,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-29|2027-04-02",
+    "price": 416,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-29|2027-04-02",
+    "price": 415,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-29|2027-04-02",
+    "price": 433,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-29|2027-04-02",
+    "price": 421,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-29|2027-04-02",
+    "price": 439,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-29|2027-04-02",
+    "price": 446,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-29|2027-04-02",
+    "price": 455,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-29|2027-04-02",
+    "price": 443,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-29|2027-04-02",
+    "price": 452,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-29|2027-04-02",
+    "price": 457,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-31|2027-04-04",
+    "price": 402,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-31|2027-04-04",
+    "price": 373,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-31|2027-04-04",
+    "price": 386,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-31|2027-04-04",
+    "price": 367,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-31|2027-04-04",
+    "price": 387,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-31|2027-04-04",
+    "price": 372,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-31|2027-04-04",
+    "price": 377,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-31|2027-04-04",
+    "price": 372,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-31|2027-04-04",
+    "price": 353,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-31|2027-04-04",
+    "price": 363,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-31|2027-04-04",
+    "price": 360,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-31|2027-04-04",
+    "price": 339,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-31|2027-04-04",
+    "price": 334,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Boston|2027-03-31|2027-04-04",
+    "price": 336,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 811,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 800,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 792,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 798,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 845,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 818,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 821,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 829,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 847,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 838,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 867,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 837,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 841,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 867,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 787,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 783,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 763,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 766,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 732,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 732,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 730,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 717,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 690,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 640,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 651,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 652,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 590,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 598,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      703,
+      832
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 390,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 403,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 386,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 399,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 378,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 384,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 397,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 381,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 383,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 392,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 394,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 374,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 398,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 386,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 453,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 438,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 411,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 425,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 390,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 389,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 392,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 370,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 348,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 345,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 329,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 329,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 311,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 280,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      361,
+      427
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 1313,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1201,
+      1421
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 1348,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1201,
+      1421
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 1339,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1201,
+      1421
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 1361,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1201,
+      1421
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 1392,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1201,
+      1421
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 1380,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1201,
+      1421
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 1361,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1201,
+      1421
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 1390,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1201,
+      1421
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 1415,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1201,
+      1421
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 1326,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1201,
+      1421
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 1420,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1201,
+      1421
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 1355,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1201,
+      1421
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 1392,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1201,
+      1421
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 1345,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1201,
+      1421
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-14|2027-05-18",
+    "price": 430,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-14|2027-05-18",
+    "price": 407,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-14|2027-05-18",
+    "price": 400,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-14|2027-05-18",
+    "price": 399,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-14|2027-05-18",
+    "price": 374,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-14|2027-05-18",
+    "price": 363,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-14|2027-05-18",
+    "price": 344,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-14|2027-05-18",
+    "price": 352,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-14|2027-05-18",
+    "price": 341,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-14|2027-05-18",
+    "price": 323,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-14|2027-05-18",
+    "price": 318,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-14|2027-05-18",
+    "price": 298,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-14|2027-05-18",
+    "price": 289,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-14|2027-05-18",
+    "price": 288,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-16|2027-05-20",
+    "price": 364,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-16|2027-05-20",
+    "price": 364,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-16|2027-05-20",
+    "price": 357,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-16|2027-05-20",
+    "price": 364,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-16|2027-05-20",
+    "price": 361,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-16|2027-05-20",
+    "price": 341,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-16|2027-05-20",
+    "price": 356,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-16|2027-05-20",
+    "price": 348,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-16|2027-05-20",
+    "price": 353,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-16|2027-05-20",
+    "price": 352,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-16|2027-05-20",
+    "price": 350,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-16|2027-05-20",
+    "price": 356,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-16|2027-05-20",
+    "price": 338,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Boston|2027-05-16|2027-05-20",
+    "price": 338,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 667,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 668,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 664,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 666,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 697,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 704,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 686,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 678,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 719,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 696,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 685,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 689,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 731,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 700,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 831,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 828,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 808,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 809,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 775,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 774,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 750,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 735,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 717,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 699,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 655,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 654,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 616,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 633,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      636,
+      752
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 408,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 403,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 403,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 399,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 385,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 360,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 358,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 355,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 355,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 336,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 338,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 316,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 309,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 309,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 416,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 405,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 398,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 396,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 392,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "high",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 369,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 352,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 342,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 341,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 337,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 313,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 325,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 317,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "price_level": "typical",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 290,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "price_level": "low",
+    "typical_range": [
+      327,
+      387
+    ]
+  },
+  {
+    "ts": "2026-09-05T14:00:00+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 1344,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      1087,
+      1285
+    ]
+  },
+  {
+    "ts": "2026-09-09T14:00:00+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 1340,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      1087,
+      1285
+    ]
+  },
+  {
+    "ts": "2026-09-13T14:00:00+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 1312,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "high",
+    "typical_range": [
+      1087,
+      1285
+    ]
+  },
+  {
+    "ts": "2026-09-17T14:00:00+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 1243,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1087,
+      1285
+    ]
+  },
+  {
+    "ts": "2026-09-21T14:00:00+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 1234,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1087,
+      1285
+    ]
+  },
+  {
+    "ts": "2026-09-25T14:00:00+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 1192,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1087,
+      1285
+    ]
+  },
+  {
+    "ts": "2026-09-29T14:00:00+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 1184,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1087,
+      1285
+    ]
+  },
+  {
+    "ts": "2026-10-03T14:00:00+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 1171,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1087,
+      1285
+    ]
+  },
+  {
+    "ts": "2026-10-07T14:00:00+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 1126,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1087,
+      1285
+    ]
+  },
+  {
+    "ts": "2026-10-11T14:00:00+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 1066,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1087,
+      1285
+    ]
+  },
+  {
+    "ts": "2026-10-15T14:00:00+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 1074,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1087,
+      1285
+    ]
+  },
+  {
+    "ts": "2026-10-19T14:00:00+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 1061,
+    "airlines": [
+      "British Airways"
+    ],
+    "stops": 1,
+    "price_level": "typical",
+    "typical_range": [
+      1087,
+      1285
+    ]
+  },
+  {
+    "ts": "2026-10-23T14:00:00+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 1013,
+    "airlines": [
+      "Aer Lingus"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1087,
+      1285
+    ]
+  },
+  {
+    "ts": "2026-10-27T14:00:00+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 989,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "price_level": "low",
+    "typical_range": [
+      1087,
+      1285
+    ]
+  }
+]
