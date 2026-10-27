@@ -1,0 +1,74 @@
+Fares worth a look: newly under your price limit, or the lowest yet (prices include taxes; bags extra, and fares can change before you book):
+
+- **New York City** 2026-12-18 → 2026-12-22: $470 round trip, taxes included (your limit $500), United, 1 stop(s)
+  - $30 under your limit, Google rates this fare HIGH for this route
+  - Out: UA 303, UA 669 7:31 AM MCI → 1:22 PM LGA
+  - Back: AA 4627, AA 4635, AA 4181 7:03 PM LGA → 8:37 AM MCI
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjYtMTItMjJqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ
+- **New York City** 2027-01-01 → 2027-01-05: $353 round trip, taxes included (your limit $500), Southwest, nonstop
+  - $147 under your limit, Google rates this fare typical for this route
+  - Out: WN 2681 5:50 AM MCI → 9:30 AM LGA
+  - Back: WN 2939 8:00 AM LGA → 10:15 AM MCI
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAxLTAxagcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDEtMDVqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ
+- **New York City** 2027-01-14 → 2027-01-18: $353 round trip, taxes included (your limit $500), Southwest, nonstop
+  - $147 under your limit, Google rates this fare typical for this route
+  - Out: WN 4766 6:00 AM MCI → 9:50 AM LGA
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAxLTE0agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDEtMThqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ
+- **Washington, DC** 2026-12-18 → 2026-12-22: $249 round trip, taxes included (your limit $350), Frontier, 1 stop(s)
+  - $101 under your limit, Google rates this fare typical for this route
+  - Out: F9 3375, F9 686 8:51 PM MCI → 12:25 PM DCA
+  - Back: F9 687, F9 4828 1:20 PM DCA → 7:56 PM MCI
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjYtMTItMjJqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ
+- **Washington, DC** 2027-01-01 → 2027-01-05: $227 for TWO ONE-WAY tickets ($129 out + $98 back), taxes included, bought separately; round trip is $235 (your limit $350)
+  - $123 under your limit, two one-way tickets save $8 vs the $235 round trip, Google rates this fare typical for this route
+  - Out (ticket 1): WN 2848 8:05 AM MCI → 11:30 AM DCA
+  - Back (ticket 2): F9 3663, F9 4175 12:01 PM BWI → 3:06 PM MCI
+  - Two separate tickets: no protection if one flight disrupts the other, bags paid per ticket.
+- **Washington, DC** 2027-01-14 → 2027-01-18: $257 round trip, taxes included (your limit $350), American, nonstop
+  - $93 under your limit, Google rates this fare typical for this route
+  - Out: AA 4752 6:00 AM MCI → 9:40 AM DCA
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAxLTE0agcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjctMDEtMThqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ
+- **London** 2026-12-30 → 2027-01-06: $1,103 round trip, taxes included (your limit $1,200), Southwest, Icelandair, 2 stop(s)
+  - $97 under your limit, Google rates this fare HIGH for this route
+  - Out: WN 2654, FI 642, FI 450 6:10 AM MCI → 10:50 AM LHR
+  - Back: FI 455, FI 643, WN 2068 8:35 PM LHR → 12:35 PM MCI
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI2LTEyLTMwagcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDEtMDZqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ
+- **London** 2027-01-11 → 2027-01-18: $979 round trip, taxes included (your limit $1,200), American, British Airways, 2 stop(s)
+  - $221 under your limit, Google rates this fare HIGH for this route
+  - Out: AA 6349, AA 2484, BA 2036 9:47 AM MCI → 7:30 AM LGW
+  - Back: BA 2037, AA 3233, AA 4938 11:15 AM LGW → 8:53 AM MCI
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI3LTAxLTExagcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDEtMThqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ
+- **Delhi** 2026-12-29 → 2027-01-08: $2,277 round trip, taxes included (your limit $2,400), United, SWISS, 2 stop(s)
+  - $123 under your limit, Google rates this fare typical for this route
+  - Out: UA 463, LX 73, LX 146 11:07 AM MCI → 12:15 AM DEL
+  - Back: KE 498, KE 17, DL 1517 7:50 PM DEL → 4:11 PM MCI
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTI5agcIARIDTUNJcgcIARIDREVMGh4SCjIwMjctMDEtMDhqBwgBEgNERUxyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ
+- **Delhi** 2027-01-08 → 2027-01-18: $1,621 round trip, taxes included (your limit $2,400), United, ANA, 2 stop(s)
+  - $779 under your limit, Google rates this fare HIGH for this route
+  - Out: UA 5309, NH 111, NH 837 1:12 PM MCI → 5:25 PM DEL
+  - Back: NH 838, NH 112, UA 3503 6:55 PM DEL → 11:15 AM MCI
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAxLTA4agcIARIDTUNJcgcIARIDREVMGh4SCjIwMjctMDEtMThqBwgBEgNERUxyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ
+- **New York City** 2027-03-29 → 2027-04-02: $440 round trip, taxes included (your limit $500), United, nonstop
+  - $60 under your limit, Google rates this fare typical for this route
+  - Out: UA 3654 6:00 AM MCI → 10:01 AM EWR
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTI5agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDQtMDJqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ
+- **New York City** 2027-03-31 → 2027-04-04: $398 round trip, taxes included (your limit $500), Frontier, 1 stop(s)
+  - $102 under your limit, Google rates this fare typical for this route
+  - Out: F9 4176, F9 2432 8:15 AM MCI → 11:15 PM LGA
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTMxagcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDQtMDRqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ
+- **London** 2027-03-29 → 2027-04-04: $945 round trip, taxes included (your limit $1,200), American, British Airways, 2 stop(s)
+  - $255 under your limit, Google rates this fare typical for this route
+  - Out: AA 2487, AA 2360, BA 2036 6:39 AM MCI → 6:50 AM LGW
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI3LTAzLTI5agcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDQtMDRqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ
+- **New York City** 2027-05-14 → 2027-05-18: $469 round trip, taxes included (your limit $500), Southwest, nonstop
+  - $31 under your limit, Google rates this fare HIGH for this route
+  - Out: WN 1421 5:10 AM MCI → 8:55 AM LGA
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTA1LTE0agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDUtMThqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ
+- **New York City** 2027-05-16 → 2027-05-20: $480 round trip, taxes included (your limit $500), Southwest, nonstop
+  - $20 under your limit, Google rates this fare typical for this route
+  - Out: WN 1421 5:05 AM MCI → 8:50 AM LGA
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTA1LTE2agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDUtMjBqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ
+- **London** 2027-05-14 → 2027-05-20: $993 round trip, taxes included (your limit $1,200), American, British Airways, 2 stop(s)
+  - $207 under your limit, Google rates this fare typical for this route
+  - Out: AA 4964, AA 2288, BA 2036 9:05 AM MCI → 6:50 AM LGW
+  - Google Flights: https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI3LTA1LTE0agcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDUtMjBqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ

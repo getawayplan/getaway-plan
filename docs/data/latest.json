@@ -1,0 +1,2781 @@
+{
+  "generated_at": "2026-10-27T21:09:01+00:00",
+  "mode": "live",
+  "home_airports": [
+    "MCI"
+  ],
+  "currency": "USD",
+  "searches_used_this_month": 41,
+  "monthly_search_budget": 240,
+  "estimated_searches_next_30_days": 156,
+  "config": {
+    "home_airports": [
+      "MCI"
+    ],
+    "currency": "USD",
+    "monthly_search_budget": 240,
+    "max_detail_lookups_per_run": 8,
+    "pacing_slack": 40,
+    "one_way_compare": {
+      "enabled": true,
+      "max_trips_per_run": 2,
+      "within_pct_of_limit": 25,
+      "min_days_between": 7
+    },
+    "check_every_days": {
+      "far": 21,
+      "approaching": 7,
+      "prime": 3,
+      "late": 5
+    },
+    "destinations": [
+      {
+        "name": "Boston",
+        "airports": [
+          "BOS"
+        ],
+        "max_price": 350,
+        "nights": 4,
+        "min_nights": 3
+      },
+      {
+        "name": "New York City",
+        "airports": [
+          "JFK",
+          "LGA",
+          "EWR"
+        ],
+        "max_price": 500,
+        "nights": 4,
+        "min_nights": 3
+      },
+      {
+        "name": "Washington, DC",
+        "airports": [
+          "DCA",
+          "IAD",
+          "BWI"
+        ],
+        "max_price": 350,
+        "nights": 4,
+        "min_nights": 3
+      },
+      {
+        "name": "London",
+        "airports": [
+          "LHR",
+          "LGW"
+        ],
+        "max_price": 1200,
+        "nights": 7,
+        "min_nights": 5,
+        "booking_days": [
+          50,
+          133
+        ]
+      },
+      {
+        "name": "Delhi",
+        "airports": [
+          "DEL"
+        ],
+        "max_price": 2400,
+        "nights": 10,
+        "min_nights": 8,
+        "booking_days": [
+          50,
+          133
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "start": "2026-12-18",
+        "end": "2027-01-18",
+        "samples": 3,
+        "book_earlier_days": 10
+      },
+      {
+        "start": "2027-03-29",
+        "end": "2027-04-04",
+        "samples": 2,
+        "book_earlier_days": 5
+      },
+      {
+        "start": "2027-05-14",
+        "end": "2027-05-20",
+        "samples": 2,
+        "book_earlier_days": 0
+      }
+    ]
+  },
+  "destinations": [
+    {
+      "name": "Boston",
+      "airports": [
+        "BOS"
+      ],
+      "max_price": 350,
+      "best_trip_id": "Boston|2027-01-01|2027-01-05",
+      "best_price": 363,
+      "best_kind": "round_trip",
+      "under_ceiling": false
+    },
+    {
+      "name": "New York City",
+      "airports": [
+        "JFK",
+        "LGA",
+        "EWR"
+      ],
+      "max_price": 500,
+      "best_trip_id": "New York City|2027-01-01|2027-01-05",
+      "best_price": 353,
+      "best_kind": "round_trip",
+      "under_ceiling": true
+    },
+    {
+      "name": "Washington, DC",
+      "airports": [
+        "DCA",
+        "IAD",
+        "BWI"
+      ],
+      "max_price": 350,
+      "best_trip_id": "Washington, DC|2027-01-01|2027-01-05",
+      "best_price": 227,
+      "best_kind": "two_one_ways",
+      "under_ceiling": true
+    },
+    {
+      "name": "London",
+      "airports": [
+        "LHR",
+        "LGW"
+      ],
+      "max_price": 1200,
+      "best_trip_id": "London|2027-03-29|2027-04-04",
+      "best_price": 945,
+      "best_kind": "round_trip",
+      "under_ceiling": true
+    },
+    {
+      "name": "Delhi",
+      "airports": [
+        "DEL"
+      ],
+      "max_price": 2400,
+      "best_trip_id": "Delhi|2027-01-08|2027-01-18",
+      "best_price": 1621,
+      "best_kind": "round_trip",
+      "under_ceiling": true
+    }
+  ],
+  "trips": [
+    {
+      "id": "Boston|2026-12-18|2026-12-22",
+      "destination": "Boston",
+      "airports": [
+        "BOS"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2026-12-18",
+      "return": "2026-12-22",
+      "nights": 4,
+      "max_price": 350,
+      "book_lo": 32,
+      "book_hi": 67,
+      "days_out": 52,
+      "phase": "prime",
+      "best_from": "2026-10-12",
+      "best_until": "2026-11-16",
+      "check_every_days": 3,
+      "status": "ok",
+      "price": 417,
+      "airlines": [
+        "Delta"
+      ],
+      "stops": 0,
+      "duration_min": 174,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjYtMTItMjJqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        290,
+        520
+      ],
+      "observed_at": "2026-10-27T21:06:58+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 417,
+      "observations": 1,
+      "effective_price": 417,
+      "oneway": null,
+      "under_ceiling": false,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Delta",
+            "flight": "DL 675",
+            "from": "MCI",
+            "depart": "2026-12-18 09:55",
+            "to": "BOS",
+            "arrive": "2026-12-18 13:49",
+            "minutes": 174,
+            "overnight": false
+          }
+        ],
+        "layovers": [],
+        "minutes": 174
+      },
+      "return_flight": null
+    },
+    {
+      "id": "Boston|2027-01-01|2027-01-05",
+      "destination": "Boston",
+      "airports": [
+        "BOS"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2027-01-01",
+      "return": "2027-01-05",
+      "nights": 4,
+      "max_price": 350,
+      "book_lo": 32,
+      "book_hi": 67,
+      "days_out": 66,
+      "phase": "prime",
+      "best_from": "2026-10-26",
+      "best_until": "2026-11-30",
+      "check_every_days": 3,
+      "status": "ok",
+      "price": 363,
+      "airlines": [
+        "United"
+      ],
+      "stops": 1,
+      "duration_min": 721,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAxLTAxagcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMDVqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        250,
+        470
+      ],
+      "observed_at": "2026-10-27T21:07:00+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 363,
+      "observations": 1,
+      "effective_price": 363,
+      "oneway": null,
+      "under_ceiling": false,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "United",
+            "flight": "UA 463",
+            "from": "MCI",
+            "depart": "2027-01-01 10:58",
+            "to": "IAD",
+            "arrive": "2027-01-01 14:23",
+            "minutes": 145,
+            "overnight": false
+          },
+          {
+            "airline": "United",
+            "flight": "UA 755",
+            "from": "IAD",
+            "depart": "2027-01-01 22:20",
+            "to": "BOS",
+            "arrive": "2027-01-01 23:59",
+            "minutes": 99,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Dulles International Airport",
+            "code": "IAD",
+            "minutes": 477,
+            "overnight": false
+          }
+        ],
+        "minutes": 721
+      },
+      "return_flight": null
+    },
+    {
+      "id": "Boston|2027-01-14|2027-01-18",
+      "destination": "Boston",
+      "airports": [
+        "BOS"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2027-01-14",
+      "return": "2027-01-18",
+      "nights": 4,
+      "max_price": 350,
+      "book_lo": 32,
+      "book_hi": 67,
+      "days_out": 79,
+      "phase": "approaching",
+      "best_from": "2026-11-08",
+      "best_until": "2026-12-13",
+      "check_every_days": 7,
+      "status": "ok",
+      "price": 363,
+      "airlines": [
+        "American"
+      ],
+      "stops": 1,
+      "duration_min": 524,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAxLTE0agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMThqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        230,
+        480
+      ],
+      "observed_at": "2026-10-27T21:08:07+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 363,
+      "observations": 1,
+      "effective_price": 363,
+      "oneway": null,
+      "under_ceiling": false,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "American",
+            "flight": "AA 4752",
+            "from": "MCI",
+            "depart": "2027-01-14 06:00",
+            "to": "DCA",
+            "arrive": "2027-01-14 09:40",
+            "minutes": 160,
+            "overnight": false
+          },
+          {
+            "airline": "American",
+            "flight": "AA 4570",
+            "from": "DCA",
+            "depart": "2027-01-14 13:58",
+            "to": "BOS",
+            "arrive": "2027-01-14 15:44",
+            "minutes": 106,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Ronald Reagan Washington National Airport",
+            "code": "DCA",
+            "minutes": 258,
+            "overnight": false
+          }
+        ],
+        "minutes": 524
+      },
+      "return_flight": null
+    },
+    {
+      "id": "New York City|2026-12-18|2026-12-22",
+      "destination": "New York City",
+      "airports": [
+        "JFK",
+        "LGA",
+        "EWR"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2026-12-18",
+      "return": "2026-12-22",
+      "nights": 4,
+      "max_price": 500,
+      "book_lo": 32,
+      "book_hi": 67,
+      "days_out": 52,
+      "phase": "prime",
+      "best_from": "2026-10-12",
+      "best_until": "2026-11-16",
+      "check_every_days": 3,
+      "status": "ok",
+      "price": 470,
+      "airlines": [
+        "United"
+      ],
+      "stops": 1,
+      "duration_min": 291,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjYtMTItMjJqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "high",
+      "typical_range": [
+        240,
+        415
+      ],
+      "observed_at": "2026-10-27T21:07:10+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 470,
+      "observations": 1,
+      "effective_price": 470,
+      "oneway": null,
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "United",
+            "flight": "UA 303",
+            "from": "MCI",
+            "depart": "2026-12-18 07:31",
+            "to": "ORD",
+            "arrive": "2026-12-18 09:22",
+            "minutes": 111,
+            "overnight": false
+          },
+          {
+            "airline": "United",
+            "flight": "UA 669",
+            "from": "ORD",
+            "depart": "2026-12-18 10:05",
+            "to": "LGA",
+            "arrive": "2026-12-18 13:22",
+            "minutes": 137,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Chicago O'Hare International Airport",
+            "code": "ORD",
+            "minutes": 43,
+            "overnight": false
+          }
+        ],
+        "minutes": 291
+      },
+      "return_flight": {
+        "segments": [
+          {
+            "airline": "American",
+            "flight": "AA 4627",
+            "from": "LGA",
+            "depart": "2026-12-22 19:03",
+            "to": "DCA",
+            "arrive": "2026-12-22 20:57",
+            "minutes": 114,
+            "overnight": false
+          },
+          {
+            "airline": "American",
+            "flight": "AA 4635",
+            "from": "DCA",
+            "depart": "2026-12-22 22:06",
+            "to": "ORD",
+            "arrive": "2026-12-22 23:32",
+            "minutes": 146,
+            "overnight": false
+          },
+          {
+            "airline": "American",
+            "flight": "AA 4181",
+            "from": "ORD",
+            "depart": "2026-12-23 06:45",
+            "to": "MCI",
+            "arrive": "2026-12-23 08:37",
+            "minutes": 112,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Ronald Reagan Washington National Airport",
+            "code": "DCA",
+            "minutes": 69,
+            "overnight": false
+          },
+          {
+            "name": "Chicago O'Hare International Airport",
+            "code": "ORD",
+            "minutes": 433,
+            "overnight": false
+          }
+        ],
+        "minutes": 874
+      }
+    },
+    {
+      "id": "New York City|2027-01-01|2027-01-05",
+      "destination": "New York City",
+      "airports": [
+        "JFK",
+        "LGA",
+        "EWR"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2027-01-01",
+      "return": "2027-01-05",
+      "nights": 4,
+      "max_price": 500,
+      "book_lo": 32,
+      "book_hi": 67,
+      "days_out": 66,
+      "phase": "prime",
+      "best_from": "2026-10-26",
+      "best_until": "2026-11-30",
+      "check_every_days": 3,
+      "status": "ok",
+      "price": 353,
+      "airlines": [
+        "Southwest"
+      ],
+      "stops": 0,
+      "duration_min": 160,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAxLTAxagcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDEtMDVqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        195,
+        380
+      ],
+      "observed_at": "2026-10-27T21:07:15+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 353,
+      "observations": 1,
+      "effective_price": 353,
+      "oneway": null,
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Southwest",
+            "flight": "WN 2681",
+            "from": "MCI",
+            "depart": "2027-01-01 05:50",
+            "to": "LGA",
+            "arrive": "2027-01-01 09:30",
+            "minutes": 160,
+            "overnight": false
+          }
+        ],
+        "layovers": [],
+        "minutes": 160
+      },
+      "return_flight": {
+        "segments": [
+          {
+            "airline": "Southwest",
+            "flight": "WN 2939",
+            "from": "LGA",
+            "depart": "2027-01-05 08:00",
+            "to": "MCI",
+            "arrive": "2027-01-05 10:15",
+            "minutes": 195,
+            "overnight": false
+          }
+        ],
+        "layovers": [],
+        "minutes": 195
+      }
+    },
+    {
+      "id": "New York City|2027-01-14|2027-01-18",
+      "destination": "New York City",
+      "airports": [
+        "JFK",
+        "LGA",
+        "EWR"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2027-01-14",
+      "return": "2027-01-18",
+      "nights": 4,
+      "max_price": 500,
+      "book_lo": 32,
+      "book_hi": 67,
+      "days_out": 79,
+      "phase": "approaching",
+      "best_from": "2026-11-08",
+      "best_until": "2026-12-13",
+      "check_every_days": 7,
+      "status": "ok",
+      "price": 353,
+      "airlines": [
+        "Southwest"
+      ],
+      "stops": 0,
+      "duration_min": 170,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAxLTE0agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDEtMThqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        200,
+        400
+      ],
+      "observed_at": "2026-10-27T21:08:09+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 353,
+      "observations": 1,
+      "effective_price": 353,
+      "oneway": null,
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Southwest",
+            "flight": "WN 4766",
+            "from": "MCI",
+            "depart": "2027-01-14 06:00",
+            "to": "LGA",
+            "arrive": "2027-01-14 09:50",
+            "minutes": 170,
+            "overnight": false
+          }
+        ],
+        "layovers": [],
+        "minutes": 170
+      },
+      "return_flight": null
+    },
+    {
+      "id": "Washington, DC|2026-12-18|2026-12-22",
+      "destination": "Washington, DC",
+      "airports": [
+        "DCA",
+        "IAD",
+        "BWI"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2026-12-18",
+      "return": "2026-12-22",
+      "nights": 4,
+      "max_price": 350,
+      "book_lo": 32,
+      "book_hi": 67,
+      "days_out": 52,
+      "phase": "prime",
+      "best_from": "2026-10-12",
+      "best_until": "2026-11-16",
+      "check_every_days": 3,
+      "status": "ok",
+      "price": 249,
+      "airlines": [
+        "Frontier"
+      ],
+      "stops": 1,
+      "duration_min": 874,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjYtMTItMjJqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        210,
+        380
+      ],
+      "observed_at": "2026-10-27T21:07:18+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 249,
+      "observations": 1,
+      "effective_price": 249,
+      "oneway": null,
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Frontier",
+            "flight": "F9 3375",
+            "from": "MCI",
+            "depart": "2026-12-18 20:51",
+            "to": "DEN",
+            "arrive": "2026-12-18 21:53",
+            "minutes": 122,
+            "overnight": false
+          },
+          {
+            "airline": "Frontier",
+            "flight": "F9 686",
+            "from": "DEN",
+            "depart": "2026-12-19 07:00",
+            "to": "DCA",
+            "arrive": "2026-12-19 12:25",
+            "minutes": 205,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Denver International Airport",
+            "code": "DEN",
+            "minutes": 547,
+            "overnight": false
+          }
+        ],
+        "minutes": 874
+      },
+      "return_flight": {
+        "segments": [
+          {
+            "airline": "Frontier",
+            "flight": "F9 687",
+            "from": "DCA",
+            "depart": "2026-12-22 13:20",
+            "to": "DEN",
+            "arrive": "2026-12-22 15:29",
+            "minutes": 249,
+            "overnight": false
+          },
+          {
+            "airline": "Frontier",
+            "flight": "F9 4828",
+            "from": "DEN",
+            "depart": "2026-12-22 17:17",
+            "to": "MCI",
+            "arrive": "2026-12-22 19:56",
+            "minutes": 99,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Denver International Airport",
+            "code": "DEN",
+            "minutes": 108,
+            "overnight": false
+          }
+        ],
+        "minutes": 456
+      }
+    },
+    {
+      "id": "Washington, DC|2027-01-01|2027-01-05",
+      "destination": "Washington, DC",
+      "airports": [
+        "DCA",
+        "IAD",
+        "BWI"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2027-01-01",
+      "return": "2027-01-05",
+      "nights": 4,
+      "max_price": 350,
+      "book_lo": 32,
+      "book_hi": 67,
+      "days_out": 66,
+      "phase": "prime",
+      "best_from": "2026-10-26",
+      "best_until": "2026-11-30",
+      "check_every_days": 3,
+      "status": "ok",
+      "price": 235,
+      "airlines": [
+        "Southwest"
+      ],
+      "stops": 0,
+      "duration_min": 145,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAxLTAxagcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjctMDEtMDVqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        185,
+        320
+      ],
+      "observed_at": "2026-10-27T21:07:22+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 235,
+      "observations": 1,
+      "effective_price": 227,
+      "oneway": {
+        "total": 227,
+        "out_price": 129,
+        "back_price": 98,
+        "out_airlines": [
+          "Southwest"
+        ],
+        "back_airlines": [
+          "Frontier"
+        ],
+        "out_flight": {
+          "segments": [
+            {
+              "airline": "Southwest",
+              "flight": "WN 2848",
+              "from": "MCI",
+              "depart": "2027-01-01 08:05",
+              "to": "DCA",
+              "arrive": "2027-01-01 11:30",
+              "minutes": 145,
+              "overnight": false
+            }
+          ],
+          "layovers": [],
+          "minutes": 145
+        },
+        "back_flight": {
+          "segments": [
+            {
+              "airline": "Frontier",
+              "flight": "F9 3663",
+              "from": "BWI",
+              "depart": "2027-01-05 12:01",
+              "to": "MCO",
+              "arrive": "2027-01-05 14:38",
+              "minutes": 157,
+              "overnight": false
+            },
+            {
+              "airline": "Frontier",
+              "flight": "F9 4175",
+              "from": "MCO",
+              "depart": "2027-01-06 12:54",
+              "to": "MCI",
+              "arrive": "2027-01-06 15:06",
+              "minutes": 192,
+              "overnight": false
+            }
+          ],
+          "layovers": [
+            {
+              "name": "Orlando International Airport",
+              "code": "MCO",
+              "minutes": 1336,
+              "overnight": false
+            }
+          ],
+          "minutes": 1685
+        },
+        "checked_at": "2026-10-27T21:08:56+00:00",
+        "better": true,
+        "saves": 8
+      },
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Southwest",
+            "flight": "WN 2848",
+            "from": "MCI",
+            "depart": "2027-01-01 08:05",
+            "to": "DCA",
+            "arrive": "2027-01-01 11:30",
+            "minutes": 145,
+            "overnight": false
+          }
+        ],
+        "layovers": [],
+        "minutes": 145
+      },
+      "return_flight": {
+        "segments": [
+          {
+            "airline": "Frontier",
+            "flight": "F9 685",
+            "from": "DCA",
+            "depart": "2027-01-05 07:25",
+            "to": "DEN",
+            "arrive": "2027-01-05 09:41",
+            "minutes": 256,
+            "overnight": false
+          },
+          {
+            "airline": "Frontier",
+            "flight": "F9 3376",
+            "from": "DEN",
+            "depart": "2027-01-05 17:05",
+            "to": "MCI",
+            "arrive": "2027-01-05 19:44",
+            "minutes": 99,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Denver International Airport",
+            "code": "DEN",
+            "minutes": 444,
+            "overnight": false
+          }
+        ],
+        "minutes": 799
+      }
+    },
+    {
+      "id": "Washington, DC|2027-01-14|2027-01-18",
+      "destination": "Washington, DC",
+      "airports": [
+        "DCA",
+        "IAD",
+        "BWI"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2027-01-14",
+      "return": "2027-01-18",
+      "nights": 4,
+      "max_price": 350,
+      "book_lo": 32,
+      "book_hi": 67,
+      "days_out": 79,
+      "phase": "approaching",
+      "best_from": "2026-11-08",
+      "best_until": "2026-12-13",
+      "check_every_days": 7,
+      "status": "ok",
+      "price": 257,
+      "airlines": [
+        "American"
+      ],
+      "stops": 0,
+      "duration_min": 160,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAxLTE0agcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjctMDEtMThqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        180,
+        325
+      ],
+      "observed_at": "2026-10-27T21:08:11+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 257,
+      "observations": 1,
+      "effective_price": 257,
+      "oneway": null,
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "American",
+            "flight": "AA 4752",
+            "from": "MCI",
+            "depart": "2027-01-14 06:00",
+            "to": "DCA",
+            "arrive": "2027-01-14 09:40",
+            "minutes": 160,
+            "overnight": false
+          }
+        ],
+        "layovers": [],
+        "minutes": 160
+      },
+      "return_flight": null
+    },
+    {
+      "id": "London|2026-12-18|2026-12-25",
+      "destination": "London",
+      "airports": [
+        "LHR",
+        "LGW"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2026-12-18",
+      "return": "2026-12-25",
+      "nights": 7,
+      "max_price": 1200,
+      "book_lo": 60,
+      "book_hi": 143,
+      "days_out": 52,
+      "phase": "late",
+      "best_from": "2026-07-28",
+      "best_until": "2026-10-19",
+      "check_every_days": 5,
+      "status": "ok",
+      "price": 1393,
+      "airlines": [
+        "Delta",
+        "Virgin Atlantic"
+      ],
+      "stops": 1,
+      "duration_min": 665,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjYtMTItMjVqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        720,
+        1400
+      ],
+      "observed_at": "2026-10-27T21:08:03+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 1393,
+      "observations": 1,
+      "effective_price": 1393,
+      "oneway": null,
+      "under_ceiling": false,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Delta",
+            "flight": "DL 2466",
+            "from": "MCI",
+            "depart": "2026-12-18 13:20",
+            "to": "ATL",
+            "arrive": "2026-12-18 16:22",
+            "minutes": 122,
+            "overnight": false
+          },
+          {
+            "airline": "Virgin Atlantic",
+            "flight": "VS 104",
+            "from": "ATL",
+            "depart": "2026-12-18 17:30",
+            "to": "LHR",
+            "arrive": "2026-12-19 06:25",
+            "minutes": 475,
+            "overnight": true
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Hartsfield-Jackson Atlanta International Airport",
+            "code": "ATL",
+            "minutes": 68,
+            "overnight": false
+          }
+        ],
+        "minutes": 665
+      },
+      "return_flight": null
+    },
+    {
+      "id": "London|2026-12-30|2027-01-06",
+      "destination": "London",
+      "airports": [
+        "LHR",
+        "LGW"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2026-12-30",
+      "return": "2027-01-06",
+      "nights": 7,
+      "max_price": 1200,
+      "book_lo": 60,
+      "book_hi": 143,
+      "days_out": 64,
+      "phase": "prime",
+      "best_from": "2026-08-09",
+      "best_until": "2026-10-31",
+      "check_every_days": 3,
+      "status": "ok",
+      "price": 1103,
+      "airlines": [
+        "Southwest",
+        "Icelandair"
+      ],
+      "stops": 2,
+      "duration_min": 1360,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI2LTEyLTMwagcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDEtMDZqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "high",
+      "typical_range": [
+        640,
+        1050
+      ],
+      "observed_at": "2026-10-27T21:07:26+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 1103,
+      "observations": 1,
+      "effective_price": 1103,
+      "oneway": null,
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Southwest",
+            "flight": "WN 2654",
+            "from": "MCI",
+            "depart": "2026-12-30 06:10",
+            "to": "BWI",
+            "arrive": "2026-12-30 09:30",
+            "minutes": 140,
+            "overnight": false
+          },
+          {
+            "airline": "Icelandair",
+            "flight": "FI 642",
+            "from": "BWI",
+            "depart": "2026-12-30 19:40",
+            "to": "KEF",
+            "arrive": "2026-12-31 06:30",
+            "minutes": 350,
+            "overnight": true
+          },
+          {
+            "airline": "Icelandair",
+            "flight": "FI 450",
+            "from": "KEF",
+            "depart": "2026-12-31 07:35",
+            "to": "LHR",
+            "arrive": "2026-12-31 10:50",
+            "minutes": 195,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Baltimore/Washington International Thurgood Marshall Airport",
+            "code": "BWI",
+            "minutes": 610,
+            "overnight": false
+          },
+          {
+            "name": "Keflav\u00edk International Airport",
+            "code": "KEF",
+            "minutes": 65,
+            "overnight": false
+          }
+        ],
+        "minutes": 1360
+      },
+      "return_flight": {
+        "segments": [
+          {
+            "airline": "Icelandair",
+            "flight": "FI 455",
+            "from": "LHR",
+            "depart": "2027-01-06 20:35",
+            "to": "KEF",
+            "arrive": "2027-01-06 23:50",
+            "minutes": 195,
+            "overnight": false
+          },
+          {
+            "airline": "Icelandair",
+            "flight": "FI 643",
+            "from": "KEF",
+            "depart": "2027-01-07 17:00",
+            "to": "BWI",
+            "arrive": "2027-01-07 18:40",
+            "minutes": 400,
+            "overnight": false
+          },
+          {
+            "airline": "Southwest",
+            "flight": "WN 2068",
+            "from": "BWI",
+            "depart": "2027-01-08 10:40",
+            "to": "MCI",
+            "arrive": "2027-01-08 12:35",
+            "minutes": 175,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Keflav\u00edk International Airport",
+            "code": "KEF",
+            "minutes": 1030,
+            "overnight": false
+          },
+          {
+            "name": "Baltimore/Washington International Thurgood Marshall Airport",
+            "code": "BWI",
+            "minutes": 960,
+            "overnight": false
+          }
+        ],
+        "minutes": 2760
+      }
+    },
+    {
+      "id": "London|2027-01-11|2027-01-18",
+      "destination": "London",
+      "airports": [
+        "LHR",
+        "LGW"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2027-01-11",
+      "return": "2027-01-18",
+      "nights": 7,
+      "max_price": 1200,
+      "book_lo": 60,
+      "book_hi": 143,
+      "days_out": 76,
+      "phase": "prime",
+      "best_from": "2026-08-21",
+      "best_until": "2026-11-12",
+      "check_every_days": 3,
+      "status": "ok",
+      "price": 979,
+      "airlines": [
+        "American",
+        "British Airways"
+      ],
+      "stops": 2,
+      "duration_min": 943,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI3LTAxLTExagcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDEtMThqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "high",
+      "typical_range": [
+        610,
+        880
+      ],
+      "observed_at": "2026-10-27T21:07:37+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 979,
+      "observations": 1,
+      "effective_price": 979,
+      "oneway": null,
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "American",
+            "flight": "AA 6349",
+            "from": "MCI",
+            "depart": "2027-01-11 09:47",
+            "to": "ORD",
+            "arrive": "2027-01-11 11:39",
+            "minutes": 112,
+            "overnight": false
+          },
+          {
+            "airline": "American",
+            "flight": "AA 2484",
+            "from": "ORD",
+            "depart": "2027-01-11 12:35",
+            "to": "MCO",
+            "arrive": "2027-01-11 16:28",
+            "minutes": 173,
+            "overnight": false
+          },
+          {
+            "airline": "British Airways",
+            "flight": "BA 2036",
+            "from": "MCO",
+            "depart": "2027-01-11 18:10",
+            "to": "LGW",
+            "arrive": "2027-01-12 07:30",
+            "minutes": 500,
+            "overnight": true
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Chicago O'Hare International Airport",
+            "code": "ORD",
+            "minutes": 56,
+            "overnight": false
+          },
+          {
+            "name": "Orlando International Airport",
+            "code": "MCO",
+            "minutes": 102,
+            "overnight": false
+          }
+        ],
+        "minutes": 943
+      },
+      "return_flight": {
+        "segments": [
+          {
+            "airline": "British Airways",
+            "flight": "BA 2037",
+            "from": "LGW",
+            "depart": "2027-01-18 11:15",
+            "to": "MCO",
+            "arrive": "2027-01-18 16:10",
+            "minutes": 595,
+            "overnight": false
+          },
+          {
+            "airline": "American",
+            "flight": "AA 3233",
+            "from": "MCO",
+            "depart": "2027-01-18 19:51",
+            "to": "ORD",
+            "arrive": "2027-01-18 22:05",
+            "minutes": 194,
+            "overnight": false
+          },
+          {
+            "airline": "American",
+            "flight": "AA 4938",
+            "from": "ORD",
+            "depart": "2027-01-19 06:50",
+            "to": "MCI",
+            "arrive": "2027-01-19 08:53",
+            "minutes": 123,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Orlando International Airport",
+            "code": "MCO",
+            "minutes": 221,
+            "overnight": false
+          },
+          {
+            "name": "Chicago O'Hare International Airport",
+            "code": "ORD",
+            "minutes": 525,
+            "overnight": false
+          }
+        ],
+        "minutes": 1658
+      }
+    },
+    {
+      "id": "Delhi|2026-12-18|2026-12-28",
+      "destination": "Delhi",
+      "airports": [
+        "DEL"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2026-12-18",
+      "return": "2026-12-28",
+      "nights": 10,
+      "max_price": 2400,
+      "book_lo": 60,
+      "book_hi": 143,
+      "days_out": 52,
+      "phase": "late",
+      "best_from": "2026-07-28",
+      "best_until": "2026-10-19",
+      "check_every_days": 5,
+      "status": "ok",
+      "price": 2995,
+      "airlines": [
+        "Delta",
+        "Air France"
+      ],
+      "stops": 2,
+      "duration_min": 1565,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDREVMGh4SCjIwMjYtMTItMjhqBwgBEgNERUxyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "high",
+      "typical_range": [
+        1450,
+        2950
+      ],
+      "observed_at": "2026-10-27T21:08:05+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 2995,
+      "observations": 1,
+      "effective_price": 2995,
+      "oneway": null,
+      "under_ceiling": false,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Delta",
+            "flight": "DL 675",
+            "from": "MCI",
+            "depart": "2026-12-18 09:55",
+            "to": "BOS",
+            "arrive": "2026-12-18 13:49",
+            "minutes": 174,
+            "overnight": false
+          },
+          {
+            "airline": "Air France",
+            "flight": "AF 61",
+            "from": "BOS",
+            "depart": "2026-12-18 18:20",
+            "to": "CDG",
+            "arrive": "2026-12-19 07:05",
+            "minutes": 405,
+            "overnight": true
+          },
+          {
+            "airline": "Air France",
+            "flight": "AF 226",
+            "from": "CDG",
+            "depart": "2026-12-19 10:35",
+            "to": "DEL",
+            "arrive": "2026-12-19 23:30",
+            "minutes": 505,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Boston Logan International Airport",
+            "code": "BOS",
+            "minutes": 271,
+            "overnight": false
+          },
+          {
+            "name": "A\u00e9roport de Paris-Charles de Gaulle",
+            "code": "CDG",
+            "minutes": 210,
+            "overnight": false
+          }
+        ],
+        "minutes": 1565
+      },
+      "return_flight": null
+    },
+    {
+      "id": "Delhi|2026-12-29|2027-01-08",
+      "destination": "Delhi",
+      "airports": [
+        "DEL"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2026-12-29",
+      "return": "2027-01-08",
+      "nights": 10,
+      "max_price": 2400,
+      "book_lo": 60,
+      "book_hi": 143,
+      "days_out": 63,
+      "phase": "prime",
+      "best_from": "2026-08-08",
+      "best_until": "2026-10-30",
+      "check_every_days": 3,
+      "status": "ok",
+      "price": 2277,
+      "airlines": [
+        "United",
+        "SWISS"
+      ],
+      "stops": 2,
+      "duration_min": 1538,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTI5agcIARIDTUNJcgcIARIDREVMGh4SCjIwMjctMDEtMDhqBwgBEgNERUxyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        1450,
+        2950
+      ],
+      "observed_at": "2026-10-27T21:07:51+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 2277,
+      "observations": 1,
+      "effective_price": 2277,
+      "oneway": null,
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "United",
+            "flight": "UA 463",
+            "from": "MCI",
+            "depart": "2026-12-29 11:07",
+            "to": "IAD",
+            "arrive": "2026-12-29 14:32",
+            "minutes": 145,
+            "overnight": false
+          },
+          {
+            "airline": "SWISS",
+            "flight": "LX 73",
+            "from": "IAD",
+            "depart": "2026-12-29 20:10",
+            "to": "ZRH",
+            "arrive": "2026-12-30 10:15",
+            "minutes": 485,
+            "overnight": true
+          },
+          {
+            "airline": "SWISS",
+            "flight": "LX 146",
+            "from": "ZRH",
+            "depart": "2026-12-30 12:00",
+            "to": "DEL",
+            "arrive": "2026-12-31 00:15",
+            "minutes": 465,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Dulles International Airport",
+            "code": "IAD",
+            "minutes": 338,
+            "overnight": false
+          },
+          {
+            "name": "Zurich Airport",
+            "code": "ZRH",
+            "minutes": 105,
+            "overnight": false
+          }
+        ],
+        "minutes": 1538
+      },
+      "return_flight": {
+        "segments": [
+          {
+            "airline": "Korean Air",
+            "flight": "KE 498",
+            "from": "DEL",
+            "depart": "2027-01-08 19:50",
+            "to": "ICN",
+            "arrive": "2027-01-09 06:05",
+            "minutes": 405,
+            "overnight": true
+          },
+          {
+            "airline": "Korean Air",
+            "flight": "KE 17",
+            "from": "ICN",
+            "depart": "2027-01-09 14:30",
+            "to": "LAX",
+            "arrive": "2027-01-09 08:30",
+            "minutes": 660,
+            "overnight": true
+          },
+          {
+            "airline": "Delta",
+            "flight": "DL 1517",
+            "from": "LAX",
+            "depart": "2027-01-09 10:50",
+            "to": "MCI",
+            "arrive": "2027-01-09 16:11",
+            "minutes": 201,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Incheon International Airport",
+            "code": "ICN",
+            "minutes": 505,
+            "overnight": false
+          },
+          {
+            "name": "Los Angeles International Airport",
+            "code": "LAX",
+            "minutes": 140,
+            "overnight": false
+          }
+        ],
+        "minutes": 1911
+      }
+    },
+    {
+      "id": "Delhi|2027-01-08|2027-01-18",
+      "destination": "Delhi",
+      "airports": [
+        "DEL"
+      ],
+      "window": "Dec 18 \u2013 Jan 18",
+      "depart": "2027-01-08",
+      "return": "2027-01-18",
+      "nights": 10,
+      "max_price": 2400,
+      "book_lo": 60,
+      "book_hi": 143,
+      "days_out": 73,
+      "phase": "prime",
+      "best_from": "2026-08-18",
+      "best_until": "2026-11-09",
+      "check_every_days": 3,
+      "status": "ok",
+      "price": 1621,
+      "airlines": [
+        "United",
+        "ANA"
+      ],
+      "stops": 2,
+      "duration_min": 2443,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAxLTA4agcIARIDTUNJcgcIARIDREVMGh4SCjIwMjctMDEtMThqBwgBEgNERUxyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "high",
+      "typical_range": [
+        960,
+        1450
+      ],
+      "observed_at": "2026-10-27T21:08:00+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 1621,
+      "observations": 1,
+      "effective_price": 1621,
+      "oneway": {
+        "total": 1915,
+        "out_price": 814,
+        "back_price": 1101,
+        "out_airlines": [
+          "United"
+        ],
+        "back_airlines": [
+          "Lufthansa",
+          "United"
+        ],
+        "out_flight": {
+          "segments": [
+            {
+              "airline": "United",
+              "flight": "UA 3475",
+              "from": "MCI",
+              "depart": "2027-01-08 15:25",
+              "to": "EWR",
+              "arrive": "2027-01-08 19:10",
+              "minutes": 165,
+              "overnight": false
+            },
+            {
+              "airline": "United",
+              "flight": "UA 82",
+              "from": "EWR",
+              "depart": "2027-01-08 20:30",
+              "to": "DEL",
+              "arrive": "2027-01-09 21:50",
+              "minutes": 890,
+              "overnight": true
+            }
+          ],
+          "layovers": [
+            {
+              "name": "Newark Liberty International Airport",
+              "code": "EWR",
+              "minutes": 80,
+              "overnight": false
+            }
+          ],
+          "minutes": 1135
+        },
+        "back_flight": {
+          "segments": [
+            {
+              "airline": "Lufthansa",
+              "flight": "LH 763",
+              "from": "DEL",
+              "depart": "2027-01-18 01:55",
+              "to": "MUC",
+              "arrive": "2027-01-18 06:00",
+              "minutes": 515,
+              "overnight": true
+            },
+            {
+              "airline": "Lufthansa",
+              "flight": "LH 480",
+              "from": "MUC",
+              "depart": "2027-01-18 11:50",
+              "to": "DEN",
+              "arrive": "2027-01-18 14:30",
+              "minutes": 640,
+              "overnight": false
+            },
+            {
+              "airline": "United",
+              "flight": "UA 2793",
+              "from": "DEN",
+              "depart": "2027-01-18 17:48",
+              "to": "MCI",
+              "arrive": "2027-01-18 20:35",
+              "minutes": 107,
+              "overnight": false
+            }
+          ],
+          "layovers": [
+            {
+              "name": "Munich International Airport",
+              "code": "MUC",
+              "minutes": 350,
+              "overnight": false
+            },
+            {
+              "name": "Denver International Airport",
+              "code": "DEN",
+              "minutes": 198,
+              "overnight": false
+            }
+          ],
+          "minutes": 1810
+        },
+        "checked_at": "2026-10-27T21:09:01+00:00",
+        "better": false,
+        "saves": -294
+      },
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "United",
+            "flight": "UA 5309",
+            "from": "MCI",
+            "depart": "2027-01-08 13:12",
+            "to": "ORD",
+            "arrive": "2027-01-08 15:00",
+            "minutes": 108,
+            "overnight": false
+          },
+          {
+            "airline": "ANA",
+            "flight": "NH 111",
+            "from": "ORD",
+            "depart": "2027-01-08 16:25",
+            "to": "HND",
+            "arrive": "2027-01-09 21:10",
+            "minutes": 825,
+            "overnight": false
+          },
+          {
+            "airline": "ANA",
+            "flight": "NH 837",
+            "from": "HND",
+            "depart": "2027-01-10 10:35",
+            "to": "DEL",
+            "arrive": "2027-01-10 17:25",
+            "minutes": 620,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Chicago O'Hare International Airport",
+            "code": "ORD",
+            "minutes": 85,
+            "overnight": false
+          },
+          {
+            "name": "Haneda Airport",
+            "code": "HND",
+            "minutes": 805,
+            "overnight": false
+          }
+        ],
+        "minutes": 2443
+      },
+      "return_flight": {
+        "segments": [
+          {
+            "airline": "ANA",
+            "flight": "NH 838",
+            "from": "DEL",
+            "depart": "2027-01-18 18:55",
+            "to": "HND",
+            "arrive": "2027-01-19 05:55",
+            "minutes": 450,
+            "overnight": true
+          },
+          {
+            "airline": "ANA",
+            "flight": "NH 112",
+            "from": "HND",
+            "depart": "2027-01-19 10:25",
+            "to": "ORD",
+            "arrive": "2027-01-19 07:20",
+            "minutes": 715,
+            "overnight": true
+          },
+          {
+            "airline": "United",
+            "flight": "UA 3503",
+            "from": "ORD",
+            "depart": "2027-01-19 09:10",
+            "to": "MCI",
+            "arrive": "2027-01-19 11:15",
+            "minutes": 125,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Haneda Airport",
+            "code": "HND",
+            "minutes": 270,
+            "overnight": false
+          },
+          {
+            "name": "Chicago O'Hare International Airport",
+            "code": "ORD",
+            "minutes": 110,
+            "overnight": false
+          }
+        ],
+        "minutes": 1670
+      }
+    },
+    {
+      "id": "Boston|2027-03-29|2027-04-02",
+      "destination": "Boston",
+      "airports": [
+        "BOS"
+      ],
+      "window": "Mar 29 \u2013 Apr 4",
+      "depart": "2027-03-29",
+      "return": "2027-04-02",
+      "nights": 4,
+      "max_price": 350,
+      "book_lo": 27,
+      "book_hi": 62,
+      "days_out": 153,
+      "phase": "far",
+      "best_from": "2027-01-26",
+      "best_until": "2027-03-02",
+      "check_every_days": 21,
+      "status": "ok",
+      "price": 438,
+      "airlines": [
+        "Frontier"
+      ],
+      "stops": 1,
+      "duration_min": 1454,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAzLTI5agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDQtMDJqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        340,
+        560
+      ],
+      "observed_at": "2026-10-27T21:08:16+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 438,
+      "observations": 1,
+      "effective_price": 438,
+      "oneway": null,
+      "under_ceiling": false,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Frontier",
+            "flight": "F9 4176",
+            "from": "MCI",
+            "depart": "2027-03-29 08:15",
+            "to": "MCO",
+            "arrive": "2027-03-29 12:07",
+            "minutes": 172,
+            "overnight": false
+          },
+          {
+            "airline": "Frontier",
+            "flight": "F9 3348",
+            "from": "MCO",
+            "depart": "2027-03-30 06:24",
+            "to": "BOS",
+            "arrive": "2027-03-30 09:29",
+            "minutes": 185,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Orlando International Airport",
+            "code": "MCO",
+            "minutes": 1097,
+            "overnight": false
+          }
+        ],
+        "minutes": 1454
+      },
+      "return_flight": null
+    },
+    {
+      "id": "Boston|2027-03-31|2027-04-04",
+      "destination": "Boston",
+      "airports": [
+        "BOS"
+      ],
+      "window": "Mar 29 \u2013 Apr 4",
+      "depart": "2027-03-31",
+      "return": "2027-04-04",
+      "nights": 4,
+      "max_price": 350,
+      "book_lo": 27,
+      "book_hi": 62,
+      "days_out": 155,
+      "phase": "far",
+      "best_from": "2027-01-28",
+      "best_until": "2027-03-04",
+      "check_every_days": 21,
+      "status": "ok",
+      "price": 414,
+      "airlines": [
+        "Frontier"
+      ],
+      "stops": 1,
+      "duration_min": 1454,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAzLTMxagcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDQtMDRqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        295,
+        510
+      ],
+      "observed_at": "2026-10-27T21:08:17+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 414,
+      "observations": 1,
+      "effective_price": 414,
+      "oneway": null,
+      "under_ceiling": false,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Frontier",
+            "flight": "F9 4176",
+            "from": "MCI",
+            "depart": "2027-03-31 08:15",
+            "to": "MCO",
+            "arrive": "2027-03-31 12:07",
+            "minutes": 172,
+            "overnight": false
+          },
+          {
+            "airline": "Frontier",
+            "flight": "F9 3348",
+            "from": "MCO",
+            "depart": "2027-04-01 06:24",
+            "to": "BOS",
+            "arrive": "2027-04-01 09:29",
+            "minutes": 185,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Orlando International Airport",
+            "code": "MCO",
+            "minutes": 1097,
+            "overnight": false
+          }
+        ],
+        "minutes": 1454
+      },
+      "return_flight": null
+    },
+    {
+      "id": "New York City|2027-03-29|2027-04-02",
+      "destination": "New York City",
+      "airports": [
+        "JFK",
+        "LGA",
+        "EWR"
+      ],
+      "window": "Mar 29 \u2013 Apr 4",
+      "depart": "2027-03-29",
+      "return": "2027-04-02",
+      "nights": 4,
+      "max_price": 500,
+      "book_lo": 27,
+      "book_hi": 62,
+      "days_out": 153,
+      "phase": "far",
+      "best_from": "2027-01-26",
+      "best_until": "2027-03-02",
+      "check_every_days": 21,
+      "status": "ok",
+      "price": 440,
+      "airlines": [
+        "United"
+      ],
+      "stops": 0,
+      "duration_min": 181,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTI5agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDQtMDJqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        250,
+        480
+      ],
+      "observed_at": "2026-10-27T21:08:19+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 440,
+      "observations": 1,
+      "effective_price": 440,
+      "oneway": null,
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "United",
+            "flight": "UA 3654",
+            "from": "MCI",
+            "depart": "2027-03-29 06:00",
+            "to": "EWR",
+            "arrive": "2027-03-29 10:01",
+            "minutes": 181,
+            "overnight": false
+          }
+        ],
+        "layovers": [],
+        "minutes": 181
+      },
+      "return_flight": null
+    },
+    {
+      "id": "New York City|2027-03-31|2027-04-04",
+      "destination": "New York City",
+      "airports": [
+        "JFK",
+        "LGA",
+        "EWR"
+      ],
+      "window": "Mar 29 \u2013 Apr 4",
+      "depart": "2027-03-31",
+      "return": "2027-04-04",
+      "nights": 4,
+      "max_price": 500,
+      "book_lo": 27,
+      "book_hi": 62,
+      "days_out": 155,
+      "phase": "far",
+      "best_from": "2027-01-28",
+      "best_until": "2027-03-04",
+      "check_every_days": 21,
+      "status": "ok",
+      "price": 398,
+      "airlines": [
+        "Frontier"
+      ],
+      "stops": 1,
+      "duration_min": 840,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTMxagcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDQtMDRqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        230,
+        440
+      ],
+      "observed_at": "2026-10-27T21:08:21+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 398,
+      "observations": 1,
+      "effective_price": 398,
+      "oneway": null,
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Frontier",
+            "flight": "F9 4176",
+            "from": "MCI",
+            "depart": "2027-03-31 08:15",
+            "to": "MCO",
+            "arrive": "2027-03-31 12:07",
+            "minutes": 172,
+            "overnight": false
+          },
+          {
+            "airline": "Frontier",
+            "flight": "F9 2432",
+            "from": "MCO",
+            "depart": "2027-03-31 20:34",
+            "to": "LGA",
+            "arrive": "2027-03-31 23:15",
+            "minutes": 161,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Orlando International Airport",
+            "code": "MCO",
+            "minutes": 507,
+            "overnight": false
+          }
+        ],
+        "minutes": 840
+      },
+      "return_flight": null
+    },
+    {
+      "id": "Washington, DC|2027-03-29|2027-04-02",
+      "destination": "Washington, DC",
+      "airports": [
+        "DCA",
+        "IAD",
+        "BWI"
+      ],
+      "window": "Mar 29 \u2013 Apr 4",
+      "depart": "2027-03-29",
+      "return": "2027-04-02",
+      "nights": 4,
+      "max_price": 350,
+      "book_lo": 27,
+      "book_hi": 62,
+      "days_out": 153,
+      "phase": "far",
+      "best_from": "2027-01-26",
+      "best_until": "2027-03-02",
+      "check_every_days": 21,
+      "status": "ok",
+      "price": 398,
+      "airlines": [
+        "Frontier"
+      ],
+      "stops": 1,
+      "duration_min": 929,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTI5agcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjctMDQtMDJqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "high",
+      "typical_range": [
+        225,
+        385
+      ],
+      "observed_at": "2026-10-27T21:08:23+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 398,
+      "observations": 1,
+      "effective_price": 398,
+      "oneway": null,
+      "under_ceiling": false,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Frontier",
+            "flight": "F9 4176",
+            "from": "MCI",
+            "depart": "2027-03-29 08:15",
+            "to": "MCO",
+            "arrive": "2027-03-29 12:07",
+            "minutes": 172,
+            "overnight": false
+          },
+          {
+            "airline": "Frontier",
+            "flight": "F9 4072",
+            "from": "MCO",
+            "depart": "2027-03-29 22:24",
+            "to": "BWI",
+            "arrive": "2027-03-30 00:44",
+            "minutes": 140,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Orlando International Airport",
+            "code": "MCO",
+            "minutes": 617,
+            "overnight": false
+          }
+        ],
+        "minutes": 929
+      },
+      "return_flight": null
+    },
+    {
+      "id": "Washington, DC|2027-03-31|2027-04-04",
+      "destination": "Washington, DC",
+      "airports": [
+        "DCA",
+        "IAD",
+        "BWI"
+      ],
+      "window": "Mar 29 \u2013 Apr 4",
+      "depart": "2027-03-31",
+      "return": "2027-04-04",
+      "nights": 4,
+      "max_price": 350,
+      "book_lo": 27,
+      "book_hi": 62,
+      "days_out": 155,
+      "phase": "far",
+      "best_from": "2027-01-28",
+      "best_until": "2027-03-04",
+      "check_every_days": 21,
+      "status": "ok",
+      "price": 374,
+      "airlines": [
+        "Frontier"
+      ],
+      "stops": 1,
+      "duration_min": 716,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTMxagcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjctMDQtMDRqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        230,
+        410
+      ],
+      "observed_at": "2026-10-27T21:08:30+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 374,
+      "observations": 1,
+      "effective_price": 374,
+      "oneway": null,
+      "under_ceiling": false,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Frontier",
+            "flight": "F9 4176",
+            "from": "MCI",
+            "depart": "2027-03-31 08:15",
+            "to": "MCO",
+            "arrive": "2027-03-31 12:07",
+            "minutes": 172,
+            "overnight": false
+          },
+          {
+            "airline": "Frontier",
+            "flight": "F9 4230",
+            "from": "MCO",
+            "depart": "2027-03-31 18:55",
+            "to": "IAD",
+            "arrive": "2027-03-31 21:11",
+            "minutes": 136,
+            "overnight": false
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Orlando International Airport",
+            "code": "MCO",
+            "minutes": 408,
+            "overnight": false
+          }
+        ],
+        "minutes": 716
+      },
+      "return_flight": null
+    },
+    {
+      "id": "London|2027-03-29|2027-04-04",
+      "destination": "London",
+      "airports": [
+        "LHR",
+        "LGW"
+      ],
+      "window": "Mar 29 \u2013 Apr 4",
+      "depart": "2027-03-29",
+      "return": "2027-04-04",
+      "nights": 6,
+      "max_price": 1200,
+      "book_lo": 55,
+      "book_hi": 138,
+      "days_out": 153,
+      "phase": "approaching",
+      "best_from": "2026-11-11",
+      "best_until": "2027-02-02",
+      "check_every_days": 7,
+      "status": "ok",
+      "price": 945,
+      "airlines": [
+        "American",
+        "British Airways"
+      ],
+      "stops": 2,
+      "duration_min": 1091,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI3LTAzLTI5agcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDQtMDRqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        650,
+        1200
+      ],
+      "observed_at": "2026-10-27T21:08:13+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 945,
+      "observations": 1,
+      "effective_price": 945,
+      "oneway": null,
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "American",
+            "flight": "AA 2487",
+            "from": "MCI",
+            "depart": "2027-03-29 06:39",
+            "to": "DFW",
+            "arrive": "2027-03-29 08:35",
+            "minutes": 116,
+            "overnight": false
+          },
+          {
+            "airline": "American",
+            "flight": "AA 2360",
+            "from": "DFW",
+            "depart": "2027-03-29 09:38",
+            "to": "MCO",
+            "arrive": "2027-03-29 13:19",
+            "minutes": 161,
+            "overnight": false
+          },
+          {
+            "airline": "British Airways",
+            "flight": "BA 2036",
+            "from": "MCO",
+            "depart": "2027-03-29 17:15",
+            "to": "LGW",
+            "arrive": "2027-03-30 06:50",
+            "minutes": 515,
+            "overnight": true
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Dallas Fort Worth International Airport",
+            "code": "DFW",
+            "minutes": 63,
+            "overnight": false
+          },
+          {
+            "name": "Orlando International Airport",
+            "code": "MCO",
+            "minutes": 236,
+            "overnight": false
+          }
+        ],
+        "minutes": 1091
+      },
+      "return_flight": null
+    },
+    {
+      "id": "Boston|2027-05-14|2027-05-18",
+      "destination": "Boston",
+      "airports": [
+        "BOS"
+      ],
+      "window": "May 14 \u2013 May 20",
+      "depart": "2027-05-14",
+      "return": "2027-05-18",
+      "nights": 4,
+      "max_price": 350,
+      "book_lo": 22,
+      "book_hi": 57,
+      "days_out": 199,
+      "phase": "far",
+      "best_from": "2027-03-18",
+      "best_until": "2027-04-22",
+      "check_every_days": 21,
+      "status": "ok",
+      "price": 533,
+      "airlines": [
+        "Delta"
+      ],
+      "stops": 0,
+      "duration_min": 179,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTA1LTE0agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDUtMThqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "high",
+      "typical_range": [
+        285,
+        500
+      ],
+      "observed_at": "2026-10-27T21:08:32+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 533,
+      "observations": 1,
+      "effective_price": 533,
+      "oneway": null,
+      "under_ceiling": false,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Delta",
+            "flight": "DL 675",
+            "from": "MCI",
+            "depart": "2027-05-14 10:10",
+            "to": "BOS",
+            "arrive": "2027-05-14 14:09",
+            "minutes": 179,
+            "overnight": false
+          }
+        ],
+        "layovers": [],
+        "minutes": 179
+      },
+      "return_flight": null
+    },
+    {
+      "id": "Boston|2027-05-16|2027-05-20",
+      "destination": "Boston",
+      "airports": [
+        "BOS"
+      ],
+      "window": "May 14 \u2013 May 20",
+      "depart": "2027-05-16",
+      "return": "2027-05-20",
+      "nights": 4,
+      "max_price": 350,
+      "book_lo": 22,
+      "book_hi": 57,
+      "days_out": 201,
+      "phase": "far",
+      "best_from": "2027-03-20",
+      "best_until": "2027-04-24",
+      "check_every_days": 21,
+      "status": "ok",
+      "price": 547,
+      "airlines": [
+        "Southwest"
+      ],
+      "stops": 0,
+      "duration_min": 180,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTA1LTE2agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDUtMjBqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "high",
+      "typical_range": [
+        295,
+        530
+      ],
+      "observed_at": "2026-10-27T21:08:33+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 547,
+      "observations": 1,
+      "effective_price": 547,
+      "oneway": null,
+      "under_ceiling": false,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Southwest",
+            "flight": "WN 966",
+            "from": "MCI",
+            "depart": "2027-05-16 10:45",
+            "to": "BOS",
+            "arrive": "2027-05-16 14:45",
+            "minutes": 180,
+            "overnight": false
+          }
+        ],
+        "layovers": [],
+        "minutes": 180
+      },
+      "return_flight": null
+    },
+    {
+      "id": "New York City|2027-05-14|2027-05-18",
+      "destination": "New York City",
+      "airports": [
+        "JFK",
+        "LGA",
+        "EWR"
+      ],
+      "window": "May 14 \u2013 May 20",
+      "depart": "2027-05-14",
+      "return": "2027-05-18",
+      "nights": 4,
+      "max_price": 500,
+      "book_lo": 22,
+      "book_hi": 57,
+      "days_out": 199,
+      "phase": "far",
+      "best_from": "2027-03-18",
+      "best_until": "2027-04-22",
+      "check_every_days": 21,
+      "status": "ok",
+      "price": 469,
+      "airlines": [
+        "Southwest"
+      ],
+      "stops": 0,
+      "duration_min": 165,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTA1LTE0agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDUtMThqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "high",
+      "typical_range": [
+        270,
+        455
+      ],
+      "observed_at": "2026-10-27T21:08:35+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 469,
+      "observations": 1,
+      "effective_price": 469,
+      "oneway": null,
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Southwest",
+            "flight": "WN 1421",
+            "from": "MCI",
+            "depart": "2027-05-14 05:10",
+            "to": "LGA",
+            "arrive": "2027-05-14 08:55",
+            "minutes": 165,
+            "overnight": false
+          }
+        ],
+        "layovers": [],
+        "minutes": 165
+      },
+      "return_flight": null
+    },
+    {
+      "id": "New York City|2027-05-16|2027-05-20",
+      "destination": "New York City",
+      "airports": [
+        "JFK",
+        "LGA",
+        "EWR"
+      ],
+      "window": "May 14 \u2013 May 20",
+      "depart": "2027-05-16",
+      "return": "2027-05-20",
+      "nights": 4,
+      "max_price": 500,
+      "book_lo": 22,
+      "book_hi": 57,
+      "days_out": 201,
+      "phase": "far",
+      "best_from": "2027-03-20",
+      "best_until": "2027-04-24",
+      "check_every_days": 21,
+      "status": "ok",
+      "price": 480,
+      "airlines": [
+        "Southwest"
+      ],
+      "stops": 0,
+      "duration_min": 165,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTA1LTE2agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDUtMjBqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        295,
+        500
+      ],
+      "observed_at": "2026-10-27T21:08:36+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 480,
+      "observations": 1,
+      "effective_price": 480,
+      "oneway": null,
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Southwest",
+            "flight": "WN 1421",
+            "from": "MCI",
+            "depart": "2027-05-16 05:05",
+            "to": "LGA",
+            "arrive": "2027-05-16 08:50",
+            "minutes": 165,
+            "overnight": false
+          }
+        ],
+        "layovers": [],
+        "minutes": 165
+      },
+      "return_flight": null
+    },
+    {
+      "id": "Washington, DC|2027-05-14|2027-05-18",
+      "destination": "Washington, DC",
+      "airports": [
+        "DCA",
+        "IAD",
+        "BWI"
+      ],
+      "window": "May 14 \u2013 May 20",
+      "depart": "2027-05-14",
+      "return": "2027-05-18",
+      "nights": 4,
+      "max_price": 350,
+      "book_lo": 22,
+      "book_hi": 57,
+      "days_out": 199,
+      "phase": "far",
+      "best_from": "2027-03-18",
+      "best_until": "2027-04-22",
+      "check_every_days": 21,
+      "status": "ok",
+      "price": 434,
+      "airlines": [
+        "Southwest"
+      ],
+      "stops": 0,
+      "duration_min": 140,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTA1LTE0agcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjctMDUtMThqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "high",
+      "typical_range": [
+        220,
+        420
+      ],
+      "observed_at": "2026-10-27T21:08:39+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 434,
+      "observations": 1,
+      "effective_price": 434,
+      "oneway": null,
+      "under_ceiling": false,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Southwest",
+            "flight": "WN 2578",
+            "from": "MCI",
+            "depart": "2027-05-14 07:40",
+            "to": "DCA",
+            "arrive": "2027-05-14 11:00",
+            "minutes": 140,
+            "overnight": false
+          }
+        ],
+        "layovers": [],
+        "minutes": 140
+      },
+      "return_flight": null
+    },
+    {
+      "id": "Washington, DC|2027-05-16|2027-05-20",
+      "destination": "Washington, DC",
+      "airports": [
+        "DCA",
+        "IAD",
+        "BWI"
+      ],
+      "window": "May 14 \u2013 May 20",
+      "depart": "2027-05-16",
+      "return": "2027-05-20",
+      "nights": 4,
+      "max_price": 350,
+      "book_lo": 22,
+      "book_hi": 57,
+      "days_out": 201,
+      "phase": "far",
+      "best_from": "2027-03-20",
+      "best_until": "2027-04-24",
+      "check_every_days": 21,
+      "status": "ok",
+      "price": 459,
+      "airlines": [
+        "Southwest"
+      ],
+      "stops": 0,
+      "duration_min": 140,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTA1LTE2agcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjctMDUtMjBqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "high",
+      "typical_range": [
+        245,
+        405
+      ],
+      "observed_at": "2026-10-27T21:08:41+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 459,
+      "observations": 1,
+      "effective_price": 459,
+      "oneway": null,
+      "under_ceiling": false,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "Southwest",
+            "flight": "WN 2578",
+            "from": "MCI",
+            "depart": "2027-05-16 07:40",
+            "to": "DCA",
+            "arrive": "2027-05-16 11:00",
+            "minutes": 140,
+            "overnight": false
+          }
+        ],
+        "layovers": [],
+        "minutes": 140
+      },
+      "return_flight": null
+    },
+    {
+      "id": "London|2027-05-14|2027-05-20",
+      "destination": "London",
+      "airports": [
+        "LHR",
+        "LGW"
+      ],
+      "window": "May 14 \u2013 May 20",
+      "depart": "2027-05-14",
+      "return": "2027-05-20",
+      "nights": 6,
+      "max_price": 1200,
+      "book_lo": 50,
+      "book_hi": 133,
+      "days_out": 199,
+      "phase": "far",
+      "best_from": "2027-01-01",
+      "best_until": "2027-03-25",
+      "check_every_days": 21,
+      "status": "ok",
+      "price": 993,
+      "airlines": [
+        "American",
+        "British Airways"
+      ],
+      "stops": 2,
+      "duration_min": 945,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI3LTA1LTE0agcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDUtMjBqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "typical",
+      "typical_range": [
+        970,
+        1400
+      ],
+      "observed_at": "2026-10-27T21:08:43+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 993,
+      "observations": 1,
+      "effective_price": 993,
+      "oneway": null,
+      "under_ceiling": true,
+      "lowest_yet": false,
+      "outbound_flight": {
+        "segments": [
+          {
+            "airline": "American",
+            "flight": "AA 4964",
+            "from": "MCI",
+            "depart": "2027-05-14 09:05",
+            "to": "ORD",
+            "arrive": "2027-05-14 10:57",
+            "minutes": 112,
+            "overnight": false
+          },
+          {
+            "airline": "American",
+            "flight": "AA 2288",
+            "from": "ORD",
+            "depart": "2027-05-14 11:45",
+            "to": "MCO",
+            "arrive": "2027-05-14 15:33",
+            "minutes": 168,
+            "overnight": false
+          },
+          {
+            "airline": "British Airways",
+            "flight": "BA 2036",
+            "from": "MCO",
+            "depart": "2027-05-14 17:15",
+            "to": "LGW",
+            "arrive": "2027-05-15 06:50",
+            "minutes": 515,
+            "overnight": true
+          }
+        ],
+        "layovers": [
+          {
+            "name": "Chicago O'Hare International Airport",
+            "code": "ORD",
+            "minutes": 48,
+            "overnight": false
+          },
+          {
+            "name": "Orlando International Airport",
+            "code": "MCO",
+            "minutes": 102,
+            "overnight": false
+          }
+        ],
+        "minutes": 945
+      },
+      "return_flight": null
+    }
+  ],
+  "skipped": [
+    "Delhi / Mar 29 \u2013 Apr 4: window too short (6 nights, needs 8+)",
+    "Delhi / May 14 \u2013 May 20: window too short (6 nights, needs 8+)"
+  ]
+}
