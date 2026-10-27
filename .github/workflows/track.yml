@@ -1,0 +1,56 @@
+name: Track fares
+
+on:
+  schedule:
+    # Runs once a day. Each run only checks the trips that are due, based on how close each
+    # one is to its best booking window (see check_every_days in config.json), so most days
+    # use only a few of your free searches.
+    - cron: "17 14 * * *"
+  workflow_dispatch: # lets you run it by hand from the Actions tab
+    inputs:
+      test_notification:
+        description: "Only send a test phone notification (uses no searches)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # commit the updated fare history
+  issues: write   # open an issue (you get an email) when a fare drops under a limit
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Send a test phone notification
+        if: inputs.test_notification
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python tracker.py --test-notify
+
+      - name: Check fares
+        if: "!inputs.test_notification"
+        env:
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python tracker.py
+
+      - name: Save results
+        if: "!inputs.test_notification"
+        run: |
+          git config user.name "getaway-plan-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data
+          git diff --cached --quiet || git commit -m "Update fares"
+          git push
+
+      - name: Open an issue for new deals
+        if: ${{ !inputs.test_notification && hashFiles('docs/data/new_deals.md') != '' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "Fare deal found ($(date +%F))" --body-file docs/data/new_deals.md
