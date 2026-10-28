@@ -29,8 +29,8 @@
         "BOS"
       ],
       "max_price": 350,
-      "nights": 4,
-      "min_nights": 3
+      "nights": 14,
+      "min_nights": 2
     },
     {
       "name": "New York City",
