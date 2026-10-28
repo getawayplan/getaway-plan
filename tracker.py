@@ -162,21 +162,26 @@ def trip_phase(t, today):
     return days_out, phase_for(days_out, t["book_lo"], t["book_hi"])
 
 
-def pick_due(trips, cfg, history, today, now):
-    """Trips whose last check is older than their phase's interval, most valuable first."""
-    last = {}
+def pick_due(trips, cfg, history, today, now, details=None, force=False):
+    """Trips to check now, most valuable first. A trip is due when its last check is older than
+    its phase's interval, or when the layover limit has changed since that check."""
+    last = {}  # trip id -> (time of last check, layover limit used then)
     for h in history:
-        if h["trip_id"] not in last or h["ts"] > last[h["trip_id"]]:
-            last[h["trip_id"]] = h["ts"]
+        cur = last.get(h["trip_id"])
+        if cur is None or h["ts"] > cur[0]:
+            last[h["trip_id"]] = (h["ts"], h.get("max_layover_min"))
+    for tid, d in (details or {}).items():
+        if d.get("checked_at") and (tid not in last or d["checked_at"] > last[tid][0]):
+            last[tid] = (d["checked_at"], d.get("max_layover_min"))
     due = []
     for t in trips:
         days_out, ph = trip_phase(t, today)
-        ts = last.get(t["id"])
-        if ts:
+        ts, cap = last.get(t["id"], (None, None))
+        if ts and not force and cap == t.get("max_layover_min"):
             age = (now - datetime.fromisoformat(ts)).total_seconds() / 86400
             if age < check_every(cfg, ph) - 0.5:   # half a day of slack for scheduling drift
                 continue
-        due.append((PHASE_ORDER[ph], ts or "", t))
+        due.append((PHASE_ORDER[ph], "" if (force or cap != t.get("max_layover_min")) else (ts or ""), t))
     due.sort(key=lambda x: (x[0], x[1]))
     return [x[2] for x in due]
 
@@ -567,7 +572,10 @@ def build_latest(cfg, trips, skipped, history, details, mode, used, budget, toda
                    best_from=(dep - timedelta(days=t["book_hi"])).isoformat(),
                    best_until=(dep - timedelta(days=t["book_lo"])).isoformat(),
                    check_every_days=check_every(cfg, ph))
-        if not obs:
+        mark = details.get(t["id"]) or {}
+        if mark.get("none") and (not obs or mark.get("checked_at", "") >= obs[-1]["ts"]):
+            row.update(status="no_data", price=None, no_data_reason="no_flights_within_layover_limit")
+        elif not obs:
             row.update(status="no_data", price=None)
         else:
             cur = obs[-1]
@@ -724,6 +732,7 @@ def main():
     ap.add_argument("--out", default=None, help="output folder (default: docs/data, or docs/demo-data with --demo)")
     ap.add_argument("--demo", action="store_true", help="generate labeled sample data, no API calls")
     ap.add_argument("--plan", action="store_true", help="print the search plan and exit")
+    ap.add_argument("--recheck-all", action="store_true", help="check every trip now, ignoring the schedule")
     ap.add_argument("--test-notify", action="store_true", help="send a test phone notification and exit")
     args = ap.parse_args()
 
@@ -789,7 +798,7 @@ def main():
     lookups_left = lookups_per_run
     halted = False
     now = datetime.now(timezone.utc)
-    due = pick_due(trips, cfg, history, today, now)
+    due = pick_due(trips, cfg, history, today, now, details, force=args.recheck_all)
     allowed = pace_limit(budget, today, int(cfg.get("pacing_slack", 40)))
     print(f"{len(due)} of {len(trips)} trips are due for a check today "
           f"({used}/{budget} searches used this month, pace limit {allowed}).")
@@ -818,11 +827,13 @@ def main():
         if not offer:
             print(f"  {t['destination']} {t['depart']}: no fares returned "
                   f"(or none with layovers under your limit)")
+            details[t["id"]] = {"none": True, "checked_at": now_iso(), "max_layover_min": t.get("max_layover_min")}
             continue
         done += 1
 
         quoted = offer["price"]  # the "from" price in the first search
         det = {"price": offer["price"], "quoted": quoted, "checked_at": now_iso(),
+               "max_layover_min": t.get("max_layover_min"),
                "outbound": offer["outbound"], "return": None}
         old_ow = (details.get(t["id"]) or {}).get("oneway")
         if old_ow:
@@ -861,6 +872,7 @@ def main():
             "price_level": offer["price_level"],
             "typical_range": offer["typical_range"],
             "link": offer["link"],
+            "max_layover_min": t.get("max_layover_min"),
         })
         print(f"  {t['destination']:<15} {t['depart']}: ${offer['price']:,} "
               f"(limit ${t['max_price']:,}, {trip_phase(t, today)[1]}){' + return flight' if det['return'] else ''}")
