@@ -1,67 +1,4 @@
 {
-  "Boston|2026-12-18|2026-12-22": {
-    "price": 417,
-    "quoted": 417,
-    "checked_at": "2026-10-28T15:51:59+00:00",
-    "max_layover_min": 180,
-    "outbound": {
-      "segments": [
-        {
-          "airline": "Delta",
-          "flight": "DL 675",
-          "from": "MCI",
-          "depart": "2026-12-18 09:55",
-          "to": "BOS",
-          "arrive": "2026-12-18 13:49",
-          "minutes": 174,
-          "overnight": false
-        }
-      ],
-      "layovers": [],
-      "minutes": 174
-    },
-    "return": null
-  },
-  "Boston|2027-01-01|2027-01-05": {
-    "price": 400,
-    "quoted": 400,
-    "checked_at": "2026-10-28T15:52:02+00:00",
-    "max_layover_min": 180,
-    "outbound": {
-      "segments": [
-        {
-          "airline": "United",
-          "flight": "UA 3454",
-          "from": "MCI",
-          "depart": "2027-01-01 06:39",
-          "to": "EWR",
-          "arrive": "2027-01-01 10:39",
-          "minutes": 180,
-          "overnight": false
-        },
-        {
-          "airline": "United",
-          "flight": "UA 1016",
-          "from": "EWR",
-          "depart": "2027-01-01 12:15",
-          "to": "BOS",
-          "arrive": "2027-01-01 13:26",
-          "minutes": 71,
-          "overnight": false
-        }
-      ],
-      "layovers": [
-        {
-          "name": "Newark Liberty International Airport",
-          "code": "EWR",
-          "minutes": 96,
-          "overnight": false
-        }
-      ],
-      "minutes": 347
-    },
-    "return": null
-  },
   "New York City|2026-12-18|2026-12-22": {
     "price": 555,
     "quoted": 493,
@@ -1053,46 +990,6 @@
     },
     "return": null
   },
-  "Boston|2027-01-14|2027-01-18": {
-    "price": 400,
-    "quoted": 400,
-    "checked_at": "2026-10-28T15:53:06+00:00",
-    "max_layover_min": 180,
-    "outbound": {
-      "segments": [
-        {
-          "airline": "American",
-          "flight": "AA 3390",
-          "from": "MCI",
-          "depart": "2027-01-14 09:49",
-          "to": "DCA",
-          "arrive": "2027-01-14 13:19",
-          "minutes": 150,
-          "overnight": false
-        },
-        {
-          "airline": "American",
-          "flight": "AA 4570",
-          "from": "DCA",
-          "depart": "2027-01-14 13:58",
-          "to": "BOS",
-          "arrive": "2027-01-14 15:44",
-          "minutes": 106,
-          "overnight": false
-        }
-      ],
-      "layovers": [
-        {
-          "name": "Ronald Reagan Washington National Airport",
-          "code": "DCA",
-          "minutes": 39,
-          "overnight": false
-        }
-      ],
-      "minutes": 295
-    },
-    "return": null
-  },
   "New York City|2027-01-14|2027-01-18": {
     "price": 353,
     "quoted": 353,
@@ -1225,69 +1122,6 @@
     },
     "return": null
   },
-  "Boston|2027-03-29|2027-04-02": {
-    "price": 543,
-    "quoted": 543,
-    "checked_at": "2026-10-28T15:53:20+00:00",
-    "max_layover_min": 180,
-    "outbound": {
-      "segments": [
-        {
-          "airline": "Delta",
-          "flight": "DL 370",
-          "from": "MCI",
-          "depart": "2027-03-29 06:05",
-          "to": "LGA",
-          "arrive": "2027-03-29 09:54",
-          "minutes": 169,
-          "overnight": false
-        },
-        {
-          "airline": "Delta",
-          "flight": "DL 5745",
-          "from": "LGA",
-          "depart": "2027-03-29 11:00",
-          "to": "BOS",
-          "arrive": "2027-03-29 12:21",
-          "minutes": 81,
-          "overnight": false
-        }
-      ],
-      "layovers": [
-        {
-          "name": "LaGuardia Airport",
-          "code": "LGA",
-          "minutes": 66,
-          "overnight": false
-        }
-      ],
-      "minutes": 316
-    },
-    "return": null
-  },
-  "Boston|2027-03-31|2027-04-04": {
-    "price": 557,
-    "quoted": 557,
-    "checked_at": "2026-10-28T15:53:21+00:00",
-    "max_layover_min": 180,
-    "outbound": {
-      "segments": [
-        {
-          "airline": "Delta",
-          "flight": "DL 5766",
-          "from": "MCI",
-          "depart": "2027-03-31 14:46",
-          "to": "BOS",
-          "arrive": "2027-03-31 18:45",
-          "minutes": 179,
-          "overnight": false
-        }
-      ],
-      "layovers": [],
-      "minutes": 179
-    },
-    "return": null
-  },
   "New York City|2027-03-29|2027-04-02": {
     "price": 440,
     "quoted": 440,
@@ -1377,52 +1211,6 @@
       ],
       "layovers": [],
       "minutes": 146
-    },
-    "return": null
-  },
-  "Boston|2027-05-14|2027-05-18": {
-    "price": 533,
-    "quoted": 533,
-    "checked_at": "2026-10-28T15:53:33+00:00",
-    "max_layover_min": 180,
-    "outbound": {
-      "segments": [
-        {
-          "airline": "Delta",
-          "flight": "DL 675",
-          "from": "MCI",
-          "depart": "2027-05-14 10:10",
-          "to": "BOS",
-          "arrive": "2027-05-14 14:09",
-          "minutes": 179,
-          "overnight": false
-        }
-      ],
-      "layovers": [],
-      "minutes": 179
-    },
-    "return": null
-  },
-  "Boston|2027-05-16|2027-05-20": {
-    "price": 547,
-    "quoted": 547,
-    "checked_at": "2026-10-28T15:53:34+00:00",
-    "max_layover_min": 180,
-    "outbound": {
-      "segments": [
-        {
-          "airline": "Southwest",
-          "flight": "WN 966",
-          "from": "MCI",
-          "depart": "2027-05-16 10:45",
-          "to": "BOS",
-          "arrive": "2027-05-16 14:45",
-          "minutes": 180,
-          "overnight": false
-        }
-      ],
-      "layovers": [],
-      "minutes": 180
     },
     "return": null
   },
@@ -1571,6 +1359,249 @@
         }
       ],
       "minutes": 945
+    },
+    "return": null
+  },
+  "Boston|2026-12-18|2027-01-01": {
+    "price": 417,
+    "quoted": 417,
+    "checked_at": "2026-10-29T15:05:44+00:00",
+    "max_layover_min": 180,
+    "outbound": {
+      "segments": [
+        {
+          "airline": "Delta",
+          "flight": "DL 675",
+          "from": "MCI",
+          "depart": "2026-12-18 09:55",
+          "to": "BOS",
+          "arrive": "2026-12-18 13:49",
+          "minutes": 174,
+          "overnight": false
+        }
+      ],
+      "layovers": [],
+      "minutes": 174
+    },
+    "return": null,
+    "oneway": {
+      "checked_at": "2026-10-29T15:06:06+00:00",
+      "out": {
+        "price": 209,
+        "airlines": [
+          "Delta"
+        ],
+        "detail": {
+          "segments": [
+            {
+              "airline": "Delta",
+              "flight": "DL 675",
+              "from": "MCI",
+              "depart": "2026-12-18 09:55",
+              "to": "BOS",
+              "arrive": "2026-12-18 13:49",
+              "minutes": 174,
+              "overnight": false
+            }
+          ],
+          "layovers": [],
+          "minutes": 174
+        }
+      },
+      "back": {
+        "price": 209,
+        "airlines": [
+          "Delta"
+        ],
+        "detail": {
+          "segments": [
+            {
+              "airline": "Delta",
+              "flight": "DL 5590",
+              "from": "BOS",
+              "depart": "2027-01-01 08:40",
+              "to": "MCI",
+              "arrive": "2027-01-01 11:31",
+              "minutes": 231,
+              "overnight": false
+            }
+          ],
+          "layovers": [],
+          "minutes": 231
+        }
+      }
+    }
+  },
+  "Boston|2026-12-27|2027-01-10": {
+    "price": 568,
+    "quoted": 568,
+    "checked_at": "2026-10-29T15:05:46+00:00",
+    "max_layover_min": 180,
+    "outbound": {
+      "segments": [
+        {
+          "airline": "Delta",
+          "flight": "DL 5596",
+          "from": "MCI",
+          "depart": "2026-12-27 19:39",
+          "to": "BOS",
+          "arrive": "2026-12-27 23:44",
+          "minutes": 185,
+          "overnight": false
+        }
+      ],
+      "layovers": [],
+      "minutes": 185
+    },
+    "return": null
+  },
+  "Boston|2027-01-04|2027-01-18": {
+    "price": 400,
+    "quoted": 400,
+    "checked_at": "2026-10-29T15:05:47+00:00",
+    "max_layover_min": 180,
+    "outbound": {
+      "segments": [
+        {
+          "airline": "American",
+          "flight": "AA 4509",
+          "from": "MCI",
+          "depart": "2027-01-04 05:06",
+          "to": "ORD",
+          "arrive": "2027-01-04 07:00",
+          "minutes": 114,
+          "overnight": false
+        },
+        {
+          "airline": "American",
+          "flight": "AA 1457",
+          "from": "ORD",
+          "depart": "2027-01-04 09:06",
+          "to": "BOS",
+          "arrive": "2027-01-04 12:57",
+          "minutes": 171,
+          "overnight": false
+        }
+      ],
+      "layovers": [
+        {
+          "name": "Chicago O'Hare International Airport",
+          "code": "ORD",
+          "minutes": 126,
+          "overnight": false
+        }
+      ],
+      "minutes": 411
+    },
+    "return": null,
+    "oneway": {
+      "checked_at": "2026-10-29T15:05:56+00:00",
+      "out": {
+        "price": 209,
+        "airlines": [
+          "Southwest"
+        ],
+        "detail": {
+          "segments": [
+            {
+              "airline": "Southwest",
+              "flight": "WN 3445",
+              "from": "MCI",
+              "depart": "2027-01-04 13:15",
+              "to": "BOS",
+              "arrive": "2027-01-04 17:10",
+              "minutes": 175,
+              "overnight": false
+            }
+          ],
+          "layovers": [],
+          "minutes": 175
+        }
+      },
+      "back": {
+        "price": 209,
+        "airlines": [
+          "Delta"
+        ],
+        "detail": {
+          "segments": [
+            {
+              "airline": "Delta",
+              "flight": "DL 5823",
+              "from": "BOS",
+              "depart": "2027-01-18 11:21",
+              "to": "MCI",
+              "arrive": "2027-01-18 14:20",
+              "minutes": 239,
+              "overnight": false
+            }
+          ],
+          "layovers": [],
+          "minutes": 239
+        }
+      }
+    }
+  },
+  "Boston|2027-03-29|2027-04-04": {
+    "price": 557,
+    "quoted": 557,
+    "checked_at": "2026-10-29T15:05:49+00:00",
+    "max_layover_min": 180,
+    "outbound": {
+      "segments": [
+        {
+          "airline": "Delta",
+          "flight": "DL 370",
+          "from": "MCI",
+          "depart": "2027-03-29 06:05",
+          "to": "LGA",
+          "arrive": "2027-03-29 09:54",
+          "minutes": 169,
+          "overnight": false
+        },
+        {
+          "airline": "Delta",
+          "flight": "DL 5745",
+          "from": "LGA",
+          "depart": "2027-03-29 11:00",
+          "to": "BOS",
+          "arrive": "2027-03-29 12:21",
+          "minutes": 81,
+          "overnight": false
+        }
+      ],
+      "layovers": [
+        {
+          "name": "LaGuardia Airport",
+          "code": "LGA",
+          "minutes": 66,
+          "overnight": false
+        }
+      ],
+      "minutes": 316
+    },
+    "return": null
+  },
+  "Boston|2027-05-14|2027-05-20": {
+    "price": 533,
+    "quoted": 533,
+    "checked_at": "2026-10-29T15:05:51+00:00",
+    "max_layover_min": 180,
+    "outbound": {
+      "segments": [
+        {
+          "airline": "Delta",
+          "flight": "DL 675",
+          "from": "MCI",
+          "depart": "2027-05-14 10:10",
+          "to": "BOS",
+          "arrive": "2027-05-14 14:09",
+          "minutes": 179,
+          "overnight": false
+        }
+      ],
+      "layovers": [],
+      "minutes": 179
     },
     "return": null
   }

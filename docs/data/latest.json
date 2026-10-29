@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-28T15:53:51+00:00",
+  "generated_at": "2026-10-29T15:06:06+00:00",
   "mode": "live",
   "home_airports": [
     "MCI"
   ],
   "currency": "USD",
-  "searches_used_this_month": 82,
+  "searches_used_this_month": 91,
   "monthly_search_budget": 240,
-  "estimated_searches_next_30_days": 158,
+  "estimated_searches_next_30_days": 155,
   "config": {
     "home_airports": [
       "MCI"
@@ -39,8 +39,8 @@
           "BOS"
         ],
         "max_price": 350,
-        "nights": 4,
-        "min_nights": 3
+        "nights": 14,
+        "min_nights": 2
       },
       {
         "name": "New York City",
@@ -114,7 +114,7 @@
         "BOS"
       ],
       "max_price": 350,
-      "best_trip_id": "Boston|2027-01-01|2027-01-05",
+      "best_trip_id": "Boston|2027-01-04|2027-01-18",
       "best_price": 400,
       "best_kind": "round_trip",
       "under_ceiling": false
@@ -171,20 +171,20 @@
   ],
   "trips": [
     {
-      "id": "Boston|2026-12-18|2026-12-22",
+      "id": "Boston|2026-12-18|2027-01-01",
       "destination": "Boston",
       "airports": [
         "BOS"
       ],
       "window": "Dec 18 \u2013 Jan 18",
       "depart": "2026-12-18",
-      "return": "2026-12-22",
-      "nights": 4,
+      "return": "2027-01-01",
+      "nights": 14,
       "max_price": 350,
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 51,
+      "days_out": 50,
       "phase": "prime",
       "best_from": "2026-10-12",
       "best_until": "2026-11-16",
@@ -196,19 +196,64 @@
       ],
       "stops": 0,
       "duration_min": 174,
-      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjYtMTItMjJqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMDFqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
       "price_level": "typical",
       "typical_range": [
-        290,
-        520
+        330,
+        560
       ],
-      "observed_at": "2026-10-28T15:51:59+00:00",
-      "prev_price": 417,
-      "delta": 0,
+      "observed_at": "2026-10-29T15:05:44+00:00",
+      "prev_price": null,
+      "delta": null,
       "low_price": 417,
-      "observations": 2,
+      "observations": 1,
       "effective_price": 417,
-      "oneway": null,
+      "oneway": {
+        "total": 418,
+        "out_price": 209,
+        "back_price": 209,
+        "out_airlines": [
+          "Delta"
+        ],
+        "back_airlines": [
+          "Delta"
+        ],
+        "out_flight": {
+          "segments": [
+            {
+              "airline": "Delta",
+              "flight": "DL 675",
+              "from": "MCI",
+              "depart": "2026-12-18 09:55",
+              "to": "BOS",
+              "arrive": "2026-12-18 13:49",
+              "minutes": 174,
+              "overnight": false
+            }
+          ],
+          "layovers": [],
+          "minutes": 174
+        },
+        "back_flight": {
+          "segments": [
+            {
+              "airline": "Delta",
+              "flight": "DL 5590",
+              "from": "BOS",
+              "depart": "2027-01-01 08:40",
+              "to": "MCI",
+              "arrive": "2027-01-01 11:31",
+              "minutes": 231,
+              "overnight": false
+            }
+          ],
+          "layovers": [],
+          "minutes": 231
+        },
+        "checked_at": "2026-10-29T15:06:06+00:00",
+        "better": false,
+        "saves": -1
+      },
       "under_ceiling": false,
       "lowest_yet": false,
       "outbound_flight": {
@@ -230,154 +275,182 @@
       "return_flight": null
     },
     {
-      "id": "Boston|2027-01-01|2027-01-05",
+      "id": "Boston|2026-12-27|2027-01-10",
       "destination": "Boston",
       "airports": [
         "BOS"
       ],
       "window": "Dec 18 \u2013 Jan 18",
-      "depart": "2027-01-01",
-      "return": "2027-01-05",
-      "nights": 4,
+      "depart": "2026-12-27",
+      "return": "2027-01-10",
+      "nights": 14,
       "max_price": 350,
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 65,
+      "days_out": 59,
       "phase": "prime",
-      "best_from": "2026-10-26",
-      "best_until": "2026-11-30",
+      "best_from": "2026-10-21",
+      "best_until": "2026-11-25",
       "check_every_days": 3,
       "status": "ok",
-      "price": 400,
+      "price": 568,
       "airlines": [
-        "United"
+        "Delta"
       ],
-      "stops": 1,
-      "duration_min": 347,
-      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAxLTAxagcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMDVqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
-      "price_level": "typical",
+      "stops": 0,
+      "duration_min": 185,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTI3agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMTBqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "price_level": "high",
       "typical_range": [
-        250,
-        470
+        330,
+        560
       ],
-      "observed_at": "2026-10-28T15:52:02+00:00",
-      "prev_price": 363,
-      "delta": 37,
-      "low_price": 363,
-      "observations": 2,
-      "effective_price": 400,
+      "observed_at": "2026-10-29T15:05:46+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 568,
+      "observations": 1,
+      "effective_price": 568,
       "oneway": null,
       "under_ceiling": false,
       "lowest_yet": false,
       "outbound_flight": {
         "segments": [
           {
-            "airline": "United",
-            "flight": "UA 3454",
+            "airline": "Delta",
+            "flight": "DL 5596",
             "from": "MCI",
-            "depart": "2027-01-01 06:39",
-            "to": "EWR",
-            "arrive": "2027-01-01 10:39",
-            "minutes": 180,
-            "overnight": false
-          },
-          {
-            "airline": "United",
-            "flight": "UA 1016",
-            "from": "EWR",
-            "depart": "2027-01-01 12:15",
+            "depart": "2026-12-27 19:39",
             "to": "BOS",
-            "arrive": "2027-01-01 13:26",
-            "minutes": 71,
+            "arrive": "2026-12-27 23:44",
+            "minutes": 185,
             "overnight": false
           }
         ],
-        "layovers": [
-          {
-            "name": "Newark Liberty International Airport",
-            "code": "EWR",
-            "minutes": 96,
-            "overnight": false
-          }
-        ],
-        "minutes": 347
+        "layovers": [],
+        "minutes": 185
       },
       "return_flight": null
     },
     {
-      "id": "Boston|2027-01-14|2027-01-18",
+      "id": "Boston|2027-01-04|2027-01-18",
       "destination": "Boston",
       "airports": [
         "BOS"
       ],
       "window": "Dec 18 \u2013 Jan 18",
-      "depart": "2027-01-14",
+      "depart": "2027-01-04",
       "return": "2027-01-18",
-      "nights": 4,
+      "nights": 14,
       "max_price": 350,
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 78,
-      "phase": "approaching",
-      "best_from": "2026-11-08",
-      "best_until": "2026-12-13",
-      "check_every_days": 7,
+      "days_out": 67,
+      "phase": "prime",
+      "best_from": "2026-10-29",
+      "best_until": "2026-12-03",
+      "check_every_days": 3,
       "status": "ok",
       "price": 400,
       "airlines": [
         "American"
       ],
       "stops": 1,
-      "duration_min": 295,
-      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAxLTE0agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMThqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "duration_min": 411,
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAxLTA0agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMThqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
       "price_level": "typical",
       "typical_range": [
-        230,
-        480
+        245,
+        440
       ],
-      "observed_at": "2026-10-28T15:53:06+00:00",
-      "prev_price": 363,
-      "delta": 37,
-      "low_price": 363,
-      "observations": 2,
+      "observed_at": "2026-10-29T15:05:47+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 400,
+      "observations": 1,
       "effective_price": 400,
-      "oneway": null,
+      "oneway": {
+        "total": 418,
+        "out_price": 209,
+        "back_price": 209,
+        "out_airlines": [
+          "Southwest"
+        ],
+        "back_airlines": [
+          "Delta"
+        ],
+        "out_flight": {
+          "segments": [
+            {
+              "airline": "Southwest",
+              "flight": "WN 3445",
+              "from": "MCI",
+              "depart": "2027-01-04 13:15",
+              "to": "BOS",
+              "arrive": "2027-01-04 17:10",
+              "minutes": 175,
+              "overnight": false
+            }
+          ],
+          "layovers": [],
+          "minutes": 175
+        },
+        "back_flight": {
+          "segments": [
+            {
+              "airline": "Delta",
+              "flight": "DL 5823",
+              "from": "BOS",
+              "depart": "2027-01-18 11:21",
+              "to": "MCI",
+              "arrive": "2027-01-18 14:20",
+              "minutes": 239,
+              "overnight": false
+            }
+          ],
+          "layovers": [],
+          "minutes": 239
+        },
+        "checked_at": "2026-10-29T15:05:56+00:00",
+        "better": false,
+        "saves": -18
+      },
       "under_ceiling": false,
       "lowest_yet": false,
       "outbound_flight": {
         "segments": [
           {
             "airline": "American",
-            "flight": "AA 3390",
+            "flight": "AA 4509",
             "from": "MCI",
-            "depart": "2027-01-14 09:49",
-            "to": "DCA",
-            "arrive": "2027-01-14 13:19",
-            "minutes": 150,
+            "depart": "2027-01-04 05:06",
+            "to": "ORD",
+            "arrive": "2027-01-04 07:00",
+            "minutes": 114,
             "overnight": false
           },
           {
             "airline": "American",
-            "flight": "AA 4570",
-            "from": "DCA",
-            "depart": "2027-01-14 13:58",
+            "flight": "AA 1457",
+            "from": "ORD",
+            "depart": "2027-01-04 09:06",
             "to": "BOS",
-            "arrive": "2027-01-14 15:44",
-            "minutes": 106,
+            "arrive": "2027-01-04 12:57",
+            "minutes": 171,
             "overnight": false
           }
         ],
         "layovers": [
           {
-            "name": "Ronald Reagan Washington National Airport",
-            "code": "DCA",
-            "minutes": 39,
+            "name": "Chicago O'Hare International Airport",
+            "code": "ORD",
+            "minutes": 126,
             "overnight": false
           }
         ],
-        "minutes": 295
+        "minutes": 411
       },
       "return_flight": null
     },
@@ -397,7 +470,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 51,
+      "days_out": 50,
       "phase": "prime",
       "best_from": "2026-10-12",
       "best_until": "2026-11-16",
@@ -507,7 +580,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 65,
+      "days_out": 64,
       "phase": "prime",
       "best_from": "2026-10-26",
       "best_until": "2026-11-30",
@@ -628,7 +701,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 78,
+      "days_out": 77,
       "phase": "approaching",
       "best_from": "2026-11-08",
       "best_until": "2026-12-13",
@@ -704,7 +777,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 51,
+      "days_out": 50,
       "phase": "prime",
       "best_from": "2026-10-12",
       "best_until": "2026-11-16",
@@ -780,7 +853,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 65,
+      "days_out": 64,
       "phase": "prime",
       "best_from": "2026-10-26",
       "best_until": "2026-11-30",
@@ -935,7 +1008,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 78,
+      "days_out": 77,
       "phase": "approaching",
       "best_from": "2026-11-08",
       "best_until": "2026-12-13",
@@ -1010,7 +1083,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 51,
+      "days_out": 50,
       "phase": "late",
       "best_from": "2026-07-28",
       "best_until": "2026-10-19",
@@ -1087,7 +1160,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 63,
+      "days_out": 62,
       "phase": "prime",
       "best_from": "2026-08-09",
       "best_until": "2026-10-31",
@@ -1181,7 +1254,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 75,
+      "days_out": 74,
       "phase": "prime",
       "best_from": "2026-08-21",
       "best_until": "2026-11-12",
@@ -1435,7 +1508,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 51,
+      "days_out": 50,
       "phase": "late",
       "best_from": "2026-07-28",
       "best_until": "2026-10-19",
@@ -1528,7 +1601,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 62,
+      "days_out": 61,
       "phase": "prime",
       "best_from": "2026-08-08",
       "best_until": "2026-10-30",
@@ -1669,7 +1742,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 72,
+      "days_out": 71,
       "phase": "prime",
       "best_from": "2026-08-18",
       "best_until": "2026-11-09",
@@ -1893,43 +1966,43 @@
       }
     },
     {
-      "id": "Boston|2027-03-29|2027-04-02",
+      "id": "Boston|2027-03-29|2027-04-04",
       "destination": "Boston",
       "airports": [
         "BOS"
       ],
       "window": "Mar 29 \u2013 Apr 4",
       "depart": "2027-03-29",
-      "return": "2027-04-02",
-      "nights": 4,
+      "return": "2027-04-04",
+      "nights": 6,
       "max_price": 350,
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 152,
+      "days_out": 151,
       "phase": "far",
       "best_from": "2027-01-26",
       "best_until": "2027-03-02",
       "check_every_days": 21,
       "status": "ok",
-      "price": 543,
+      "price": 557,
       "airlines": [
         "Delta"
       ],
       "stops": 1,
       "duration_min": 316,
-      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAzLTI5agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDQtMDJqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAzLTI5agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDQtMDRqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
       "price_level": "typical",
       "typical_range": [
-        340,
+        305,
         560
       ],
-      "observed_at": "2026-10-28T15:53:20+00:00",
-      "prev_price": 438,
-      "delta": 105,
-      "low_price": 438,
-      "observations": 2,
-      "effective_price": 543,
+      "observed_at": "2026-10-29T15:05:49+00:00",
+      "prev_price": null,
+      "delta": null,
+      "low_price": 557,
+      "observations": 1,
+      "effective_price": 557,
       "oneway": null,
       "under_ceiling": false,
       "lowest_yet": false,
@@ -1969,65 +2042,6 @@
       "return_flight": null
     },
     {
-      "id": "Boston|2027-03-31|2027-04-04",
-      "destination": "Boston",
-      "airports": [
-        "BOS"
-      ],
-      "window": "Mar 29 \u2013 Apr 4",
-      "depart": "2027-03-31",
-      "return": "2027-04-04",
-      "nights": 4,
-      "max_price": 350,
-      "book_lo": 27,
-      "book_hi": 62,
-      "max_layover_min": 180,
-      "days_out": 154,
-      "phase": "far",
-      "best_from": "2027-01-28",
-      "best_until": "2027-03-04",
-      "check_every_days": 21,
-      "status": "ok",
-      "price": 557,
-      "airlines": [
-        "Delta"
-      ],
-      "stops": 0,
-      "duration_min": 179,
-      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAzLTMxagcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDQtMDRqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
-      "price_level": "typical",
-      "typical_range": [
-        295,
-        510
-      ],
-      "observed_at": "2026-10-28T15:53:21+00:00",
-      "prev_price": 414,
-      "delta": 143,
-      "low_price": 414,
-      "observations": 2,
-      "effective_price": 557,
-      "oneway": null,
-      "under_ceiling": false,
-      "lowest_yet": false,
-      "outbound_flight": {
-        "segments": [
-          {
-            "airline": "Delta",
-            "flight": "DL 5766",
-            "from": "MCI",
-            "depart": "2027-03-31 14:46",
-            "to": "BOS",
-            "arrive": "2027-03-31 18:45",
-            "minutes": 179,
-            "overnight": false
-          }
-        ],
-        "layovers": [],
-        "minutes": 179
-      },
-      "return_flight": null
-    },
-    {
       "id": "New York City|2027-03-29|2027-04-02",
       "destination": "New York City",
       "airports": [
@@ -2043,7 +2057,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 152,
+      "days_out": 151,
       "phase": "far",
       "best_from": "2027-01-26",
       "best_until": "2027-03-02",
@@ -2104,7 +2118,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 154,
+      "days_out": 153,
       "phase": "far",
       "best_from": "2027-01-28",
       "best_until": "2027-03-04",
@@ -2165,7 +2179,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 152,
+      "days_out": 151,
       "phase": "far",
       "best_from": "2027-01-26",
       "best_until": "2027-03-02",
@@ -2226,7 +2240,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 154,
+      "days_out": 153,
       "phase": "far",
       "best_from": "2027-01-28",
       "best_until": "2027-03-04",
@@ -2286,7 +2300,7 @@
       "book_lo": 55,
       "book_hi": 138,
       "max_layover_min": 420,
-      "days_out": 152,
+      "days_out": 151,
       "phase": "approaching",
       "best_from": "2026-11-11",
       "best_until": "2027-02-02",
@@ -2366,20 +2380,20 @@
       "return_flight": null
     },
     {
-      "id": "Boston|2027-05-14|2027-05-18",
+      "id": "Boston|2027-05-14|2027-05-20",
       "destination": "Boston",
       "airports": [
         "BOS"
       ],
       "window": "May 14 \u2013 May 20",
       "depart": "2027-05-14",
-      "return": "2027-05-18",
-      "nights": 4,
+      "return": "2027-05-20",
+      "nights": 6,
       "max_price": 350,
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 198,
+      "days_out": 197,
       "phase": "far",
       "best_from": "2027-03-18",
       "best_until": "2027-04-22",
@@ -2391,17 +2405,17 @@
       ],
       "stops": 0,
       "duration_min": 179,
-      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTA1LTE0agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDUtMThqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTA1LTE0agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDUtMjBqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
       "price_level": "high",
       "typical_range": [
-        285,
-        500
+        275,
+        495
       ],
-      "observed_at": "2026-10-28T15:53:33+00:00",
-      "prev_price": 533,
-      "delta": 0,
+      "observed_at": "2026-10-29T15:05:51+00:00",
+      "prev_price": null,
+      "delta": null,
       "low_price": 533,
-      "observations": 2,
+      "observations": 1,
       "effective_price": 533,
       "oneway": null,
       "under_ceiling": false,
@@ -2425,65 +2439,6 @@
       "return_flight": null
     },
     {
-      "id": "Boston|2027-05-16|2027-05-20",
-      "destination": "Boston",
-      "airports": [
-        "BOS"
-      ],
-      "window": "May 14 \u2013 May 20",
-      "depart": "2027-05-16",
-      "return": "2027-05-20",
-      "nights": 4,
-      "max_price": 350,
-      "book_lo": 22,
-      "book_hi": 57,
-      "max_layover_min": 180,
-      "days_out": 200,
-      "phase": "far",
-      "best_from": "2027-03-20",
-      "best_until": "2027-04-24",
-      "check_every_days": 21,
-      "status": "ok",
-      "price": 547,
-      "airlines": [
-        "Southwest"
-      ],
-      "stops": 0,
-      "duration_min": 180,
-      "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTA1LTE2agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDUtMjBqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
-      "price_level": "high",
-      "typical_range": [
-        295,
-        530
-      ],
-      "observed_at": "2026-10-28T15:53:34+00:00",
-      "prev_price": 547,
-      "delta": 0,
-      "low_price": 547,
-      "observations": 2,
-      "effective_price": 547,
-      "oneway": null,
-      "under_ceiling": false,
-      "lowest_yet": false,
-      "outbound_flight": {
-        "segments": [
-          {
-            "airline": "Southwest",
-            "flight": "WN 966",
-            "from": "MCI",
-            "depart": "2027-05-16 10:45",
-            "to": "BOS",
-            "arrive": "2027-05-16 14:45",
-            "minutes": 180,
-            "overnight": false
-          }
-        ],
-        "layovers": [],
-        "minutes": 180
-      },
-      "return_flight": null
-    },
-    {
       "id": "New York City|2027-05-14|2027-05-18",
       "destination": "New York City",
       "airports": [
@@ -2499,7 +2454,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 198,
+      "days_out": 197,
       "phase": "far",
       "best_from": "2027-03-18",
       "best_until": "2027-04-22",
@@ -2560,7 +2515,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 200,
+      "days_out": 199,
       "phase": "far",
       "best_from": "2027-03-20",
       "best_until": "2027-04-24",
@@ -2621,7 +2576,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 198,
+      "days_out": 197,
       "phase": "far",
       "best_from": "2027-03-18",
       "best_until": "2027-04-22",
@@ -2682,7 +2637,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 200,
+      "days_out": 199,
       "phase": "far",
       "best_from": "2027-03-20",
       "best_until": "2027-04-24",
@@ -2742,7 +2697,7 @@
       "book_lo": 50,
       "book_hi": 133,
       "max_layover_min": 420,
-      "days_out": 198,
+      "days_out": 197,
       "phase": "far",
       "best_from": "2027-01-01",
       "best_until": "2027-03-25",
