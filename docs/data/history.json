@@ -1055,5 +1055,125 @@
     ],
     "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTA1LTE0agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDUtMjBqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
     "max_layover_min": 180
+  },
+  {
+    "ts": "2026-10-31T14:45:05+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 504,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "duration_min": 306,
+    "price_level": "high",
+    "typical_range": [
+      245,
+      420
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjYtMTItMjJqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-10-31T14:45:10+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 361,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "duration_min": 160,
+    "price_level": "typical",
+    "typical_range": [
+      195,
+      380
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAxLTAxagcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDEtMDVqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-10-31T14:45:15+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 247,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "duration_min": 160,
+    "price_level": "typical",
+    "typical_range": [
+      210,
+      380
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjYtMTItMjJqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-10-31T14:45:30+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 237,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "duration_min": 140,
+    "price_level": "typical",
+    "typical_range": [
+      185,
+      320
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAxLTAxagcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjctMDEtMDVqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-10-31T14:45:43+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 1106,
+    "airlines": [
+      "United",
+      "SWISS"
+    ],
+    "stops": 2,
+    "duration_min": 1233,
+    "price_level": "high",
+    "typical_range": [
+      640,
+      1050
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI2LTEyLTMwagcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDEtMDZqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 420
+  },
+  {
+    "ts": "2026-10-31T14:45:48+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 1020,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "duration_min": 754,
+    "price_level": "high",
+    "typical_range": [
+      610,
+      880
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI3LTAxLTExagcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDEtMThqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 420
+  },
+  {
+    "ts": "2026-10-31T14:45:55+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 1903,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "duration_min": 1135,
+    "price_level": "high",
+    "typical_range": [
+      960,
+      1450
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAxLTA4agcIARIDTUNJcgcIARIDREVMGh4SCjIwMjctMDEtMThqBwgBEgNERUxyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 420
   }
 ]
