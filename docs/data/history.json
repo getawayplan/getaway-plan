@@ -1175,5 +1175,56 @@
     ],
     "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAxLTA4agcIARIDTUNJcgcIARIDREVMGh4SCjIwMjctMDEtMThqBwgBEgNERUxyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
     "max_layover_min": 420
+  },
+  {
+    "ts": "2026-11-01T14:48:00+00:00",
+    "trip_id": "Boston|2026-12-18|2027-01-01",
+    "price": 279,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "duration_min": 174,
+    "price_level": "low",
+    "typical_range": [
+      330,
+      560
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMDFqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-01T14:48:05+00:00",
+    "trip_id": "Boston|2026-12-27|2027-01-10",
+    "price": 542,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "duration_min": 185,
+    "price_level": "typical",
+    "typical_range": [
+      330,
+      560
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTI3agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMTBqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-01T14:48:12+00:00",
+    "trip_id": "Boston|2027-01-04|2027-01-18",
+    "price": 279,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "duration_min": 184,
+    "price_level": "typical",
+    "typical_range": [
+      245,
+      440
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAxLTA0agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMThqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
   }
 ]

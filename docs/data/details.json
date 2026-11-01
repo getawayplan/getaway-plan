@@ -1445,9 +1445,9 @@
     "return": null
   },
   "Boston|2026-12-18|2027-01-01": {
-    "price": 417,
-    "quoted": 417,
-    "checked_at": "2026-10-29T15:05:44+00:00",
+    "price": 279,
+    "quoted": 279,
+    "checked_at": "2026-11-01T14:47:56+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
@@ -1465,7 +1465,22 @@
       "layovers": [],
       "minutes": 174
     },
-    "return": null,
+    "return": {
+      "segments": [
+        {
+          "airline": "Delta",
+          "flight": "DL 5590",
+          "from": "BOS",
+          "depart": "2027-01-01 08:40",
+          "to": "MCI",
+          "arrive": "2027-01-01 11:31",
+          "minutes": 231,
+          "overnight": false
+        }
+      ],
+      "layovers": [],
+      "minutes": 231
+    },
     "oneway": {
       "checked_at": "2026-10-29T15:06:06+00:00",
       "out": {
@@ -1515,9 +1530,9 @@
     }
   },
   "Boston|2026-12-27|2027-01-10": {
-    "price": 568,
-    "quoted": 568,
-    "checked_at": "2026-10-29T15:05:46+00:00",
+    "price": 542,
+    "quoted": 542,
+    "checked_at": "2026-11-01T14:48:05+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
@@ -1538,44 +1553,42 @@
     "return": null
   },
   "Boston|2027-01-04|2027-01-18": {
-    "price": 400,
-    "quoted": 400,
-    "checked_at": "2026-10-29T15:05:47+00:00",
+    "price": 279,
+    "quoted": 279,
+    "checked_at": "2026-11-01T14:48:10+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
         {
-          "airline": "American",
-          "flight": "AA 4509",
+          "airline": "Delta",
+          "flight": "DL 5823",
           "from": "MCI",
-          "depart": "2027-01-04 05:06",
-          "to": "ORD",
-          "arrive": "2027-01-04 07:00",
-          "minutes": 114,
-          "overnight": false
-        },
-        {
-          "airline": "American",
-          "flight": "AA 1457",
-          "from": "ORD",
-          "depart": "2027-01-04 09:06",
+          "depart": "2027-01-04 16:47",
           "to": "BOS",
-          "arrive": "2027-01-04 12:57",
-          "minutes": 171,
+          "arrive": "2027-01-04 20:51",
+          "minutes": 184,
           "overnight": false
         }
       ],
-      "layovers": [
-        {
-          "name": "Chicago O'Hare International Airport",
-          "code": "ORD",
-          "minutes": 126,
-          "overnight": false
-        }
-      ],
-      "minutes": 411
+      "layovers": [],
+      "minutes": 184
     },
-    "return": null,
+    "return": {
+      "segments": [
+        {
+          "airline": "Delta",
+          "flight": "DL 5823",
+          "from": "BOS",
+          "depart": "2027-01-18 11:21",
+          "to": "MCI",
+          "arrive": "2027-01-18 14:20",
+          "minutes": 239,
+          "overnight": false
+        }
+      ],
+      "layovers": [],
+      "minutes": 239
+    },
     "oneway": {
       "checked_at": "2026-10-29T15:05:56+00:00",
       "out": {
