@@ -687,107 +687,107 @@
     }
   },
   "Delhi|2026-12-29|2027-01-08": {
-    "price": 2745,
-    "quoted": 2289,
-    "checked_at": "2026-10-28T15:52:43+00:00",
+    "price": 3102,
+    "quoted": 2347,
+    "checked_at": "2026-11-02T15:02:40+00:00",
     "max_layover_min": 420,
     "outbound": {
       "segments": [
         {
-          "airline": "United",
-          "flight": "UA 463",
+          "airline": "American",
+          "flight": "AA 6330",
           "from": "MCI",
-          "depart": "2026-12-29 11:07",
-          "to": "IAD",
-          "arrive": "2026-12-29 14:32",
-          "minutes": 145,
+          "depart": "2026-12-29 16:01",
+          "to": "ORD",
+          "arrive": "2026-12-29 17:59",
+          "minutes": 118,
           "overnight": false
         },
         {
-          "airline": "SWISS",
-          "flight": "LX 73",
-          "from": "IAD",
-          "depart": "2026-12-29 20:10",
-          "to": "ZRH",
-          "arrive": "2026-12-30 10:15",
-          "minutes": 485,
+          "airline": "American",
+          "flight": "AA 86",
+          "from": "ORD",
+          "depart": "2026-12-29 18:40",
+          "to": "LHR",
+          "arrive": "2026-12-30 08:35",
+          "minutes": 475,
           "overnight": true
         },
         {
-          "airline": "SWISS",
-          "flight": "LX 146",
-          "from": "ZRH",
-          "depart": "2026-12-30 12:00",
+          "airline": "British Airways",
+          "flight": "BA 143",
+          "from": "LHR",
+          "depart": "2026-12-30 11:10",
           "to": "DEL",
-          "arrive": "2026-12-31 00:15",
-          "minutes": 465,
+          "arrive": "2026-12-31 01:15",
+          "minutes": 515,
           "overnight": false
         }
       ],
       "layovers": [
         {
-          "name": "Dulles International Airport",
-          "code": "IAD",
-          "minutes": 338,
+          "name": "Chicago O'Hare International Airport",
+          "code": "ORD",
+          "minutes": 41,
           "overnight": false
         },
         {
-          "name": "Zurich Airport",
-          "code": "ZRH",
-          "minutes": 105,
+          "name": "Heathrow Airport",
+          "code": "LHR",
+          "minutes": 155,
           "overnight": false
         }
       ],
-      "minutes": 1538
+      "minutes": 1304
     },
     "return": {
       "segments": [
         {
-          "airline": "United",
-          "flight": "UA 83",
+          "airline": "American",
+          "flight": "AA 293",
           "from": "DEL",
           "depart": "2027-01-08 23:55",
-          "to": "EWR",
-          "arrive": "2027-01-09 06:30",
-          "minutes": 1025,
+          "to": "JFK",
+          "arrive": "2027-01-09 06:10",
+          "minutes": 1005,
           "overnight": true
         },
         {
-          "airline": "United",
-          "flight": "UA 2164",
-          "from": "EWR",
-          "depart": "2027-01-09 08:10",
+          "airline": "American",
+          "flight": "AA 3050",
+          "from": "JFK",
+          "depart": "2027-01-09 07:30",
           "to": "ORD",
-          "arrive": "2027-01-09 10:03",
-          "minutes": 173,
+          "arrive": "2027-01-09 09:30",
+          "minutes": 180,
           "overnight": false
         },
         {
-          "airline": "United",
-          "flight": "UA 561",
+          "airline": "American",
+          "flight": "AA 4937",
           "from": "ORD",
-          "depart": "2027-01-09 12:40",
+          "depart": "2027-01-09 10:35",
           "to": "MCI",
-          "arrive": "2027-01-09 14:17",
-          "minutes": 97,
+          "arrive": "2027-01-09 12:33",
+          "minutes": 118,
           "overnight": false
         }
       ],
       "layovers": [
         {
-          "name": "Newark Liberty International Airport",
-          "code": "EWR",
-          "minutes": 100,
+          "name": "John F. Kennedy International Airport",
+          "code": "JFK",
+          "minutes": 80,
           "overnight": false
         },
         {
           "name": "Chicago O'Hare International Airport",
           "code": "ORD",
-          "minutes": 157,
+          "minutes": 65,
           "overnight": false
         }
       ],
-      "minutes": 1552
+      "minutes": 1448
     }
   },
   "Delhi|2027-01-08|2027-01-18": {
@@ -977,9 +977,49 @@
     }
   },
   "London|2026-12-18|2026-12-25": {
-    "price": 1409,
-    "quoted": 1409,
-    "checked_at": "2026-10-28T15:53:02+00:00",
+    "price": 1427,
+    "quoted": 1427,
+    "checked_at": "2026-11-02T15:02:46+00:00",
+    "max_layover_min": 420,
+    "outbound": {
+      "segments": [
+        {
+          "airline": "United",
+          "flight": "UA 303",
+          "from": "MCI",
+          "depart": "2026-12-18 07:31",
+          "to": "ORD",
+          "arrive": "2026-12-18 09:22",
+          "minutes": 111,
+          "overnight": false
+        },
+        {
+          "airline": "United",
+          "flight": "UA 929",
+          "from": "ORD",
+          "depart": "2026-12-18 15:45",
+          "to": "LHR",
+          "arrive": "2026-12-19 05:55",
+          "minutes": 490,
+          "overnight": true
+        }
+      ],
+      "layovers": [
+        {
+          "name": "Chicago O'Hare International Airport",
+          "code": "ORD",
+          "minutes": 383,
+          "overnight": false
+        }
+      ],
+      "minutes": 984
+    },
+    "return": null
+  },
+  "Delhi|2026-12-18|2026-12-28": {
+    "price": 3235,
+    "quoted": 3235,
+    "checked_at": "2026-11-02T15:02:48+00:00",
     "max_layover_min": 420,
     "outbound": {
       "segments": [
@@ -995,12 +1035,22 @@
         },
         {
           "airline": "United",
-          "flight": "UA 918",
+          "flight": "UA 3602",
           "from": "IAD",
-          "depart": "2026-12-18 18:20",
-          "to": "LHR",
-          "arrive": "2026-12-19 06:40",
-          "minutes": 440,
+          "depart": "2026-12-18 17:45",
+          "to": "YUL",
+          "arrive": "2026-12-18 19:48",
+          "minutes": 123,
+          "overnight": false
+        },
+        {
+          "airline": "Air Canada",
+          "flight": "AC 50",
+          "from": "YUL",
+          "depart": "2026-12-18 22:05",
+          "to": "DEL",
+          "arrive": "2026-12-19 22:45",
+          "minutes": 850,
           "overnight": true
         }
       ],
@@ -1008,67 +1058,17 @@
         {
           "name": "Dulles International Airport",
           "code": "IAD",
-          "minutes": 228,
-          "overnight": false
-        }
-      ],
-      "minutes": 813
-    },
-    "return": null
-  },
-  "Delhi|2026-12-18|2026-12-28": {
-    "price": 3025,
-    "quoted": 3025,
-    "checked_at": "2026-10-28T15:53:04+00:00",
-    "max_layover_min": 420,
-    "outbound": {
-      "segments": [
-        {
-          "airline": "Delta",
-          "flight": "DL 675",
-          "from": "MCI",
-          "depart": "2026-12-18 09:55",
-          "to": "BOS",
-          "arrive": "2026-12-18 13:49",
-          "minutes": 174,
+          "minutes": 193,
           "overnight": false
         },
         {
-          "airline": "Air France",
-          "flight": "AF 61",
-          "from": "BOS",
-          "depart": "2026-12-18 18:20",
-          "to": "CDG",
-          "arrive": "2026-12-19 07:05",
-          "minutes": 405,
-          "overnight": true
-        },
-        {
-          "airline": "Air France",
-          "flight": "AF 226",
-          "from": "CDG",
-          "depart": "2026-12-19 10:35",
-          "to": "DEL",
-          "arrive": "2026-12-19 23:30",
-          "minutes": 505,
+          "name": "Montr\u00e9al-Pierre Elliott Trudeau International Airport",
+          "code": "YUL",
+          "minutes": 137,
           "overnight": false
         }
       ],
-      "layovers": [
-        {
-          "name": "Boston Logan International Airport",
-          "code": "BOS",
-          "minutes": 271,
-          "overnight": false
-        },
-        {
-          "name": "A\u00e9roport de Paris-Charles de Gaulle",
-          "code": "CDG",
-          "minutes": 210,
-          "overnight": false
-        }
-      ],
-      "minutes": 1565
+      "minutes": 1448
     },
     "return": null
   },

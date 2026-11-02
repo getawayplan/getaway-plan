@@ -1226,5 +1226,58 @@
     ],
     "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAxLTA0agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMThqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
     "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-02T15:02:44+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 3102,
+    "airlines": [
+      "American",
+      "British Airways"
+    ],
+    "stops": 2,
+    "duration_min": 1304,
+    "price_level": "typical",
+    "typical_range": [
+      1450,
+      3000
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTI5agcIARIDTUNJcgcIARIDREVMGh4SCjIwMjctMDEtMDhqBwgBEgNERUxyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 420
+  },
+  {
+    "ts": "2026-11-02T15:02:46+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1427,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "duration_min": 984,
+    "price_level": "typical",
+    "typical_range": [
+      740,
+      1450
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjYtMTItMjVqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 420
+  },
+  {
+    "ts": "2026-11-02T15:02:48+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 3235,
+    "airlines": [
+      "United",
+      "Air Canada"
+    ],
+    "stops": 2,
+    "duration_min": 1448,
+    "price_level": "high",
+    "typical_range": [
+      1450,
+      3000
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDREVMGh4SCjIwMjYtMTItMjhqBwgBEgNERUxyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 420
   }
 ]
