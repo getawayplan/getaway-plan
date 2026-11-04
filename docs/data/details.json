@@ -1057,9 +1057,9 @@
     "return": null
   },
   "New York City|2027-01-14|2027-01-18": {
-    "price": 353,
-    "quoted": 353,
-    "checked_at": "2026-10-28T15:53:09+00:00",
+    "price": 361,
+    "quoted": 361,
+    "checked_at": "2026-11-04T14:59:40+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
@@ -1095,47 +1095,47 @@
     }
   },
   "Washington, DC|2027-01-14|2027-01-18": {
-    "price": 257,
-    "quoted": 257,
-    "checked_at": "2026-10-28T15:53:14+00:00",
+    "price": 237,
+    "quoted": 237,
+    "checked_at": "2026-11-04T14:59:45+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
         {
-          "airline": "American",
-          "flight": "AA 4752",
+          "airline": "Southwest",
+          "flight": "WN 2409",
           "from": "MCI",
-          "depart": "2027-01-14 06:00",
+          "depart": "2027-01-14 07:50",
           "to": "DCA",
-          "arrive": "2027-01-14 09:40",
-          "minutes": 160,
+          "arrive": "2027-01-14 11:15",
+          "minutes": 145,
           "overnight": false
         }
       ],
       "layovers": [],
-      "minutes": 160
+      "minutes": 145
     },
     "return": {
       "segments": [
         {
-          "airline": "American",
-          "flight": "AA 3390",
+          "airline": "Southwest",
+          "flight": "WN 574",
           "from": "DCA",
-          "depart": "2027-01-18 07:13",
+          "depart": "2027-01-18 15:40",
           "to": "MCI",
-          "arrive": "2027-01-18 09:19",
-          "minutes": 186,
+          "arrive": "2027-01-18 17:25",
+          "minutes": 165,
           "overnight": false
         }
       ],
       "layovers": [],
-      "minutes": 186
+      "minutes": 165
     }
   },
   "London|2027-03-29|2027-04-04": {
-    "price": 945,
+    "price": 964,
     "quoted": 945,
-    "checked_at": "2026-10-28T15:53:18+00:00",
+    "checked_at": "2026-11-04T14:59:52+00:00",
     "max_layover_min": 420,
     "outbound": {
       "segments": [
@@ -1186,7 +1186,55 @@
       ],
       "minutes": 1091
     },
-    "return": null
+    "return": {
+      "segments": [
+        {
+          "airline": "British Airways",
+          "flight": "BA 2037",
+          "from": "LGW",
+          "depart": "2027-04-04 10:45",
+          "to": "MCO",
+          "arrive": "2027-04-04 15:15",
+          "minutes": 570,
+          "overnight": false
+        },
+        {
+          "airline": "American",
+          "flight": "AA 1760",
+          "from": "MCO",
+          "depart": "2027-04-04 18:55",
+          "to": "DFW",
+          "arrive": "2027-04-04 21:07",
+          "minutes": 192,
+          "overnight": false
+        },
+        {
+          "airline": "American",
+          "flight": "AA 2267",
+          "from": "DFW",
+          "depart": "2027-04-04 21:53",
+          "to": "MCI",
+          "arrive": "2027-04-04 23:36",
+          "minutes": 103,
+          "overnight": false
+        }
+      ],
+      "layovers": [
+        {
+          "name": "Orlando International Airport",
+          "code": "MCO",
+          "minutes": 220,
+          "overnight": false
+        },
+        {
+          "name": "Dallas Fort Worth International Airport",
+          "code": "DFW",
+          "minutes": 46,
+          "overnight": false
+        }
+      ],
+      "minutes": 1131
+    }
   },
   "New York City|2027-03-29|2027-04-02": {
     "price": 440,
@@ -1431,7 +1479,7 @@
   "Boston|2026-12-18|2027-01-01": {
     "price": 279,
     "quoted": 279,
-    "checked_at": "2026-11-01T14:47:56+00:00",
+    "checked_at": "2026-11-04T14:59:34+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
@@ -1514,9 +1562,9 @@
     }
   },
   "Boston|2026-12-27|2027-01-10": {
-    "price": 542,
-    "quoted": 542,
-    "checked_at": "2026-11-01T14:48:05+00:00",
+    "price": 552,
+    "quoted": 552,
+    "checked_at": "2026-11-04T14:59:36+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
@@ -1539,7 +1587,7 @@
   "Boston|2027-01-04|2027-01-18": {
     "price": 279,
     "quoted": 279,
-    "checked_at": "2026-11-01T14:48:10+00:00",
+    "checked_at": "2026-11-04T14:59:38+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
