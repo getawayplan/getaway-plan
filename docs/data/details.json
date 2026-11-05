@@ -329,9 +329,9 @@
     }
   },
   "London|2026-12-30|2027-01-06": {
-    "price": 1106,
-    "quoted": 1106,
-    "checked_at": "2026-10-31T14:45:32+00:00",
+    "price": 1072,
+    "quoted": 1072,
+    "checked_at": "2026-11-05T15:06:49+00:00",
     "max_layover_min": 420,
     "outbound": {
       "segments": [
