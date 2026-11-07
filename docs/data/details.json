@@ -653,108 +653,60 @@
     }
   },
   "Delhi|2026-12-29|2027-01-08": {
-    "price": 3102,
-    "quoted": 2347,
-    "checked_at": "2026-11-02T15:02:40+00:00",
+    "price": 2602,
+    "quoted": 2602,
+    "checked_at": "2026-11-07T14:50:57+00:00",
     "max_layover_min": 420,
     "outbound": {
       "segments": [
         {
-          "airline": "American",
-          "flight": "AA 6330",
+          "airline": "Delta",
+          "flight": "DL 2908",
           "from": "MCI",
-          "depart": "2026-12-29 16:01",
-          "to": "ORD",
-          "arrive": "2026-12-29 17:59",
-          "minutes": 118,
+          "depart": "2026-12-29 12:55",
+          "to": "ATL",
+          "arrive": "2026-12-29 15:59",
+          "minutes": 124,
           "overnight": false
         },
         {
-          "airline": "American",
-          "flight": "AA 86",
-          "from": "ORD",
-          "depart": "2026-12-29 18:40",
-          "to": "LHR",
-          "arrive": "2026-12-30 08:35",
-          "minutes": 475,
+          "airline": "Delta",
+          "flight": "DL 74",
+          "from": "ATL",
+          "depart": "2026-12-29 20:10",
+          "to": "AMS",
+          "arrive": "2026-12-30 10:40",
+          "minutes": 510,
           "overnight": true
         },
         {
-          "airline": "British Airways",
-          "flight": "BA 143",
-          "from": "LHR",
-          "depart": "2026-12-30 11:10",
+          "airline": "KLM",
+          "flight": "KL 871",
+          "from": "AMS",
+          "depart": "2026-12-30 12:30",
           "to": "DEL",
-          "arrive": "2026-12-31 01:15",
-          "minutes": 515,
+          "arrive": "2026-12-31 01:10",
+          "minutes": 490,
           "overnight": false
         }
       ],
       "layovers": [
         {
-          "name": "Chicago O'Hare International Airport",
-          "code": "ORD",
-          "minutes": 41,
+          "name": "Hartsfield-Jackson Atlanta International Airport",
+          "code": "ATL",
+          "minutes": 251,
           "overnight": false
         },
         {
-          "name": "Heathrow Airport",
-          "code": "LHR",
-          "minutes": 155,
+          "name": "Amsterdam Airport Schiphol",
+          "code": "AMS",
+          "minutes": 110,
           "overnight": false
         }
       ],
-      "minutes": 1304
+      "minutes": 1485
     },
-    "return": {
-      "segments": [
-        {
-          "airline": "American",
-          "flight": "AA 293",
-          "from": "DEL",
-          "depart": "2027-01-08 23:55",
-          "to": "JFK",
-          "arrive": "2027-01-09 06:10",
-          "minutes": 1005,
-          "overnight": true
-        },
-        {
-          "airline": "American",
-          "flight": "AA 3050",
-          "from": "JFK",
-          "depart": "2027-01-09 07:30",
-          "to": "ORD",
-          "arrive": "2027-01-09 09:30",
-          "minutes": 180,
-          "overnight": false
-        },
-        {
-          "airline": "American",
-          "flight": "AA 4937",
-          "from": "ORD",
-          "depart": "2027-01-09 10:35",
-          "to": "MCI",
-          "arrive": "2027-01-09 12:33",
-          "minutes": 118,
-          "overnight": false
-        }
-      ],
-      "layovers": [
-        {
-          "name": "John F. Kennedy International Airport",
-          "code": "JFK",
-          "minutes": 80,
-          "overnight": false
-        },
-        {
-          "name": "Chicago O'Hare International Airport",
-          "code": "ORD",
-          "minutes": 65,
-          "overnight": false
-        }
-      ],
-      "minutes": 1448
-    }
+    "return": null
   },
   "Delhi|2027-01-08|2027-01-18": {
     "price": 1654,
@@ -960,30 +912,40 @@
     }
   },
   "London|2026-12-18|2026-12-25": {
-    "price": 1427,
-    "quoted": 1427,
-    "checked_at": "2026-11-02T15:02:46+00:00",
+    "price": 1334,
+    "quoted": 1334,
+    "checked_at": "2026-11-07T14:51:02+00:00",
     "max_layover_min": 420,
     "outbound": {
       "segments": [
         {
-          "airline": "United",
-          "flight": "UA 303",
+          "airline": "American",
+          "flight": "AA 4142",
           "from": "MCI",
-          "depart": "2026-12-18 07:31",
+          "depart": "2026-12-18 09:22",
           "to": "ORD",
-          "arrive": "2026-12-18 09:22",
-          "minutes": 111,
+          "arrive": "2026-12-18 11:05",
+          "minutes": 103,
           "overnight": false
         },
         {
-          "airline": "United",
-          "flight": "UA 929",
+          "airline": "American",
+          "flight": "AA 2848",
           "from": "ORD",
-          "depart": "2026-12-18 15:45",
-          "to": "LHR",
-          "arrive": "2026-12-19 05:55",
-          "minutes": 490,
+          "depart": "2026-12-18 12:06",
+          "to": "MCO",
+          "arrive": "2026-12-18 15:55",
+          "minutes": 169,
+          "overnight": false
+        },
+        {
+          "airline": "British Airways",
+          "flight": "BA 2036",
+          "from": "MCO",
+          "depart": "2026-12-18 18:10",
+          "to": "LGW",
+          "arrive": "2026-12-19 07:30",
+          "minutes": 500,
           "overnight": true
         }
       ],
@@ -991,18 +953,24 @@
         {
           "name": "Chicago O'Hare International Airport",
           "code": "ORD",
-          "minutes": 383,
+          "minutes": 61,
+          "overnight": false
+        },
+        {
+          "name": "Orlando International Airport",
+          "code": "MCO",
+          "minutes": 135,
           "overnight": false
         }
       ],
-      "minutes": 984
+      "minutes": 968
     },
     "return": null
   },
   "Delhi|2026-12-18|2026-12-28": {
-    "price": 3235,
-    "quoted": 3235,
-    "checked_at": "2026-11-02T15:02:48+00:00",
+    "price": 3239,
+    "quoted": 3239,
+    "checked_at": "2026-11-07T14:51:10+00:00",
     "max_layover_min": 420,
     "outbound": {
       "segments": [
@@ -1476,9 +1444,9 @@
     "return": null
   },
   "Boston|2026-12-18|2027-01-01": {
-    "price": 279,
-    "quoted": 279,
-    "checked_at": "2026-11-04T14:59:34+00:00",
+    "price": 351,
+    "quoted": 351,
+    "checked_at": "2026-11-07T14:50:36+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
@@ -1496,26 +1464,11 @@
       "layovers": [],
       "minutes": 174
     },
-    "return": {
-      "segments": [
-        {
-          "airline": "Delta",
-          "flight": "DL 5590",
-          "from": "BOS",
-          "depart": "2027-01-01 08:40",
-          "to": "MCI",
-          "arrive": "2027-01-01 11:31",
-          "minutes": 231,
-          "overnight": false
-        }
-      ],
-      "layovers": [],
-      "minutes": 231
-    },
+    "return": null,
     "oneway": {
-      "checked_at": "2026-10-29T15:06:06+00:00",
+      "checked_at": "2026-11-07T14:51:20+00:00",
       "out": {
-        "price": 209,
+        "price": 176,
         "airlines": [
           "Delta"
         ],
@@ -1537,7 +1490,7 @@
         }
       },
       "back": {
-        "price": 209,
+        "price": 176,
         "airlines": [
           "Delta"
         ],
@@ -1561,32 +1514,49 @@
     }
   },
   "Boston|2026-12-27|2027-01-10": {
-    "price": 552,
-    "quoted": 552,
-    "checked_at": "2026-11-04T14:59:36+00:00",
+    "price": 600,
+    "quoted": 600,
+    "checked_at": "2026-11-07T14:50:39+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
         {
-          "airline": "Delta",
-          "flight": "DL 5596",
+          "airline": "United",
+          "flight": "UA 5761",
           "from": "MCI",
-          "depart": "2026-12-27 19:39",
+          "depart": "2026-12-27 18:34",
+          "to": "ORD",
+          "arrive": "2026-12-27 20:25",
+          "minutes": 111,
+          "overnight": false
+        },
+        {
+          "airline": "United",
+          "flight": "UA 1990",
+          "from": "ORD",
+          "depart": "2026-12-27 21:49",
           "to": "BOS",
-          "arrive": "2026-12-27 23:44",
-          "minutes": 185,
+          "arrive": "2026-12-28 01:18",
+          "minutes": 149,
           "overnight": false
         }
       ],
-      "layovers": [],
-      "minutes": 185
+      "layovers": [
+        {
+          "name": "Chicago O'Hare International Airport",
+          "code": "ORD",
+          "minutes": 84,
+          "overnight": false
+        }
+      ],
+      "minutes": 344
     },
     "return": null
   },
   "Boston|2027-01-04|2027-01-18": {
-    "price": 279,
-    "quoted": 279,
-    "checked_at": "2026-11-04T14:59:38+00:00",
+    "price": 286,
+    "quoted": 286,
+    "checked_at": "2026-11-07T14:50:41+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
@@ -1607,45 +1577,40 @@
     "return": {
       "segments": [
         {
-          "airline": "Delta",
-          "flight": "DL 5823",
+          "airline": "Frontier",
+          "flight": "F9 3347",
           "from": "BOS",
-          "depart": "2027-01-18 11:21",
+          "depart": "2027-01-18 10:13",
+          "to": "MCO",
+          "arrive": "2027-01-18 13:49",
+          "minutes": 216,
+          "overnight": false
+        },
+        {
+          "airline": "Frontier",
+          "flight": "F9 4175",
+          "from": "MCO",
+          "depart": "2027-01-18 14:59",
           "to": "MCI",
-          "arrive": "2027-01-18 14:20",
-          "minutes": 239,
+          "arrive": "2027-01-18 17:11",
+          "minutes": 192,
           "overnight": false
         }
       ],
-      "layovers": [],
-      "minutes": 239
+      "layovers": [
+        {
+          "name": "Orlando International Airport",
+          "code": "MCO",
+          "minutes": 70,
+          "overnight": false
+        }
+      ],
+      "minutes": 478
     },
     "oneway": {
-      "checked_at": "2026-10-29T15:05:56+00:00",
+      "checked_at": "2026-11-07T14:51:15+00:00",
       "out": {
-        "price": 209,
-        "airlines": [
-          "Southwest"
-        ],
-        "detail": {
-          "segments": [
-            {
-              "airline": "Southwest",
-              "flight": "WN 3445",
-              "from": "MCI",
-              "depart": "2027-01-04 13:15",
-              "to": "BOS",
-              "arrive": "2027-01-04 17:10",
-              "minutes": 175,
-              "overnight": false
-            }
-          ],
-          "layovers": [],
-          "minutes": 175
-        }
-      },
-      "back": {
-        "price": 209,
+        "price": 166,
         "airlines": [
           "Delta"
         ],
@@ -1654,16 +1619,55 @@
             {
               "airline": "Delta",
               "flight": "DL 5823",
-              "from": "BOS",
-              "depart": "2027-01-18 11:21",
-              "to": "MCI",
-              "arrive": "2027-01-18 14:20",
-              "minutes": 239,
+              "from": "MCI",
+              "depart": "2027-01-04 16:47",
+              "to": "BOS",
+              "arrive": "2027-01-04 20:51",
+              "minutes": 184,
               "overnight": false
             }
           ],
           "layovers": [],
-          "minutes": 239
+          "minutes": 184
+        }
+      },
+      "back": {
+        "price": 120,
+        "airlines": [
+          "Frontier"
+        ],
+        "detail": {
+          "segments": [
+            {
+              "airline": "Frontier",
+              "flight": "F9 3347",
+              "from": "BOS",
+              "depart": "2027-01-18 10:13",
+              "to": "MCO",
+              "arrive": "2027-01-18 13:49",
+              "minutes": 216,
+              "overnight": false
+            },
+            {
+              "airline": "Frontier",
+              "flight": "F9 4175",
+              "from": "MCO",
+              "depart": "2027-01-18 14:59",
+              "to": "MCI",
+              "arrive": "2027-01-18 17:11",
+              "minutes": 192,
+              "overnight": false
+            }
+          ],
+          "layovers": [
+            {
+              "name": "Orlando International Airport",
+              "code": "MCO",
+              "minutes": 70,
+              "overnight": false
+            }
+          ],
+          "minutes": 478
         }
       }
     }

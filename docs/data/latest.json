@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-06T14:58:39+00:00",
+  "generated_at": "2026-11-07T14:51:20+00:00",
   "mode": "live",
   "home_airports": [
     "MCI"
   ],
   "currency": "USD",
-  "searches_used_this_month": 48,
+  "searches_used_this_month": 59,
   "monthly_search_budget": 240,
-  "estimated_searches_next_30_days": 151,
+  "estimated_searches_next_30_days": 150,
   "config": {
     "home_airports": [
       "MCI"
@@ -114,8 +114,8 @@
         "BOS"
       ],
       "max_price": 350,
-      "best_trip_id": "Boston|2026-12-18|2027-01-01",
-      "best_price": 279,
+      "best_trip_id": "Boston|2027-01-04|2027-01-18",
+      "best_price": 286,
       "best_kind": "round_trip",
       "under_ceiling": true
     },
@@ -184,32 +184,77 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 42,
+      "days_out": 41,
       "phase": "prime",
       "best_from": "2026-10-12",
       "best_until": "2026-11-16",
       "check_every_days": 3,
       "status": "ok",
-      "price": 279,
+      "price": 351,
       "airlines": [
         "Delta"
       ],
       "stops": 0,
       "duration_min": 174,
       "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMDFqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
-      "price_level": "low",
+      "price_level": "typical",
       "typical_range": [
-        330,
+        325,
         560
       ],
-      "observed_at": "2026-11-04T14:59:34+00:00",
+      "observed_at": "2026-11-07T14:50:36+00:00",
       "prev_price": 279,
-      "delta": 0,
+      "delta": 72,
       "low_price": 279,
-      "observations": 3,
-      "effective_price": 279,
-      "oneway": null,
-      "under_ceiling": true,
+      "observations": 4,
+      "effective_price": 351,
+      "oneway": {
+        "total": 352,
+        "out_price": 176,
+        "back_price": 176,
+        "out_airlines": [
+          "Delta"
+        ],
+        "back_airlines": [
+          "Delta"
+        ],
+        "out_flight": {
+          "segments": [
+            {
+              "airline": "Delta",
+              "flight": "DL 675",
+              "from": "MCI",
+              "depart": "2026-12-18 09:55",
+              "to": "BOS",
+              "arrive": "2026-12-18 13:49",
+              "minutes": 174,
+              "overnight": false
+            }
+          ],
+          "layovers": [],
+          "minutes": 174
+        },
+        "back_flight": {
+          "segments": [
+            {
+              "airline": "Delta",
+              "flight": "DL 5590",
+              "from": "BOS",
+              "depart": "2027-01-01 08:40",
+              "to": "MCI",
+              "arrive": "2027-01-01 11:31",
+              "minutes": 231,
+              "overnight": false
+            }
+          ],
+          "layovers": [],
+          "minutes": 231
+        },
+        "checked_at": "2026-11-07T14:51:20+00:00",
+        "better": false,
+        "saves": -1
+      },
+      "under_ceiling": false,
       "lowest_yet": false,
       "outbound_flight": {
         "segments": [
@@ -227,22 +272,7 @@
         "layovers": [],
         "minutes": 174
       },
-      "return_flight": {
-        "segments": [
-          {
-            "airline": "Delta",
-            "flight": "DL 5590",
-            "from": "BOS",
-            "depart": "2027-01-01 08:40",
-            "to": "MCI",
-            "arrive": "2027-01-01 11:31",
-            "minutes": 231,
-            "overnight": false
-          }
-        ],
-        "layovers": [],
-        "minutes": 231
-      }
+      "return_flight": null
     },
     {
       "id": "Boston|2026-12-27|2027-01-10",
@@ -258,48 +288,65 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 51,
+      "days_out": 50,
       "phase": "prime",
       "best_from": "2026-10-21",
       "best_until": "2026-11-25",
       "check_every_days": 3,
       "status": "ok",
-      "price": 552,
+      "price": 600,
       "airlines": [
-        "Delta"
+        "United"
       ],
-      "stops": 0,
-      "duration_min": 185,
+      "stops": 1,
+      "duration_min": 344,
       "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTI3agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMTBqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
-      "price_level": "typical",
+      "price_level": "high",
       "typical_range": [
-        330,
+        325,
         560
       ],
-      "observed_at": "2026-11-04T14:59:36+00:00",
-      "prev_price": 542,
-      "delta": 10,
+      "observed_at": "2026-11-07T14:50:39+00:00",
+      "prev_price": 552,
+      "delta": 48,
       "low_price": 542,
-      "observations": 3,
-      "effective_price": 552,
+      "observations": 4,
+      "effective_price": 600,
       "oneway": null,
       "under_ceiling": false,
       "lowest_yet": false,
       "outbound_flight": {
         "segments": [
           {
-            "airline": "Delta",
-            "flight": "DL 5596",
+            "airline": "United",
+            "flight": "UA 5761",
             "from": "MCI",
-            "depart": "2026-12-27 19:39",
+            "depart": "2026-12-27 18:34",
+            "to": "ORD",
+            "arrive": "2026-12-27 20:25",
+            "minutes": 111,
+            "overnight": false
+          },
+          {
+            "airline": "United",
+            "flight": "UA 1990",
+            "from": "ORD",
+            "depart": "2026-12-27 21:49",
             "to": "BOS",
-            "arrive": "2026-12-27 23:44",
-            "minutes": 185,
+            "arrive": "2026-12-28 01:18",
+            "minutes": 149,
             "overnight": false
           }
         ],
-        "layovers": [],
-        "minutes": 185
+        "layovers": [
+          {
+            "name": "Chicago O'Hare International Airport",
+            "code": "ORD",
+            "minutes": 84,
+            "overnight": false
+          }
+        ],
+        "minutes": 344
       },
       "return_flight": null
     },
@@ -317,13 +364,13 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 59,
+      "days_out": 58,
       "phase": "prime",
       "best_from": "2026-10-29",
       "best_until": "2026-12-03",
       "check_every_days": 3,
       "status": "ok",
-      "price": 279,
+      "price": 286,
       "airlines": [
         "Delta"
       ],
@@ -335,13 +382,75 @@
         245,
         440
       ],
-      "observed_at": "2026-11-04T14:59:38+00:00",
+      "observed_at": "2026-11-07T14:50:50+00:00",
       "prev_price": 279,
-      "delta": 0,
+      "delta": 7,
       "low_price": 279,
-      "observations": 3,
-      "effective_price": 279,
-      "oneway": null,
+      "observations": 4,
+      "effective_price": 286,
+      "oneway": {
+        "total": 286,
+        "out_price": 166,
+        "back_price": 120,
+        "out_airlines": [
+          "Delta"
+        ],
+        "back_airlines": [
+          "Frontier"
+        ],
+        "out_flight": {
+          "segments": [
+            {
+              "airline": "Delta",
+              "flight": "DL 5823",
+              "from": "MCI",
+              "depart": "2027-01-04 16:47",
+              "to": "BOS",
+              "arrive": "2027-01-04 20:51",
+              "minutes": 184,
+              "overnight": false
+            }
+          ],
+          "layovers": [],
+          "minutes": 184
+        },
+        "back_flight": {
+          "segments": [
+            {
+              "airline": "Frontier",
+              "flight": "F9 3347",
+              "from": "BOS",
+              "depart": "2027-01-18 10:13",
+              "to": "MCO",
+              "arrive": "2027-01-18 13:49",
+              "minutes": 216,
+              "overnight": false
+            },
+            {
+              "airline": "Frontier",
+              "flight": "F9 4175",
+              "from": "MCO",
+              "depart": "2027-01-18 14:59",
+              "to": "MCI",
+              "arrive": "2027-01-18 17:11",
+              "minutes": 192,
+              "overnight": false
+            }
+          ],
+          "layovers": [
+            {
+              "name": "Orlando International Airport",
+              "code": "MCO",
+              "minutes": 70,
+              "overnight": false
+            }
+          ],
+          "minutes": 478
+        },
+        "checked_at": "2026-11-07T14:51:15+00:00",
+        "better": false,
+        "saves": 0
+      },
       "under_ceiling": true,
       "lowest_yet": false,
       "outbound_flight": {
@@ -363,18 +472,35 @@
       "return_flight": {
         "segments": [
           {
-            "airline": "Delta",
-            "flight": "DL 5823",
+            "airline": "Frontier",
+            "flight": "F9 3347",
             "from": "BOS",
-            "depart": "2027-01-18 11:21",
+            "depart": "2027-01-18 10:13",
+            "to": "MCO",
+            "arrive": "2027-01-18 13:49",
+            "minutes": 216,
+            "overnight": false
+          },
+          {
+            "airline": "Frontier",
+            "flight": "F9 4175",
+            "from": "MCO",
+            "depart": "2027-01-18 14:59",
             "to": "MCI",
-            "arrive": "2027-01-18 14:20",
-            "minutes": 239,
+            "arrive": "2027-01-18 17:11",
+            "minutes": 192,
             "overnight": false
           }
         ],
-        "layovers": [],
-        "minutes": 239
+        "layovers": [
+          {
+            "name": "Orlando International Airport",
+            "code": "MCO",
+            "minutes": 70,
+            "overnight": false
+          }
+        ],
+        "minutes": 478
       }
     },
     {
@@ -393,7 +519,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 42,
+      "days_out": 41,
       "phase": "prime",
       "best_from": "2026-10-12",
       "best_until": "2026-11-16",
@@ -471,7 +597,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 56,
+      "days_out": 55,
       "phase": "prime",
       "best_from": "2026-10-26",
       "best_until": "2026-11-30",
@@ -592,7 +718,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 69,
+      "days_out": 68,
       "phase": "approaching",
       "best_from": "2026-11-08",
       "best_until": "2026-12-13",
@@ -668,7 +794,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 42,
+      "days_out": 41,
       "phase": "prime",
       "best_from": "2026-10-12",
       "best_until": "2026-11-16",
@@ -691,70 +817,8 @@
       "delta": 71,
       "low_price": 213,
       "observations": 5,
-      "effective_price": 243,
-      "oneway": {
-        "total": 243,
-        "out_price": 119,
-        "back_price": 124,
-        "out_airlines": [
-          "American"
-        ],
-        "back_airlines": [
-          "Delta"
-        ],
-        "out_flight": {
-          "segments": [
-            {
-              "airline": "American",
-              "flight": "AA 4375",
-              "from": "MCI",
-              "depart": "2026-12-18 05:50",
-              "to": "DCA",
-              "arrive": "2026-12-18 09:30",
-              "minutes": 160,
-              "overnight": false
-            }
-          ],
-          "layovers": [],
-          "minutes": 160
-        },
-        "back_flight": {
-          "segments": [
-            {
-              "airline": "Delta",
-              "flight": "DL 2799",
-              "from": "BWI",
-              "depart": "2026-12-22 17:20",
-              "to": "ATL",
-              "arrive": "2026-12-22 19:27",
-              "minutes": 127,
-              "overnight": false
-            },
-            {
-              "airline": "Delta",
-              "flight": "DL 3023",
-              "from": "ATL",
-              "depart": "2026-12-22 21:20",
-              "to": "MCI",
-              "arrive": "2026-12-22 22:37",
-              "minutes": 137,
-              "overnight": false
-            }
-          ],
-          "layovers": [
-            {
-              "name": "Hartsfield-Jackson Atlanta International Airport",
-              "code": "ATL",
-              "minutes": 113,
-              "overnight": false
-            }
-          ],
-          "minutes": 377
-        },
-        "checked_at": "2026-10-31T14:46:01+00:00",
-        "better": true,
-        "saves": 41
-      },
+      "effective_price": 284,
+      "oneway": null,
       "under_ceiling": true,
       "lowest_yet": false,
       "outbound_flight": {
@@ -806,7 +870,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 56,
+      "days_out": 55,
       "phase": "prime",
       "best_from": "2026-10-26",
       "best_until": "2026-11-30",
@@ -927,7 +991,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 69,
+      "days_out": 68,
       "phase": "approaching",
       "best_from": "2026-11-08",
       "best_until": "2026-12-13",
@@ -1002,53 +1066,64 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 42,
+      "days_out": 41,
       "phase": "late",
       "best_from": "2026-07-28",
       "best_until": "2026-10-19",
       "check_every_days": 5,
       "status": "ok",
-      "price": 1427,
+      "price": 1334,
       "airlines": [
-        "United"
+        "American",
+        "British Airways"
       ],
-      "stops": 1,
-      "duration_min": 984,
+      "stops": 2,
+      "duration_min": 968,
       "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjYtMTItMjVqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
       "price_level": "typical",
       "typical_range": [
-        740,
-        1450
+        810,
+        1500
       ],
-      "observed_at": "2026-11-02T15:02:46+00:00",
-      "prev_price": 1409,
-      "delta": 18,
-      "low_price": 1393,
-      "observations": 3,
-      "effective_price": 1427,
+      "observed_at": "2026-11-07T14:51:02+00:00",
+      "prev_price": 1427,
+      "delta": -93,
+      "low_price": 1334,
+      "observations": 4,
+      "effective_price": 1334,
       "oneway": null,
       "under_ceiling": false,
-      "lowest_yet": false,
+      "lowest_yet": true,
       "outbound_flight": {
         "segments": [
           {
-            "airline": "United",
-            "flight": "UA 303",
+            "airline": "American",
+            "flight": "AA 4142",
             "from": "MCI",
-            "depart": "2026-12-18 07:31",
+            "depart": "2026-12-18 09:22",
             "to": "ORD",
-            "arrive": "2026-12-18 09:22",
-            "minutes": 111,
+            "arrive": "2026-12-18 11:05",
+            "minutes": 103,
             "overnight": false
           },
           {
-            "airline": "United",
-            "flight": "UA 929",
+            "airline": "American",
+            "flight": "AA 2848",
             "from": "ORD",
-            "depart": "2026-12-18 15:45",
-            "to": "LHR",
-            "arrive": "2026-12-19 05:55",
-            "minutes": 490,
+            "depart": "2026-12-18 12:06",
+            "to": "MCO",
+            "arrive": "2026-12-18 15:55",
+            "minutes": 169,
+            "overnight": false
+          },
+          {
+            "airline": "British Airways",
+            "flight": "BA 2036",
+            "from": "MCO",
+            "depart": "2026-12-18 18:10",
+            "to": "LGW",
+            "arrive": "2026-12-19 07:30",
+            "minutes": 500,
             "overnight": true
           }
         ],
@@ -1056,11 +1131,17 @@
           {
             "name": "Chicago O'Hare International Airport",
             "code": "ORD",
-            "minutes": 383,
+            "minutes": 61,
+            "overnight": false
+          },
+          {
+            "name": "Orlando International Airport",
+            "code": "MCO",
+            "minutes": 135,
             "overnight": false
           }
         ],
-        "minutes": 984
+        "minutes": 968
       },
       "return_flight": null
     },
@@ -1079,7 +1160,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 54,
+      "days_out": 53,
       "phase": "late",
       "best_from": "2026-08-09",
       "best_until": "2026-10-31",
@@ -1104,103 +1185,7 @@
       "low_price": 1072,
       "observations": 4,
       "effective_price": 1072,
-      "oneway": {
-        "total": 1235,
-        "out_price": 444,
-        "back_price": 791,
-        "out_airlines": [
-          "American",
-          "British Airways"
-        ],
-        "back_airlines": [
-          "Delta"
-        ],
-        "out_flight": {
-          "segments": [
-            {
-              "airline": "American",
-              "flight": "AA 4142",
-              "from": "MCI",
-              "depart": "2026-12-30 09:22",
-              "to": "ORD",
-              "arrive": "2026-12-30 11:05",
-              "minutes": 103,
-              "overnight": false
-            },
-            {
-              "airline": "American",
-              "flight": "AA 4657",
-              "from": "ORD",
-              "depart": "2026-12-30 14:45",
-              "to": "YYZ",
-              "arrive": "2026-12-30 17:40",
-              "minutes": 115,
-              "overnight": false
-            },
-            {
-              "airline": "British Airways",
-              "flight": "BA 98",
-              "from": "YYZ",
-              "depart": "2026-12-30 22:20",
-              "to": "LHR",
-              "arrive": "2026-12-31 10:25",
-              "minutes": 425,
-              "overnight": true
-            }
-          ],
-          "layovers": [
-            {
-              "name": "Chicago O'Hare International Airport",
-              "code": "ORD",
-              "minutes": 220,
-              "overnight": false
-            },
-            {
-              "name": "Toronto Pearson International Airport",
-              "code": "YYZ",
-              "minutes": 280,
-              "overnight": false
-            }
-          ],
-          "minutes": 1143
-        },
-        "back_flight": {
-          "segments": [
-            {
-              "airline": "Delta",
-              "flight": "DL 33",
-              "from": "LHR",
-              "depart": "2027-01-06 08:55",
-              "to": "ATL",
-              "arrive": "2027-01-06 13:34",
-              "minutes": 579,
-              "overnight": false
-            },
-            {
-              "airline": "Delta",
-              "flight": "DL 1660",
-              "from": "ATL",
-              "depart": "2027-01-06 14:59",
-              "to": "MCI",
-              "arrive": "2027-01-06 16:14",
-              "minutes": 135,
-              "overnight": false
-            }
-          ],
-          "layovers": [
-            {
-              "name": "Hartsfield-Jackson Atlanta International Airport",
-              "code": "ATL",
-              "minutes": 85,
-              "overnight": false
-            }
-          ],
-          "minutes": 799
-        },
-        "checked_at": "2026-10-31T14:46:07+00:00",
-        "better": false,
-        "saves": -163
-      },
+      "oneway": null,
       "under_ceiling": true,
       "lowest_yet": false,
       "outbound_flight": {
@@ -1269,7 +1254,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 66,
+      "days_out": 65,
       "phase": "prime",
       "best_from": "2026-08-21",
       "best_until": "2026-11-12",
@@ -1490,13 +1475,13 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 42,
+      "days_out": 41,
       "phase": "late",
       "best_from": "2026-07-28",
       "best_until": "2026-10-19",
       "check_every_days": 5,
       "status": "ok",
-      "price": 3235,
+      "price": 3239,
       "airlines": [
         "United",
         "Air Canada"
@@ -1506,15 +1491,15 @@
       "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDREVMGh4SCjIwMjYtMTItMjhqBwgBEgNERUxyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
       "price_level": "high",
       "typical_range": [
-        1450,
+        1500,
         3000
       ],
-      "observed_at": "2026-11-02T15:02:48+00:00",
-      "prev_price": 3025,
-      "delta": 210,
+      "observed_at": "2026-11-07T14:51:10+00:00",
+      "prev_price": 3235,
+      "delta": 4,
       "low_price": 2995,
-      "observations": 3,
-      "effective_price": 3235,
+      "observations": 4,
+      "effective_price": 3239,
       "oneway": null,
       "under_ceiling": false,
       "lowest_yet": false,
@@ -1583,132 +1568,84 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 53,
+      "days_out": 52,
       "phase": "late",
       "best_from": "2026-08-08",
       "best_until": "2026-10-30",
       "check_every_days": 5,
       "status": "ok",
-      "price": 3102,
+      "price": 2602,
       "airlines": [
-        "American",
-        "British Airways"
+        "Delta",
+        "KLM"
       ],
       "stops": 2,
-      "duration_min": 1304,
+      "duration_min": 1485,
       "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTI5agcIARIDTUNJcgcIARIDREVMGh4SCjIwMjctMDEtMDhqBwgBEgNERUxyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
       "price_level": "typical",
       "typical_range": [
-        1450,
+        1500,
         3000
       ],
-      "observed_at": "2026-11-02T15:02:44+00:00",
-      "prev_price": 2745,
-      "delta": 357,
+      "observed_at": "2026-11-07T14:50:57+00:00",
+      "prev_price": 3102,
+      "delta": -500,
       "low_price": 2277,
-      "observations": 3,
-      "effective_price": 3102,
+      "observations": 4,
+      "effective_price": 2602,
       "oneway": null,
       "under_ceiling": false,
       "lowest_yet": false,
       "outbound_flight": {
         "segments": [
           {
-            "airline": "American",
-            "flight": "AA 6330",
+            "airline": "Delta",
+            "flight": "DL 2908",
             "from": "MCI",
-            "depart": "2026-12-29 16:01",
-            "to": "ORD",
-            "arrive": "2026-12-29 17:59",
-            "minutes": 118,
+            "depart": "2026-12-29 12:55",
+            "to": "ATL",
+            "arrive": "2026-12-29 15:59",
+            "minutes": 124,
             "overnight": false
           },
           {
-            "airline": "American",
-            "flight": "AA 86",
-            "from": "ORD",
-            "depart": "2026-12-29 18:40",
-            "to": "LHR",
-            "arrive": "2026-12-30 08:35",
-            "minutes": 475,
+            "airline": "Delta",
+            "flight": "DL 74",
+            "from": "ATL",
+            "depart": "2026-12-29 20:10",
+            "to": "AMS",
+            "arrive": "2026-12-30 10:40",
+            "minutes": 510,
             "overnight": true
           },
           {
-            "airline": "British Airways",
-            "flight": "BA 143",
-            "from": "LHR",
-            "depart": "2026-12-30 11:10",
+            "airline": "KLM",
+            "flight": "KL 871",
+            "from": "AMS",
+            "depart": "2026-12-30 12:30",
             "to": "DEL",
-            "arrive": "2026-12-31 01:15",
-            "minutes": 515,
+            "arrive": "2026-12-31 01:10",
+            "minutes": 490,
             "overnight": false
           }
         ],
         "layovers": [
           {
-            "name": "Chicago O'Hare International Airport",
-            "code": "ORD",
-            "minutes": 41,
+            "name": "Hartsfield-Jackson Atlanta International Airport",
+            "code": "ATL",
+            "minutes": 251,
             "overnight": false
           },
           {
-            "name": "Heathrow Airport",
-            "code": "LHR",
-            "minutes": 155,
+            "name": "Amsterdam Airport Schiphol",
+            "code": "AMS",
+            "minutes": 110,
             "overnight": false
           }
         ],
-        "minutes": 1304
+        "minutes": 1485
       },
-      "return_flight": {
-        "segments": [
-          {
-            "airline": "American",
-            "flight": "AA 293",
-            "from": "DEL",
-            "depart": "2027-01-08 23:55",
-            "to": "JFK",
-            "arrive": "2027-01-09 06:10",
-            "minutes": 1005,
-            "overnight": true
-          },
-          {
-            "airline": "American",
-            "flight": "AA 3050",
-            "from": "JFK",
-            "depart": "2027-01-09 07:30",
-            "to": "ORD",
-            "arrive": "2027-01-09 09:30",
-            "minutes": 180,
-            "overnight": false
-          },
-          {
-            "airline": "American",
-            "flight": "AA 4937",
-            "from": "ORD",
-            "depart": "2027-01-09 10:35",
-            "to": "MCI",
-            "arrive": "2027-01-09 12:33",
-            "minutes": 118,
-            "overnight": false
-          }
-        ],
-        "layovers": [
-          {
-            "name": "John F. Kennedy International Airport",
-            "code": "JFK",
-            "minutes": 80,
-            "overnight": false
-          },
-          {
-            "name": "Chicago O'Hare International Airport",
-            "code": "ORD",
-            "minutes": 65,
-            "overnight": false
-          }
-        ],
-        "minutes": 1448
-      }
+      "return_flight": null
     },
     {
       "id": "Delhi|2027-01-08|2027-01-18",
@@ -1724,7 +1661,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 63,
+      "days_out": 62,
       "phase": "prime",
       "best_from": "2026-08-18",
       "best_until": "2026-11-09",
@@ -1962,7 +1899,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 143,
+      "days_out": 142,
       "phase": "far",
       "best_from": "2027-01-26",
       "best_until": "2027-03-02",
@@ -2040,7 +1977,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 143,
+      "days_out": 142,
       "phase": "far",
       "best_from": "2027-01-26",
       "best_until": "2027-03-02",
@@ -2101,7 +2038,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 145,
+      "days_out": 144,
       "phase": "far",
       "best_from": "2027-01-28",
       "best_until": "2027-03-04",
@@ -2162,7 +2099,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 143,
+      "days_out": 142,
       "phase": "far",
       "best_from": "2027-01-26",
       "best_until": "2027-03-02",
@@ -2223,7 +2160,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 145,
+      "days_out": 144,
       "phase": "far",
       "best_from": "2027-01-28",
       "best_until": "2027-03-04",
@@ -2283,7 +2220,7 @@
       "book_lo": 55,
       "book_hi": 138,
       "max_layover_min": 420,
-      "days_out": 143,
+      "days_out": 142,
       "phase": "approaching",
       "best_from": "2026-11-11",
       "best_until": "2027-02-02",
@@ -2424,7 +2361,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 189,
+      "days_out": 188,
       "phase": "far",
       "best_from": "2027-03-18",
       "best_until": "2027-04-22",
@@ -2485,7 +2422,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 189,
+      "days_out": 188,
       "phase": "far",
       "best_from": "2027-03-18",
       "best_until": "2027-04-22",
@@ -2546,7 +2483,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 191,
+      "days_out": 190,
       "phase": "far",
       "best_from": "2027-03-20",
       "best_until": "2027-04-24",
@@ -2607,7 +2544,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 189,
+      "days_out": 188,
       "phase": "far",
       "best_from": "2027-03-18",
       "best_until": "2027-04-22",
@@ -2668,7 +2605,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 191,
+      "days_out": 190,
       "phase": "far",
       "best_from": "2027-03-20",
       "best_until": "2027-04-24",
@@ -2728,7 +2665,7 @@
       "book_lo": 50,
       "book_hi": 133,
       "max_layover_min": 420,
-      "days_out": 189,
+      "days_out": 188,
       "phase": "far",
       "best_from": "2027-01-01",
       "best_until": "2027-03-25",
