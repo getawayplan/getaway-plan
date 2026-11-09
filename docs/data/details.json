@@ -1,48 +1,95 @@
 {
   "New York City|2026-12-18|2026-12-22": {
-    "price": 514,
-    "quoted": 514,
-    "checked_at": "2026-11-06T14:57:42+00:00",
+    "price": 522,
+    "quoted": 522,
+    "checked_at": "2026-11-09T15:04:21+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
         {
-          "airline": "United",
-          "flight": "UA 303",
+          "airline": "Delta",
+          "flight": "DL 5262",
           "from": "MCI",
-          "depart": "2026-12-18 07:31",
-          "to": "ORD",
-          "arrive": "2026-12-18 09:22",
-          "minutes": 111,
-          "overnight": false
-        },
-        {
-          "airline": "United",
-          "flight": "UA 1856",
-          "from": "ORD",
-          "depart": "2026-12-18 10:30",
-          "to": "EWR",
-          "arrive": "2026-12-18 13:51",
-          "minutes": 141,
+          "depart": "2026-12-18 11:40",
+          "to": "JFK",
+          "arrive": "2026-12-18 15:39",
+          "minutes": 179,
           "overnight": false
         }
       ],
-      "layovers": [
-        {
-          "name": "Chicago O'Hare International Airport",
-          "code": "ORD",
-          "minutes": 68,
-          "overnight": false
-        }
-      ],
-      "minutes": 320
+      "layovers": [],
+      "minutes": 179
     },
-    "return": null
+    "return": null,
+    "oneway": {
+      "checked_at": "2026-11-09T15:04:58+00:00",
+      "out": {
+        "price": 217,
+        "airlines": [
+          "Delta"
+        ],
+        "detail": {
+          "segments": [
+            {
+              "airline": "Delta",
+              "flight": "DL 5262",
+              "from": "MCI",
+              "depart": "2026-12-18 11:40",
+              "to": "JFK",
+              "arrive": "2026-12-18 15:39",
+              "minutes": 179,
+              "overnight": false
+            }
+          ],
+          "layovers": [],
+          "minutes": 179
+        }
+      },
+      "back": {
+        "price": 305,
+        "airlines": [
+          "American"
+        ],
+        "detail": {
+          "segments": [
+            {
+              "airline": "American",
+              "flight": "AA 2819",
+              "from": "JFK",
+              "depart": "2026-12-22 19:30",
+              "to": "ORD",
+              "arrive": "2026-12-22 21:37",
+              "minutes": 187,
+              "overnight": false
+            },
+            {
+              "airline": "American",
+              "flight": "AA 4529",
+              "from": "ORD",
+              "depart": "2026-12-22 23:00",
+              "to": "MCI",
+              "arrive": "2026-12-23 00:56",
+              "minutes": 116,
+              "overnight": false
+            }
+          ],
+          "layovers": [
+            {
+              "name": "Chicago O'Hare International Airport",
+              "code": "ORD",
+              "minutes": 83,
+              "overnight": false
+            }
+          ],
+          "minutes": 386
+        }
+      }
+    }
   },
   "New York City|2027-01-01|2027-01-05": {
     "price": 408,
     "quoted": 408,
-    "checked_at": "2026-11-06T14:57:44+00:00",
+    "checked_at": "2026-11-09T15:04:23+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
@@ -125,143 +172,194 @@
     }
   },
   "Washington, DC|2026-12-18|2026-12-22": {
-    "price": 284,
-    "quoted": 284,
-    "checked_at": "2026-11-06T14:57:53+00:00",
+    "price": 280,
+    "quoted": 280,
+    "checked_at": "2026-11-09T15:04:26+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
         {
-          "airline": "Southwest",
-          "flight": "WN 2654",
+          "airline": "Frontier",
+          "flight": "F9 4176",
           "from": "MCI",
-          "depart": "2026-12-18 06:10",
+          "depart": "2026-12-18 18:01",
+          "to": "MCO",
+          "arrive": "2026-12-18 21:53",
+          "minutes": 172,
+          "overnight": false
+        },
+        {
+          "airline": "Frontier",
+          "flight": "F9 4072",
+          "from": "MCO",
+          "depart": "2026-12-18 22:36",
           "to": "BWI",
-          "arrive": "2026-12-18 09:30",
+          "arrive": "2026-12-19 00:56",
           "minutes": 140,
           "overnight": false
         }
       ],
-      "layovers": [],
-      "minutes": 140
+      "layovers": [
+        {
+          "name": "Orlando International Airport",
+          "code": "MCO",
+          "minutes": 43,
+          "overnight": false
+        }
+      ],
+      "minutes": 355
     },
     "return": {
       "segments": [
         {
           "airline": "Southwest",
-          "flight": "WN 2553",
+          "flight": "WN 1086",
           "from": "BWI",
-          "depart": "2026-12-22 21:50",
+          "depart": "2026-12-22 10:35",
+          "to": "MKE",
+          "arrive": "2026-12-22 11:40",
+          "minutes": 125,
+          "overnight": false
+        },
+        {
+          "airline": "Southwest",
+          "flight": "WN 1086",
+          "from": "MKE",
+          "depart": "2026-12-22 12:15",
           "to": "MCI",
-          "arrive": "2026-12-22 23:50",
-          "minutes": 180,
+          "arrive": "2026-12-22 13:45",
+          "minutes": 90,
           "overnight": false
         }
       ],
-      "layovers": [],
-      "minutes": 180
+      "layovers": [
+        {
+          "name": "Milwaukee Mitchell International Airport",
+          "code": "MKE",
+          "minutes": 35,
+          "overnight": false
+        }
+      ],
+      "minutes": 250
     },
     "oneway": {
-      "checked_at": "2026-10-31T14:46:01+00:00",
+      "checked_at": "2026-11-09T15:04:54+00:00",
       "out": {
-        "price": 119,
+        "price": 145,
         "airlines": [
-          "American"
+          "Frontier"
         ],
         "detail": {
           "segments": [
             {
-              "airline": "American",
-              "flight": "AA 4375",
+              "airline": "Frontier",
+              "flight": "F9 4176",
               "from": "MCI",
-              "depart": "2026-12-18 05:50",
-              "to": "DCA",
-              "arrive": "2026-12-18 09:30",
-              "minutes": 160,
-              "overnight": false
-            }
-          ],
-          "layovers": [],
-          "minutes": 160
-        }
-      },
-      "back": {
-        "price": 124,
-        "airlines": [
-          "Delta"
-        ],
-        "detail": {
-          "segments": [
-            {
-              "airline": "Delta",
-              "flight": "DL 2799",
-              "from": "BWI",
-              "depart": "2026-12-22 17:20",
-              "to": "ATL",
-              "arrive": "2026-12-22 19:27",
-              "minutes": 127,
+              "depart": "2026-12-18 18:01",
+              "to": "MCO",
+              "arrive": "2026-12-18 21:53",
+              "minutes": 172,
               "overnight": false
             },
             {
-              "airline": "Delta",
-              "flight": "DL 3023",
-              "from": "ATL",
-              "depart": "2026-12-22 21:20",
-              "to": "MCI",
-              "arrive": "2026-12-22 22:37",
-              "minutes": 137,
+              "airline": "Frontier",
+              "flight": "F9 4072",
+              "from": "MCO",
+              "depart": "2026-12-18 22:36",
+              "to": "BWI",
+              "arrive": "2026-12-19 00:56",
+              "minutes": 140,
               "overnight": false
             }
           ],
           "layovers": [
             {
-              "name": "Hartsfield-Jackson Atlanta International Airport",
-              "code": "ATL",
-              "minutes": 113,
+              "name": "Orlando International Airport",
+              "code": "MCO",
+              "minutes": 43,
               "overnight": false
             }
           ],
-          "minutes": 377
+          "minutes": 355
+        }
+      },
+      "back": {
+        "price": 135,
+        "airlines": [
+          "Southwest"
+        ],
+        "detail": {
+          "segments": [
+            {
+              "airline": "Southwest",
+              "flight": "WN 1086",
+              "from": "BWI",
+              "depart": "2026-12-22 10:35",
+              "to": "MKE",
+              "arrive": "2026-12-22 11:40",
+              "minutes": 125,
+              "overnight": false
+            },
+            {
+              "airline": "Southwest",
+              "flight": "WN 1086",
+              "from": "MKE",
+              "depart": "2026-12-22 12:15",
+              "to": "MCI",
+              "arrive": "2026-12-22 13:45",
+              "minutes": 90,
+              "overnight": false
+            }
+          ],
+          "layovers": [
+            {
+              "name": "Milwaukee Mitchell International Airport",
+              "code": "MKE",
+              "minutes": 35,
+              "overnight": false
+            }
+          ],
+          "minutes": 250
         }
       }
     }
   },
   "Washington, DC|2027-01-01|2027-01-05": {
     "price": 284,
-    "quoted": 255,
-    "checked_at": "2026-11-06T14:57:57+00:00",
+    "quoted": 284,
+    "checked_at": "2026-11-09T15:04:33+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
         {
           "airline": "Southwest",
-          "flight": "WN 2315",
+          "flight": "WN 2848",
           "from": "MCI",
-          "depart": "2027-01-01 06:25",
-          "to": "BWI",
-          "arrive": "2027-01-01 09:45",
-          "minutes": 140,
+          "depart": "2027-01-01 08:05",
+          "to": "DCA",
+          "arrive": "2027-01-01 11:30",
+          "minutes": 145,
           "overnight": false
         }
       ],
       "layovers": [],
-      "minutes": 140
+      "minutes": 145
     },
     "return": {
       "segments": [
         {
           "airline": "Southwest",
-          "flight": "WN 3113",
-          "from": "BWI",
-          "depart": "2027-01-05 09:40",
+          "flight": "WN 1526",
+          "from": "DCA",
+          "depart": "2027-01-05 08:00",
           "to": "MCI",
-          "arrive": "2027-01-05 11:35",
-          "minutes": 175,
+          "arrive": "2027-01-05 09:50",
+          "minutes": 170,
           "overnight": false
         }
       ],
       "layovers": [],
-      "minutes": 175
+      "minutes": 170
     },
     "oneway": {
       "checked_at": "2026-11-03T15:00:48+00:00",
@@ -468,7 +566,7 @@
   "London|2027-01-11|2027-01-18": {
     "price": 1022,
     "quoted": 939,
-    "checked_at": "2026-11-06T14:58:14+00:00",
+    "checked_at": "2026-11-09T15:04:44+00:00",
     "max_layover_min": 420,
     "outbound": {
       "segments": [
@@ -709,30 +807,30 @@
     "return": null
   },
   "Delhi|2027-01-08|2027-01-18": {
-    "price": 1654,
-    "quoted": 1654,
-    "checked_at": "2026-11-06T14:58:21+00:00",
+    "price": 1732,
+    "quoted": 1732,
+    "checked_at": "2026-11-09T15:04:47+00:00",
     "max_layover_min": 420,
     "outbound": {
       "segments": [
         {
           "airline": "Delta",
-          "flight": "DL 5262",
+          "flight": "DL 5095",
           "from": "MCI",
-          "depart": "2027-01-08 10:14",
-          "to": "JFK",
-          "arrive": "2027-01-08 14:06",
-          "minutes": 172,
+          "depart": "2027-01-08 14:16",
+          "to": "DTW",
+          "arrive": "2027-01-08 17:10",
+          "minutes": 114,
           "overnight": false
         },
         {
-          "airline": "Air France",
-          "flight": "AF 1",
-          "from": "JFK",
-          "depart": "2027-01-08 16:30",
+          "airline": "Delta",
+          "flight": "DL 228",
+          "from": "DTW",
+          "depart": "2027-01-08 18:15",
           "to": "CDG",
-          "arrive": "2027-01-09 05:45",
-          "minutes": 435,
+          "arrive": "2027-01-09 08:10",
+          "minutes": 475,
           "overnight": true
         },
         {
@@ -748,19 +846,19 @@
       ],
       "layovers": [
         {
-          "name": "John F. Kennedy International Airport",
-          "code": "JFK",
-          "minutes": 144,
+          "name": "Detroit Metropolitan Wayne County Airport",
+          "code": "DTW",
+          "minutes": 65,
           "overnight": false
         },
         {
           "name": "A\u00e9roport de Paris-Charles de Gaulle",
           "code": "CDG",
-          "minutes": 290,
+          "minutes": 145,
           "overnight": false
         }
       ],
-      "minutes": 1546
+      "minutes": 1304
     },
     "return": {
       "segments": [
@@ -776,22 +874,22 @@
         },
         {
           "airline": "Delta",
-          "flight": "DL 133",
+          "flight": "DL 47",
           "from": "AMS",
-          "depart": "2027-01-18 10:10",
-          "to": "DTW",
-          "arrive": "2027-01-18 13:16",
-          "minutes": 546,
+          "depart": "2027-01-18 08:55",
+          "to": "JFK",
+          "arrive": "2027-01-18 11:30",
+          "minutes": 515,
           "overnight": false
         },
         {
           "airline": "Delta",
-          "flight": "DL 2761",
-          "from": "DTW",
-          "depart": "2027-01-18 15:50",
+          "flight": "DL 5408",
+          "from": "JFK",
+          "depart": "2027-01-18 16:40",
           "to": "MCI",
-          "arrive": "2027-01-18 17:02",
-          "minutes": 132,
+          "arrive": "2027-01-18 19:19",
+          "minutes": 219,
           "overnight": false
         }
       ],
@@ -799,17 +897,17 @@
         {
           "name": "Amsterdam Airport Schiphol",
           "code": "AMS",
-          "minutes": 125,
+          "minutes": 50,
           "overnight": false
         },
         {
-          "name": "Detroit Metropolitan Wayne County Airport",
-          "code": "DTW",
-          "minutes": 154,
+          "name": "John F. Kennedy International Airport",
+          "code": "JFK",
+          "minutes": 310,
           "overnight": false
         }
       ],
-      "minutes": 1512
+      "minutes": 1649
     },
     "oneway": {
       "checked_at": "2026-11-03T15:00:53+00:00",
