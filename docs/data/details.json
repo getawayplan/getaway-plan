@@ -410,58 +410,58 @@
     }
   },
   "London|2026-12-30|2027-01-06": {
-    "price": 1072,
-    "quoted": 1072,
-    "checked_at": "2026-11-05T15:06:49+00:00",
+    "price": 1092,
+    "quoted": 1092,
+    "checked_at": "2026-11-10T14:59:51+00:00",
     "max_layover_min": 420,
     "outbound": {
       "segments": [
         {
-          "airline": "United",
-          "flight": "UA 3476",
+          "airline": "Southwest",
+          "flight": "WN 557",
           "from": "MCI",
-          "depart": "2026-12-30 15:17",
-          "to": "ORD",
-          "arrive": "2026-12-30 17:05",
-          "minutes": 108,
+          "depart": "2026-12-30 14:55",
+          "to": "BNA",
+          "arrive": "2026-12-30 16:30",
+          "minutes": 95,
           "overnight": false
         },
         {
-          "airline": "SWISS",
-          "flight": "LX 9",
-          "from": "ORD",
-          "depart": "2026-12-30 18:50",
-          "to": "ZRH",
-          "arrive": "2026-12-31 10:40",
-          "minutes": 530,
+          "airline": "Icelandair",
+          "flight": "FI 824",
+          "from": "BNA",
+          "depart": "2026-12-30 17:30",
+          "to": "KEF",
+          "arrive": "2026-12-31 06:10",
+          "minutes": 400,
           "overnight": true
         },
         {
-          "airline": "SWISS",
-          "flight": "LX 432",
-          "from": "ZRH",
-          "depart": "2026-12-31 17:05",
-          "to": "LGW",
-          "arrive": "2026-12-31 17:50",
-          "minutes": 105,
+          "airline": "Icelandair",
+          "flight": "FI 450",
+          "from": "KEF",
+          "depart": "2026-12-31 07:35",
+          "to": "LHR",
+          "arrive": "2026-12-31 10:50",
+          "minutes": 195,
           "overnight": false
         }
       ],
       "layovers": [
         {
-          "name": "Chicago O'Hare International Airport",
-          "code": "ORD",
-          "minutes": 105,
+          "name": "Nashville International Airport",
+          "code": "BNA",
+          "minutes": 60,
           "overnight": false
         },
         {
-          "name": "Zurich Airport",
-          "code": "ZRH",
-          "minutes": 385,
+          "name": "Keflav\u00edk International Airport",
+          "code": "KEF",
+          "minutes": 85,
           "overnight": false
         }
       ],
-      "minutes": 1233
+      "minutes": 835
     },
     "return": null,
     "oneway": {
