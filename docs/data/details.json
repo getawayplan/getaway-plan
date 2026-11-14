@@ -906,107 +906,91 @@
     }
   },
   "Delhi|2027-01-08|2027-01-18": {
-    "price": 1732,
-    "quoted": 1732,
-    "checked_at": "2026-11-09T15:04:47+00:00",
+    "price": 1733,
+    "quoted": 1733,
+    "checked_at": "2026-11-14T14:53:15+00:00",
     "max_layover_min": 420,
     "outbound": {
       "segments": [
         {
-          "airline": "Delta",
-          "flight": "DL 5095",
+          "airline": "United",
+          "flight": "UA 3475",
           "from": "MCI",
-          "depart": "2027-01-08 14:16",
-          "to": "DTW",
-          "arrive": "2027-01-08 17:10",
-          "minutes": 114,
+          "depart": "2027-01-08 15:25",
+          "to": "EWR",
+          "arrive": "2027-01-08 19:10",
+          "minutes": 165,
           "overnight": false
         },
         {
-          "airline": "Delta",
-          "flight": "DL 228",
-          "from": "DTW",
-          "depart": "2027-01-08 18:15",
-          "to": "CDG",
-          "arrive": "2027-01-09 08:10",
-          "minutes": 475,
-          "overnight": true
-        },
-        {
-          "airline": "Air France",
-          "flight": "AF 226",
-          "from": "CDG",
-          "depart": "2027-01-09 10:35",
+          "airline": "United",
+          "flight": "UA 82",
+          "from": "EWR",
+          "depart": "2027-01-08 20:30",
           "to": "DEL",
-          "arrive": "2027-01-09 23:30",
-          "minutes": 505,
-          "overnight": false
+          "arrive": "2027-01-09 21:50",
+          "minutes": 890,
+          "overnight": true
         }
       ],
       "layovers": [
         {
-          "name": "Detroit Metropolitan Wayne County Airport",
-          "code": "DTW",
-          "minutes": 65,
-          "overnight": false
-        },
-        {
-          "name": "A\u00e9roport de Paris-Charles de Gaulle",
-          "code": "CDG",
-          "minutes": 145,
+          "name": "Newark Liberty International Airport",
+          "code": "EWR",
+          "minutes": 80,
           "overnight": false
         }
       ],
-      "minutes": 1304
+      "minutes": 1135
     },
     "return": {
       "segments": [
         {
-          "airline": "KLM",
-          "flight": "KL 872",
+          "airline": "IndiGo",
+          "flight": "6E 1307",
           "from": "DEL",
-          "depart": "2027-01-18 03:20",
-          "to": "AMS",
-          "arrive": "2027-01-18 08:05",
-          "minutes": 555,
-          "overnight": true
-        },
-        {
-          "airline": "Delta",
-          "flight": "DL 47",
-          "from": "AMS",
-          "depart": "2027-01-18 08:55",
-          "to": "JFK",
-          "arrive": "2027-01-18 11:30",
-          "minutes": 515,
+          "depart": "2027-01-18 21:40",
+          "to": "DOH",
+          "arrive": "2027-01-18 23:55",
+          "minutes": 285,
           "overnight": false
         },
         {
-          "airline": "Delta",
-          "flight": "DL 5408",
-          "from": "JFK",
-          "depart": "2027-01-18 16:40",
+          "airline": "Qatar Airways",
+          "flight": "QR 731",
+          "from": "DOH",
+          "depart": "2027-01-19 02:10",
+          "to": "DFW",
+          "arrive": "2027-01-19 09:25",
+          "minutes": 975,
+          "overnight": true
+        },
+        {
+          "airline": "American",
+          "flight": "AA 4064",
+          "from": "DFW",
+          "depart": "2027-01-19 12:24",
           "to": "MCI",
-          "arrive": "2027-01-18 19:19",
-          "minutes": 219,
+          "arrive": "2027-01-19 14:08",
+          "minutes": 104,
           "overnight": false
         }
       ],
       "layovers": [
         {
-          "name": "Amsterdam Airport Schiphol",
-          "code": "AMS",
-          "minutes": 50,
+          "name": "Hamad International Airport",
+          "code": "DOH",
+          "minutes": 135,
           "overnight": false
         },
         {
-          "name": "John F. Kennedy International Airport",
-          "code": "JFK",
-          "minutes": 310,
+          "name": "Dallas Fort Worth International Airport",
+          "code": "DFW",
+          "minutes": 179,
           "overnight": false
         }
       ],
-      "minutes": 1649
+      "minutes": 1678
     },
     "oneway": {
       "checked_at": "2026-11-03T15:00:53+00:00",
@@ -1223,23 +1207,23 @@
   "New York City|2027-01-14|2027-01-18": {
     "price": 433,
     "quoted": 368,
-    "checked_at": "2026-11-11T15:00:57+00:00",
+    "checked_at": "2026-11-14T14:53:08+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
         {
-          "airline": "Delta",
-          "flight": "DL 370",
+          "airline": "Southwest",
+          "flight": "WN 4766",
           "from": "MCI",
-          "depart": "2027-01-14 07:15",
+          "depart": "2027-01-14 06:00",
           "to": "LGA",
-          "arrive": "2027-01-14 11:04",
-          "minutes": 169,
+          "arrive": "2027-01-14 09:50",
+          "minutes": 170,
           "overnight": false
         }
       ],
       "layovers": [],
-      "minutes": 169
+      "minutes": 170
     },
     "return": {
       "segments": [
@@ -1306,9 +1290,9 @@
     }
   },
   "Washington, DC|2027-01-14|2027-01-18": {
-    "price": 300,
-    "quoted": 300,
-    "checked_at": "2026-11-11T15:01:01+00:00",
+    "price": 320,
+    "quoted": 320,
+    "checked_at": "2026-11-14T14:53:10+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
@@ -1408,9 +1392,9 @@
     }
   },
   "London|2027-03-29|2027-04-04": {
-    "price": 964,
-    "quoted": 948,
-    "checked_at": "2026-11-11T15:00:24+00:00",
+    "price": 962,
+    "quoted": 943,
+    "checked_at": "2026-11-14T14:52:45+00:00",
     "max_layover_min": 420,
     "outbound": {
       "segments": [
@@ -1850,9 +1834,9 @@
     "return": null
   },
   "Boston|2026-12-18|2026-12-23": {
-    "price": 488,
-    "quoted": 488,
-    "checked_at": "2026-11-11T15:00:37+00:00",
+    "price": 506,
+    "quoted": 506,
+    "checked_at": "2026-11-14T14:52:54+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
@@ -1873,80 +1857,163 @@
     "return": null
   },
   "Boston|2026-12-31|2027-01-05": {
-    "price": 342,
-    "quoted": 342,
-    "checked_at": "2026-11-11T15:00:39+00:00",
+    "price": 351,
+    "quoted": 351,
+    "checked_at": "2026-11-14T14:52:56+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
         {
           "airline": "United",
-          "flight": "UA 3459",
+          "flight": "UA 3454",
           "from": "MCI",
-          "depart": "2026-12-31 11:25",
-          "to": "ORD",
-          "arrive": "2026-12-31 13:15",
-          "minutes": 110,
+          "depart": "2026-12-31 06:39",
+          "to": "EWR",
+          "arrive": "2026-12-31 10:39",
+          "minutes": 180,
           "overnight": false
         },
         {
           "airline": "United",
-          "flight": "UA 1928",
-          "from": "ORD",
-          "depart": "2026-12-31 14:09",
+          "flight": "UA 1016",
+          "from": "EWR",
+          "depart": "2026-12-31 12:15",
           "to": "BOS",
-          "arrive": "2026-12-31 17:36",
-          "minutes": 147,
+          "arrive": "2026-12-31 13:26",
+          "minutes": 71,
           "overnight": false
         }
       ],
       "layovers": [
         {
-          "name": "Chicago O'Hare International Airport",
-          "code": "ORD",
-          "minutes": 54,
+          "name": "Newark Liberty International Airport",
+          "code": "EWR",
+          "minutes": 96,
           "overnight": false
         }
       ],
-      "minutes": 311
+      "minutes": 347
     },
-    "return": {
-      "segments": [
-        {
-          "airline": "Delta",
-          "flight": "DL 5823",
-          "from": "BOS",
-          "depart": "2027-01-05 11:21",
-          "to": "MCI",
-          "arrive": "2027-01-05 14:20",
-          "minutes": 239,
-          "overnight": false
+    "return": null,
+    "oneway": {
+      "checked_at": "2026-11-14T14:53:34+00:00",
+      "out": {
+        "price": 186,
+        "airlines": [
+          "United"
+        ],
+        "detail": {
+          "segments": [
+            {
+              "airline": "United",
+              "flight": "UA 3459",
+              "from": "MCI",
+              "depart": "2026-12-31 11:25",
+              "to": "ORD",
+              "arrive": "2026-12-31 13:15",
+              "minutes": 110,
+              "overnight": false
+            },
+            {
+              "airline": "United",
+              "flight": "UA 1928",
+              "from": "ORD",
+              "depart": "2026-12-31 14:09",
+              "to": "BOS",
+              "arrive": "2026-12-31 17:36",
+              "minutes": 147,
+              "overnight": false
+            }
+          ],
+          "layovers": [
+            {
+              "name": "Chicago O'Hare International Airport",
+              "code": "ORD",
+              "minutes": 54,
+              "overnight": false
+            }
+          ],
+          "minutes": 311
         }
-      ],
-      "layovers": [],
-      "minutes": 239
+      },
+      "back": {
+        "price": 166,
+        "airlines": [
+          "American"
+        ],
+        "detail": {
+          "segments": [
+            {
+              "airline": "American",
+              "flight": "AA 4776",
+              "from": "BOS",
+              "depart": "2027-01-05 11:49",
+              "to": "DCA",
+              "arrive": "2027-01-05 13:44",
+              "minutes": 115,
+              "overnight": false
+            },
+            {
+              "airline": "American",
+              "flight": "AA 5333",
+              "from": "DCA",
+              "depart": "2027-01-05 14:27",
+              "to": "MCI",
+              "arrive": "2027-01-05 16:31",
+              "minutes": 184,
+              "overnight": false
+            }
+          ],
+          "layovers": [
+            {
+              "name": "Ronald Reagan Washington National Airport",
+              "code": "DCA",
+              "minutes": 43,
+              "overnight": false
+            }
+          ],
+          "minutes": 342
+        }
+      }
     }
   },
   "Boston|2027-01-13|2027-01-18": {
-    "price": 321,
-    "quoted": 321,
-    "checked_at": "2026-11-11T15:00:49+00:00",
+    "price": 331,
+    "quoted": 331,
+    "checked_at": "2026-11-14T14:52:58+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
         {
-          "airline": "Delta",
-          "flight": "DL 5823",
+          "airline": "Southwest",
+          "flight": "WN 2113",
           "from": "MCI",
-          "depart": "2027-01-13 15:05",
+          "depart": "2027-01-13 15:25",
+          "to": "STL",
+          "arrive": "2027-01-13 16:30",
+          "minutes": 65,
+          "overnight": false
+        },
+        {
+          "airline": "Southwest",
+          "flight": "WN 1794",
+          "from": "STL",
+          "depart": "2027-01-13 17:30",
           "to": "BOS",
-          "arrive": "2027-01-13 19:11",
-          "minutes": 186,
+          "arrive": "2027-01-13 21:05",
+          "minutes": 155,
           "overnight": false
         }
       ],
-      "layovers": [],
-      "minutes": 186
+      "layovers": [
+        {
+          "name": "St. Louis Lambert International Airport",
+          "code": "STL",
+          "minutes": 60,
+          "overnight": false
+        }
+      ],
+      "minutes": 280
     },
     "return": {
       "segments": [
