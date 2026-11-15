@@ -1,41 +1,41 @@
 {
   "New York City|2026-12-18|2026-12-22": {
-    "price": 568,
-    "quoted": 568,
-    "checked_at": "2026-11-12T15:05:10+00:00",
+    "price": 544,
+    "quoted": 544,
+    "checked_at": "2026-11-15T14:53:11+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
         {
           "airline": "United",
-          "flight": "UA 5853",
+          "flight": "UA 463",
           "from": "MCI",
-          "depart": "2026-12-18 17:02",
-          "to": "ORD",
-          "arrive": "2026-12-18 18:52",
-          "minutes": 110,
+          "depart": "2026-12-18 11:07",
+          "to": "IAD",
+          "arrive": "2026-12-18 14:32",
+          "minutes": 145,
           "overnight": false
         },
         {
           "airline": "United",
-          "flight": "UA 424",
-          "from": "ORD",
-          "depart": "2026-12-18 20:29",
+          "flight": "UA 67",
+          "from": "IAD",
+          "depart": "2026-12-18 17:29",
           "to": "EWR",
-          "arrive": "2026-12-18 23:49",
-          "minutes": 140,
+          "arrive": "2026-12-18 18:56",
+          "minutes": 87,
           "overnight": false
         }
       ],
       "layovers": [
         {
-          "name": "Chicago O'Hare International Airport",
-          "code": "ORD",
-          "minutes": 97,
+          "name": "Dulles International Airport",
+          "code": "IAD",
+          "minutes": 177,
           "overnight": false
         }
       ],
-      "minutes": 347
+      "minutes": 409
     },
     "return": null,
     "oneway": {
@@ -104,80 +104,46 @@
     }
   },
   "New York City|2027-01-01|2027-01-05": {
-    "price": 404,
-    "quoted": 404,
-    "checked_at": "2026-11-12T15:05:12+00:00",
+    "price": 433,
+    "quoted": 433,
+    "checked_at": "2026-11-15T14:53:13+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
         {
-          "airline": "American",
-          "flight": "AA 4142",
+          "airline": "Southwest",
+          "flight": "WN 2681",
           "from": "MCI",
-          "depart": "2027-01-01 09:22",
-          "to": "ORD",
-          "arrive": "2027-01-01 11:05",
-          "minutes": 103,
-          "overnight": false
-        },
-        {
-          "airline": "American",
-          "flight": "AA 1936",
-          "from": "ORD",
-          "depart": "2027-01-01 13:16",
-          "to": "EWR",
-          "arrive": "2027-01-01 16:34",
-          "minutes": 138,
+          "depart": "2027-01-01 05:50",
+          "to": "LGA",
+          "arrive": "2027-01-01 09:30",
+          "minutes": 160,
           "overnight": false
         }
       ],
-      "layovers": [
-        {
-          "name": "Chicago O'Hare International Airport",
-          "code": "ORD",
-          "minutes": 131,
-          "overnight": false
-        }
-      ],
-      "minutes": 372
+      "layovers": [],
+      "minutes": 160
     },
     "return": {
       "segments": [
         {
-          "airline": "American",
-          "flight": "AA 2501",
-          "from": "EWR",
-          "depart": "2027-01-05 06:45",
-          "to": "ORD",
-          "arrive": "2027-01-05 08:55",
-          "minutes": 190,
-          "overnight": false
-        },
-        {
-          "airline": "American",
-          "flight": "AA 4055",
-          "from": "ORD",
-          "depart": "2027-01-05 10:05",
+          "airline": "Southwest",
+          "flight": "WN 2939",
+          "from": "LGA",
+          "depart": "2027-01-05 08:00",
           "to": "MCI",
-          "arrive": "2027-01-05 12:00",
-          "minutes": 115,
+          "arrive": "2027-01-05 10:15",
+          "minutes": 195,
           "overnight": false
         }
       ],
-      "layovers": [
-        {
-          "name": "Chicago O'Hare International Airport",
-          "code": "ORD",
-          "minutes": 70,
-          "overnight": false
-        }
-      ],
-      "minutes": 375
+      "layovers": [],
+      "minutes": 195
     },
     "oneway": {
-      "checked_at": "2026-11-06T14:58:36+00:00",
+      "checked_at": "2026-11-15T14:53:50+00:00",
       "out": {
-        "price": 217,
+        "price": 237,
         "airlines": [
           "Southwest"
         ],
@@ -199,7 +165,7 @@
         }
       },
       "back": {
-        "price": 192,
+        "price": 197,
         "airlines": [
           "United"
         ],
@@ -223,9 +189,9 @@
     }
   },
   "Washington, DC|2026-12-18|2026-12-22": {
-    "price": 270,
-    "quoted": 270,
-    "checked_at": "2026-11-12T15:05:20+00:00",
+    "price": 310,
+    "quoted": 310,
+    "checked_at": "2026-11-15T14:53:22+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
@@ -263,35 +229,35 @@
     "return": {
       "segments": [
         {
-          "airline": "Southwest",
-          "flight": "WN 1479",
+          "airline": "American",
+          "flight": "AA 2224",
           "from": "BWI",
-          "depart": "2026-12-22 12:55",
-          "to": "BOS",
-          "arrive": "2026-12-22 14:20",
-          "minutes": 85,
+          "depart": "2026-12-22 05:00",
+          "to": "CLT",
+          "arrive": "2026-12-22 06:34",
+          "minutes": 94,
           "overnight": false
         },
         {
-          "airline": "Southwest",
-          "flight": "WN 1479",
-          "from": "BOS",
-          "depart": "2026-12-22 15:00",
+          "airline": "American",
+          "flight": "AA 1616",
+          "from": "CLT",
+          "depart": "2026-12-22 07:20",
           "to": "MCI",
-          "arrive": "2026-12-22 17:40",
-          "minutes": 220,
+          "arrive": "2026-12-22 08:55",
+          "minutes": 155,
           "overnight": false
         }
       ],
       "layovers": [
         {
-          "name": "Boston Logan International Airport",
-          "code": "BOS",
-          "minutes": 40,
+          "name": "Charlotte Douglas International Airport",
+          "code": "CLT",
+          "minutes": 46,
           "overnight": false
         }
       ],
-      "minutes": 345
+      "minutes": 295
     },
     "oneway": {
       "checked_at": "2026-11-09T15:04:54+00:00",
@@ -376,9 +342,9 @@
     }
   },
   "Washington, DC|2027-01-01|2027-01-05": {
-    "price": 304,
-    "quoted": 281,
-    "checked_at": "2026-11-12T15:05:24+00:00",
+    "price": 333,
+    "quoted": 298,
+    "checked_at": "2026-11-15T14:53:29+00:00",
     "max_layover_min": 180,
     "outbound": {
       "segments": [
@@ -461,9 +427,9 @@
     }
   },
   "London|2026-12-30|2027-01-06": {
-    "price": 1092,
-    "quoted": 1092,
-    "checked_at": "2026-11-10T14:59:51+00:00",
+    "price": 1090,
+    "quoted": 1090,
+    "checked_at": "2026-11-15T14:53:42+00:00",
     "max_layover_min": 420,
     "outbound": {
       "segments": [
