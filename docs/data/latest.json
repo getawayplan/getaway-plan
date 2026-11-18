@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T15:02:30+00:00",
+  "generated_at": "2026-11-18T15:07:59+00:00",
   "mode": "live",
   "home_airports": [
     "MCI"
@@ -115,8 +115,8 @@
       ],
       "max_price": 350,
       "best_trip_id": "Boston|2027-01-13|2027-01-18",
-      "best_price": 321,
-      "best_kind": "two_one_ways",
+      "best_price": 331,
+      "best_kind": "round_trip",
       "under_ceiling": true
     },
     {
@@ -184,7 +184,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 31,
+      "days_out": 30,
       "phase": "late",
       "best_from": "2026-10-12",
       "best_until": "2026-11-16",
@@ -243,7 +243,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 44,
+      "days_out": 43,
       "phase": "prime",
       "best_from": "2026-10-25",
       "best_until": "2026-11-29",
@@ -398,7 +398,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 57,
+      "days_out": 56,
       "phase": "prime",
       "best_from": "2026-11-07",
       "best_until": "2026-12-12",
@@ -421,70 +421,8 @@
       "delta": 10,
       "low_price": 316,
       "observations": 3,
-      "effective_price": 321,
-      "oneway": {
-        "total": 321,
-        "out_price": 156,
-        "back_price": 165,
-        "out_airlines": [
-          "Delta"
-        ],
-        "back_airlines": [
-          "Frontier"
-        ],
-        "out_flight": {
-          "segments": [
-            {
-              "airline": "Delta",
-              "flight": "DL 5823",
-              "from": "MCI",
-              "depart": "2027-01-13 15:05",
-              "to": "BOS",
-              "arrive": "2027-01-13 19:11",
-              "minutes": 186,
-              "overnight": false
-            }
-          ],
-          "layovers": [],
-          "minutes": 186
-        },
-        "back_flight": {
-          "segments": [
-            {
-              "airline": "Frontier",
-              "flight": "F9 3347",
-              "from": "BOS",
-              "depart": "2027-01-18 10:13",
-              "to": "MCO",
-              "arrive": "2027-01-18 13:49",
-              "minutes": 216,
-              "overnight": false
-            },
-            {
-              "airline": "Frontier",
-              "flight": "F9 4175",
-              "from": "MCO",
-              "depart": "2027-01-18 14:59",
-              "to": "MCI",
-              "arrive": "2027-01-18 17:11",
-              "minutes": 192,
-              "overnight": false
-            }
-          ],
-          "layovers": [
-            {
-              "name": "Orlando International Airport",
-              "code": "MCO",
-              "minutes": 70,
-              "overnight": false
-            }
-          ],
-          "minutes": 478
-        },
-        "checked_at": "2026-11-11T15:01:15+00:00",
-        "better": true,
-        "saves": 10
-      },
+      "effective_price": 331,
+      "oneway": null,
       "under_ceiling": true,
       "lowest_yet": false,
       "outbound_flight": {
@@ -570,7 +508,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 31,
+      "days_out": 30,
       "phase": "late",
       "best_from": "2026-10-12",
       "best_until": "2026-11-16",
@@ -648,7 +586,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 45,
+      "days_out": 44,
       "phase": "prime",
       "best_from": "2026-10-26",
       "best_until": "2026-11-30",
@@ -769,7 +707,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 58,
+      "days_out": 57,
       "phase": "prime",
       "best_from": "2026-11-08",
       "best_until": "2026-12-13",
@@ -845,7 +783,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 31,
+      "days_out": 30,
       "phase": "late",
       "best_from": "2026-10-12",
       "best_until": "2026-11-16",
@@ -955,7 +893,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 45,
+      "days_out": 44,
       "phase": "prime",
       "best_from": "2026-10-26",
       "best_until": "2026-11-30",
@@ -1076,7 +1014,7 @@
       "book_lo": 32,
       "book_hi": 67,
       "max_layover_min": 180,
-      "days_out": 58,
+      "days_out": 57,
       "phase": "prime",
       "best_from": "2026-11-08",
       "best_until": "2026-12-13",
@@ -1168,7 +1106,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 31,
+      "days_out": 30,
       "phase": "late",
       "best_from": "2026-07-28",
       "best_until": "2026-10-19",
@@ -1262,7 +1200,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 43,
+      "days_out": 42,
       "phase": "late",
       "best_from": "2026-08-09",
       "best_until": "2026-10-31",
@@ -1356,7 +1294,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 55,
+      "days_out": 54,
       "phase": "late",
       "best_from": "2026-08-21",
       "best_until": "2026-11-12",
@@ -1464,7 +1402,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 31,
+      "days_out": 30,
       "phase": "late",
       "best_from": "2026-07-28",
       "best_until": "2026-10-19",
@@ -1557,7 +1495,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 42,
+      "days_out": 41,
       "phase": "late",
       "best_from": "2026-08-08",
       "best_until": "2026-10-30",
@@ -1698,7 +1636,7 @@
       "book_lo": 60,
       "book_hi": 143,
       "max_layover_min": 420,
-      "days_out": 52,
+      "days_out": 51,
       "phase": "late",
       "best_from": "2026-08-18",
       "best_until": "2026-11-09",
@@ -1822,7 +1760,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 132,
+      "days_out": 131,
       "phase": "far",
       "best_from": "2027-01-26",
       "best_until": "2027-03-02",
@@ -1898,7 +1836,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 133,
+      "days_out": 132,
       "phase": "far",
       "best_from": "2027-01-27",
       "best_until": "2027-03-03",
@@ -1959,7 +1897,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 132,
+      "days_out": 131,
       "phase": "far",
       "best_from": "2027-01-26",
       "best_until": "2027-03-02",
@@ -2020,7 +1958,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 134,
+      "days_out": 133,
       "phase": "far",
       "best_from": "2027-01-28",
       "best_until": "2027-03-04",
@@ -2081,7 +2019,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 132,
+      "days_out": 131,
       "phase": "far",
       "best_from": "2027-01-26",
       "best_until": "2027-03-02",
@@ -2142,7 +2080,7 @@
       "book_lo": 27,
       "book_hi": 62,
       "max_layover_min": 180,
-      "days_out": 134,
+      "days_out": 133,
       "phase": "far",
       "best_from": "2027-01-28",
       "best_until": "2027-03-04",
@@ -2202,7 +2140,7 @@
       "book_lo": 55,
       "book_hi": 138,
       "max_layover_min": 420,
-      "days_out": 132,
+      "days_out": 131,
       "phase": "prime",
       "best_from": "2026-11-11",
       "best_until": "2027-02-02",
@@ -2227,103 +2165,7 @@
       "low_price": 945,
       "observations": 5,
       "effective_price": 962,
-      "oneway": {
-        "total": 1189,
-        "out_price": 339,
-        "back_price": 850,
-        "out_airlines": [
-          "American"
-        ],
-        "back_airlines": [
-          "Air France",
-          "Delta"
-        ],
-        "out_flight": {
-          "segments": [
-            {
-              "airline": "American",
-              "flight": "AA 1619",
-              "from": "MCI",
-              "depart": "2027-03-29 16:18",
-              "to": "CLT",
-              "arrive": "2027-03-29 19:35",
-              "minutes": 137,
-              "overnight": false
-            },
-            {
-              "airline": "American",
-              "flight": "AA 734",
-              "from": "CLT",
-              "depart": "2027-03-29 23:10",
-              "to": "LHR",
-              "arrive": "2027-03-30 12:15",
-              "minutes": 485,
-              "overnight": true
-            }
-          ],
-          "layovers": [
-            {
-              "name": "Charlotte Douglas International Airport",
-              "code": "CLT",
-              "minutes": 215,
-              "overnight": false
-            }
-          ],
-          "minutes": 837
-        },
-        "back_flight": {
-          "segments": [
-            {
-              "airline": "Air France",
-              "flight": "AF 1705",
-              "from": "LGW",
-              "depart": "2027-04-04 09:55",
-              "to": "CDG",
-              "arrive": "2027-04-04 12:10",
-              "minutes": 75,
-              "overnight": false
-            },
-            {
-              "airline": "Air France",
-              "flight": "AF 32",
-              "from": "CDG",
-              "depart": "2027-04-04 14:10",
-              "to": "ATL",
-              "arrive": "2027-04-04 17:35",
-              "minutes": 565,
-              "overnight": false
-            },
-            {
-              "airline": "Delta",
-              "flight": "DL 2911",
-              "from": "ATL",
-              "depart": "2027-04-04 22:45",
-              "to": "MCI",
-              "arrive": "2027-04-04 23:58",
-              "minutes": 133,
-              "overnight": false
-            }
-          ],
-          "layovers": [
-            {
-              "name": "A\u00e9roport de Paris-Charles de Gaulle",
-              "code": "CDG",
-              "minutes": 120,
-              "overnight": false
-            },
-            {
-              "name": "Hartsfield-Jackson Atlanta International Airport",
-              "code": "ATL",
-              "minutes": 310,
-              "overnight": false
-            }
-          ],
-          "minutes": 1203
-        },
-        "checked_at": "2026-11-11T15:01:11+00:00",
-        "better": false,
-        "saves": -227
-      },
+      "oneway": null,
       "under_ceiling": true,
       "lowest_yet": false,
       "outbound_flight": {
@@ -2439,7 +2281,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 178,
+      "days_out": 177,
       "phase": "far",
       "best_from": "2027-03-18",
       "best_until": "2027-04-22",
@@ -2498,7 +2340,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 179,
+      "days_out": 178,
       "phase": "far",
       "best_from": "2027-03-19",
       "best_until": "2027-04-23",
@@ -2559,7 +2401,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 178,
+      "days_out": 177,
       "phase": "far",
       "best_from": "2027-03-18",
       "best_until": "2027-04-22",
@@ -2620,7 +2462,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 180,
+      "days_out": 179,
       "phase": "far",
       "best_from": "2027-03-20",
       "best_until": "2027-04-24",
@@ -2681,7 +2523,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 178,
+      "days_out": 177,
       "phase": "far",
       "best_from": "2027-03-18",
       "best_until": "2027-04-22",
@@ -2742,7 +2584,7 @@
       "book_lo": 22,
       "book_hi": 57,
       "max_layover_min": 180,
-      "days_out": 180,
+      "days_out": 179,
       "phase": "far",
       "best_from": "2027-03-20",
       "best_until": "2027-04-24",
@@ -2802,7 +2644,7 @@
       "book_lo": 50,
       "book_hi": 133,
       "max_layover_min": 420,
-      "days_out": 178,
+      "days_out": 177,
       "phase": "far",
       "best_from": "2027-01-01",
       "best_until": "2027-03-25",
