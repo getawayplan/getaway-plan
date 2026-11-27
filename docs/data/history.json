@@ -2432,5 +2432,433 @@
     ],
     "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI2LTEyLTMwagcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDEtMDZqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
     "max_layover_min": 420
+  },
+  {
+    "ts": "2026-11-27T15:09:15+00:00",
+    "trip_id": "London|2027-03-29|2027-04-04",
+    "price": 933,
+    "airlines": [
+      "American",
+      "British Airways"
+    ],
+    "stops": 2,
+    "duration_min": 1190,
+    "price_level": "typical",
+    "typical_range": [
+      650,
+      1200
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI3LTAzLTI5agcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDQtMDRqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 420
+  },
+  {
+    "ts": "2026-11-27T15:09:16+00:00",
+    "trip_id": "Boston|2026-12-31|2027-01-05",
+    "price": 505,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "duration_min": 270,
+    "price_level": "typical",
+    "typical_range": [
+      300,
+      550
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTMxagcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMDVqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:09:25+00:00",
+    "trip_id": "Boston|2027-01-13|2027-01-18",
+    "price": 315,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 1,
+    "duration_min": 290,
+    "price_level": "typical",
+    "typical_range": [
+      255,
+      475
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAxLTEzagcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjctMDEtMThqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:09:31+00:00",
+    "trip_id": "New York City|2027-01-14|2027-01-18",
+    "price": 411,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 0,
+    "duration_min": 169,
+    "price_level": "typical",
+    "typical_range": [
+      210,
+      445
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAxLTE0agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDEtMThqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:09:42+00:00",
+    "trip_id": "Washington, DC|2027-01-14|2027-01-18",
+    "price": 287,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "duration_min": 145,
+    "price_level": "typical",
+    "typical_range": [
+      190,
+      345
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAxLTE0agcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjctMDEtMThqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:09:56+00:00",
+    "trip_id": "New York City|2027-01-01|2027-01-05",
+    "price": 403,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "duration_min": 160,
+    "price_level": "typical",
+    "typical_range": [
+      205,
+      410
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAxLTAxagcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDEtMDVqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:09:58+00:00",
+    "trip_id": "Washington, DC|2027-01-01|2027-01-05",
+    "price": 280,
+    "airlines": [
+      "Frontier"
+    ],
+    "stops": 1,
+    "duration_min": 355,
+    "price_level": "typical",
+    "typical_range": [
+      195,
+      335
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAxLTAxagcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjctMDEtMDVqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:10:09+00:00",
+    "trip_id": "London|2027-01-11|2027-01-18",
+    "price": 777,
+    "airlines": [
+      "American"
+    ],
+    "stops": 1,
+    "duration_min": 628,
+    "price_level": "typical",
+    "typical_range": [
+      610,
+      990
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI3LTAxLTExagcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDEtMThqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 420
+  },
+  {
+    "ts": "2026-11-27T15:10:15+00:00",
+    "trip_id": "Delhi|2026-12-29|2027-01-08",
+    "price": 4072,
+    "airlines": [
+      "American",
+      "British Airways"
+    ],
+    "stops": 2,
+    "duration_min": 1304,
+    "price_level": "typical",
+    "typical_range": [
+      1600,
+      3050
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTI5agcIARIDTUNJcgcIARIDREVMGh4SCjIwMjctMDEtMDhqBwgBEgNERUxyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 420
+  },
+  {
+    "ts": "2026-11-27T15:10:17+00:00",
+    "trip_id": "London|2026-12-18|2026-12-25",
+    "price": 1310,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "duration_min": 895,
+    "price_level": "typical",
+    "typical_range": [
+      960,
+      1500
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjYtMTItMjVqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 420
+  },
+  {
+    "ts": "2026-11-27T15:10:23+00:00",
+    "trip_id": "Delhi|2026-12-18|2026-12-28",
+    "price": 3234,
+    "airlines": [
+      "United"
+    ],
+    "stops": 2,
+    "duration_min": 1393,
+    "price_level": "high",
+    "typical_range": [
+      1600,
+      3050
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDREVMGh4SCjIwMjYtMTItMjhqBwgBEgNERUxyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 420
+  },
+  {
+    "ts": "2026-11-27T15:10:27+00:00",
+    "trip_id": "Boston|2026-12-18|2026-12-23",
+    "price": 646,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "duration_min": 344,
+    "price_level": "typical",
+    "typical_range": [
+      300,
+      550
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDQk9TGh4SCjIwMjYtMTItMjNqBwgBEgNCT1NyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:10:29+00:00",
+    "trip_id": "Delhi|2027-01-08|2027-01-18",
+    "price": 1627,
+    "airlines": [
+      "United"
+    ],
+    "stops": 2,
+    "duration_min": 1609,
+    "price_level": "high",
+    "typical_range": [
+      960,
+      1550
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhoeEgoyMDI3LTAxLTA4agcIARIDTUNJcgcIARIDREVMGh4SCjIwMjctMDEtMThqBwgBEgNERUxyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 420
+  },
+  {
+    "ts": "2026-11-27T15:10:33+00:00",
+    "trip_id": "New York City|2026-12-18|2026-12-22",
+    "price": 532,
+    "airlines": [
+      "Delta"
+    ],
+    "stops": 1,
+    "duration_min": 271,
+    "price_level": "high",
+    "typical_range": [
+      295,
+      485
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjYtMTItMjJqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:10:34+00:00",
+    "trip_id": "Washington, DC|2026-12-18|2026-12-22",
+    "price": 320,
+    "airlines": [
+      "Frontier"
+    ],
+    "stops": 1,
+    "duration_min": 355,
+    "price_level": "typical",
+    "typical_range": [
+      220,
+      380
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI2LTEyLTE4agcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjYtMTItMjJqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:10:35+00:00",
+    "trip_id": "London|2026-12-30|2027-01-06",
+    "price": 907,
+    "airlines": [
+      "United"
+    ],
+    "stops": 1,
+    "duration_min": 638,
+    "price_level": "typical",
+    "typical_range": [
+      870,
+      1250
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI2LTEyLTMwagcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDEtMDZqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 420
+  },
+  {
+    "ts": "2026-11-27T15:10:37+00:00",
+    "trip_id": "New York City|2027-03-29|2027-04-02",
+    "price": 489,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "duration_min": 181,
+    "price_level": "typical",
+    "typical_range": [
+      250,
+      480
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTI5agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDQtMDJqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:10:44+00:00",
+    "trip_id": "New York City|2027-03-31|2027-04-04",
+    "price": 500,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "duration_min": 181,
+    "price_level": "typical",
+    "typical_range": [
+      230,
+      440
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTMxagcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDQtMDRqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:10:46+00:00",
+    "trip_id": "Washington, DC|2027-03-29|2027-04-02",
+    "price": 489,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "duration_min": 142,
+    "price_level": "typical",
+    "typical_range": [
+      225,
+      385
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTI5agcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjctMDQtMDJqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:10:48+00:00",
+    "trip_id": "Washington, DC|2027-03-31|2027-04-04",
+    "price": 454,
+    "airlines": [
+      "United"
+    ],
+    "stops": 0,
+    "duration_min": 149,
+    "price_level": "typical",
+    "typical_range": [
+      230,
+      410
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTAzLTMxagcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjctMDQtMDRqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:10:50+00:00",
+    "trip_id": "New York City|2027-05-14|2027-05-18",
+    "price": 455,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "duration_min": 165,
+    "price_level": "typical",
+    "typical_range": [
+      270,
+      455
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTA1LTE0agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDUtMThqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:10:53+00:00",
+    "trip_id": "New York City|2027-05-16|2027-05-20",
+    "price": 500,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "duration_min": 165,
+    "price_level": "typical",
+    "typical_range": [
+      295,
+      500
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTA1LTE2agcIARIDTUNJcgcIARIDSkZLcgcIARIDTEdBcgcIARIDRVdSGjASCjIwMjctMDUtMjBqBwgBEgNKRktqBwgBEgNMR0FqBwgBEgNFV1JyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:11:03+00:00",
+    "trip_id": "Washington, DC|2027-05-14|2027-05-18",
+    "price": 454,
+    "airlines": [
+      "American"
+    ],
+    "stops": 0,
+    "duration_min": 162,
+    "price_level": "typical",
+    "typical_range": [
+      220,
+      420
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTA1LTE0agcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjctMDUtMThqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:11:04+00:00",
+    "trip_id": "Washington, DC|2027-05-16|2027-05-20",
+    "price": 479,
+    "airlines": [
+      "Southwest"
+    ],
+    "stops": 0,
+    "duration_min": 140,
+    "price_level": "high",
+    "typical_range": [
+      245,
+      405
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhowEgoyMDI3LTA1LTE2agcIARIDTUNJcgcIARIDRENBcgcIARIDSUFEcgcIARIDQldJGjASCjIwMjctMDUtMjBqBwgBEgNEQ0FqBwgBEgNJQURqBwgBEgNCV0lyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 180
+  },
+  {
+    "ts": "2026-11-27T15:11:08+00:00",
+    "trip_id": "London|2027-05-14|2027-05-20",
+    "price": 838,
+    "airlines": [
+      "American",
+      "British Airways"
+    ],
+    "stops": 2,
+    "duration_min": 945,
+    "price_level": "low",
+    "typical_range": [
+      970,
+      1400
+    ],
+    "link": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&tfs=CBwQAhonEgoyMDI3LTA1LTE0agcIARIDTUNJcgcIARIDTEhScgcIARIDTEdXGicSCjIwMjctMDUtMjBqBwgBEgNMSFJqBwgBEgNMR1dyBwgBEgNNQ0lAAUgBcAGYAQE&tfu=EgIIAQ",
+    "max_layover_min": 420
   }
 ]
